@@ -64,7 +64,7 @@
 <meta property="og:description" content="linux是在日常开发中常用的一个操作系统，但是linux中的指令实在太多了，这篇博客主要是记录平时常用的一些指令进行汇总。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://wx1.sinaimg.cn/mw690/007857NYgy1g8lbf1v9aaj30s40diab1.jpg">
-<meta property="og:updated_time" content="2019-11-03T16:28:08.284Z">
+<meta property="og:updated_time" content="2019-11-04T07:27:26.014Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux笔记">
 <meta name="twitter:description" content="linux是在日常开发中常用的一个操作系统，但是linux中的指令实在太多了，这篇博客主要是记录平时常用的一些指令进行汇总。">
@@ -253,7 +253,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-04 00:28:08" itemprop="dateModified" datetime="2019-11-04T00:28:08+08:00">2019-11-04</time>
+                <time title="修改时间：2019-11-04 15:27:26" itemprop="dateModified" datetime="2019-11-04T15:27:26+08:00">2019-11-04</time>
               </span>
             
           
@@ -286,7 +286,9 @@
 <h2 id="如何进行secureCRT连接的不同界面之间的切换——Alt-”Num”"><a href="#如何进行secureCRT连接的不同界面之间的切换——Alt-”Num”" class="headerlink" title="如何进行secureCRT连接的不同界面之间的切换——Alt+”Num”"></a>如何进行secureCRT连接的不同界面之间的切换——Alt+”Num”</h2><p>如图所示为4个不同的连接的页面，我们在进行切换时直接按住 Alt+”连接界面所处的位置”</p>
 <hr>
 <h2 id="如何在linux中关掉一些进程"><a href="#如何在linux中关掉一些进程" class="headerlink" title="如何在linux中关掉一些进程"></a>如何在linux中关掉一些进程</h2><h2 id="scp-文件安全拷贝命令（-secure-copy）"><a href="#scp-文件安全拷贝命令（-secure-copy）" class="headerlink" title="scp 文件安全拷贝命令（    secure copy）"></a>scp 文件安全拷贝命令（    secure copy）</h2><p>scp -r 本地文件地址 username@ip:目的账户的保存地址（如果是文件的话就不需要加上 -r 了）<br><img src="https://wx1.sinaimg.cn/mw690/007857NYgy1g8lbf1v9aaj30s40diab1.jpg" alt="scp"></p>
-
+<hr>
+<h2 id="xsync集群分发脚本"><a href="#xsync集群分发脚本" class="headerlink" title="xsync集群分发脚本"></a>xsync集群分发脚本</h2><p>在进行集群配置的时候可能会需要在master上进行了配置，然后有需要将配置好的文件逐个传输到其他的文件夹下面，这样是非常的耗费精力的，为了实现快速的进行向各个节点的文件传输，我们这里采取配置xsync集群分发脚本。</p>
+<h2 id="集群时间的同步操作"><a href="#集群时间的同步操作" class="headerlink" title="集群时间的同步操作"></a>集群时间的同步操作</h2>
     </div>
 
     
@@ -359,7 +361,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何进行secureCRT连接的不同界面之间的切换——Alt-”Num”"><span class="nav-number">1.</span> <span class="nav-text">如何进行secureCRT连接的不同界面之间的切换——Alt+”Num”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何在linux中关掉一些进程"><span class="nav-number">2.</span> <span class="nav-text">如何在linux中关掉一些进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scp-文件安全拷贝命令（-secure-copy）"><span class="nav-number">3.</span> <span class="nav-text">scp 文件安全拷贝命令（    secure copy）</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何进行secureCRT连接的不同界面之间的切换——Alt-”Num”"><span class="nav-number">1.</span> <span class="nav-text">如何进行secureCRT连接的不同界面之间的切换——Alt+”Num”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何在linux中关掉一些进程"><span class="nav-number">2.</span> <span class="nav-text">如何在linux中关掉一些进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scp-文件安全拷贝命令（-secure-copy）"><span class="nav-number">3.</span> <span class="nav-text">scp 文件安全拷贝命令（    secure copy）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#xsync集群分发脚本"><span class="nav-number">4.</span> <span class="nav-text">xsync集群分发脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集群时间的同步操作"><span class="nav-number">5.</span> <span class="nav-text">集群时间的同步操作</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
