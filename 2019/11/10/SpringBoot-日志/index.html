@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="在我们的日常开发中，通常需要查看日志来帮我们解决程序运行中的一些错误问题及对程序运行过程的监控，这篇文章主要是讲解在SpringBoot中日志的工作原理、日志实现类的选择、日志的展示及存储方式等内容。">
+<meta name="keywords" content="Java,Python,Big Data">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot-日志">
+<meta property="og:url" content="http://yoursite.com/2019/11/10/SpringBoot-日志/index.html">
+<meta property="og:site_name" content="残霜晓月">
+<meta property="og:description" content="在我们的日常开发中，通常需要查看日志来帮我们解决程序运行中的一些错误问题及对程序运行过程的监控，这篇文章主要是讲解在SpringBoot中日志的工作原理、日志实现类的选择、日志的展示及存储方式等内容。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wx1.sinaimg.cn/mw690/007857NYgy1g8sqnny7iaj30w00homz4.jpg">
+<meta property="og:image" content="https://wx4.sinaimg.cn/mw690/007857NYly1g8sr40230bj316e0u00xc.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/mw690/007857NYgy1g8sr81yfcnj30o709f0ta.jpg">
+<meta property="og:image" content="https://wx4.sinaimg.cn/mw690/007857NYgy1g8sreyk7njj30cp06odg2.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/mw690/007857NYgy1g8sslk1dccj311j0ovjst.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/small/007857NYly1g8stgrfhm3j30kg0d70ti.jpg">
+<meta property="og:image" content="https://wx2.sinaimg.cn/small/007857NYly1g8stgum4ucj30py0870tz.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/mw690/007857NYly1g8stis21fpj30oa0dtta9.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/mw690/007857NYly1g8stivul1dj30ry07zweu.jpg">
+<meta property="og:updated_time" content="2019-11-10T05:24:23.340Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SpringBoot-日志">
+<meta name="twitter:description" content="在我们的日常开发中，通常需要查看日志来帮我们解决程序运行中的一些错误问题及对程序运行过程的监控，这篇文章主要是讲解在SpringBoot中日志的工作原理、日志实现类的选择、日志的展示及存储方式等内容。">
+<meta name="twitter:image" content="https://wx1.sinaimg.cn/mw690/007857NYgy1g8sqnny7iaj30w00homz4.jpg">
+  <link rel="canonical" href="http://yoursite.com/2019/11/10/SpringBoot-日志/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>SpringBoot-日志 | 残霜晓月</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband">
+		<a href="https://github.com/DongONNS" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+	</div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">残霜晓月</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">许韶华不负，愿来日可期！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>归档</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/10/SpringBoot-日志/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="残霜晓月">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">SpringBoot-日志
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-10 10:06:55 / 修改时间：13:24:23" itemprop="dateCreated datePublished" datetime="2019-11-10T10:06:55+08:00">2019-11-10</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SpringBoot/" itemprop="url" rel="index"><span itemprop="name">SpringBoot</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>在我们的日常开发中，通常需要查看日志来帮我们解决程序运行中的一些错误问题及对程序运行过程的监控，这篇文章主要是讲解在SpringBoot中日志的工作原理、日志实现类的选择、日志的展示及存储方式等内容。</p><a id="more"></a>
+<h1 id="一、常用的日志框架"><a href="#一、常用的日志框架" class="headerlink" title="一、常用的日志框架"></a>一、常用的日志框架</h1><p>JUL、JCL、Jboss-logging、logback、log4j、log4j2、slf4j….</p>
+<p>其中属于<strong>日志门面</strong>（日志的抽象层）的是：JCL（Jakarta Commons Logging）    <strong>SLF4j</strong>（Simple Logging Facade for Java）、jboss-logging    </p>
+<p>属于日志的<strong>实现类</strong>的是：Log4j2 <strong>Logback</strong>、Log4j JUL（java.util.logging） </p>
+<p>我们一般是选择SLF4j作为抽象层，Logback作为实现类</p>
+<p>springboot也是选用的<strong>SLF4j和Logback</strong></p>
+<hr>
+<h1 id="二、如何在系统中使用SLF4j"><a href="#二、如何在系统中使用SLF4j" class="headerlink" title="二、如何在系统中使用SLF4j"></a>二、如何在系统中使用SLF4j</h1><p>开发的时候，日志记录方法的调用，不应该来直接调用日志的实现类，而是调用日志抽象层里面的方法；给系统里面导入slf4j的jar和 logback的实现jar</p>
+<p>具体的实现代码如下：</p>
+<pre><code>import org.slf4j.Logger; 
+import org.slf4j.LoggerFactory;   
+
+public class HelloWorld {
+   public static void main(String[] args) {
+     Logger logger = LoggerFactory.getLogger(HelloWorld.class);     
+     logger.info(&quot;Hello World&quot;);
+   }
+}</code></pre><blockquote>
+<p>抽象类与实现类之间的关系如下所示,每一个日志的实现框架都有自己的配置文件。<br>使用slf4j以后，配置文件还是做成日志实现框架自己本身的配置文件。</p>
+</blockquote>
+<p><img src="https://wx1.sinaimg.cn/mw690/007857NYgy1g8sqnny7iaj30w00homz4.jpg" alt="抽象类与实现类的关系"></p>
+<hr>
+<h1 id="三、遗留问题"><a href="#三、遗留问题" class="headerlink" title="三、遗留问题"></a>三、遗留问题</h1><p>在springboot中我们含有很多的框架，如Spring、Hebernate、MyBatis等，这些不同的日志框架使用的日志实现类是不相同的，那么我们如何实现不同的日志实现类之间的协调统一呢？</p>
+<p>如：a（slf4j+logback）: Spring（commons-logging）、Hibernate（jboss-logging）、MyBatis、xxxx 统一日志记录，即使是别的框架和我一起统一使用slf4j进行输出？</p>
+<p><strong>如何让系统中所有的日志都统一到slf4j：</strong></p>
+<pre><code>1、将系统中其他日志框架先排除出去；
+
+2、用中间包来替换原有的日志框架；
+
+3、我们导入slf4j其他的实现；</code></pre><p><img src="https://wx4.sinaimg.cn/mw690/007857NYly1g8sr40230bj316e0u00xc.jpg" alt="日志框架的替换类"></p>
+<hr>
+<h1 id="四、SpringBoot的日志依赖关系："><a href="#四、SpringBoot的日志依赖关系：" class="headerlink" title="四、SpringBoot的日志依赖关系："></a>四、SpringBoot的日志依赖关系：</h1><p><img src="https://wx3.sinaimg.cn/mw690/007857NYgy1g8sr81yfcnj30o709f0ta.jpg" alt="日志依赖关系"></p>
+<p>总结：</p>
+<pre><code>1）、SpringBoot底层也是使用slf4j+logback的方式进行日志记录
+
+2）、SpringBoot也把其他的日志都替换成了slf4j；
+
+3）、中间替换包？
+
+4）、如果我们要引入其他框架？一定要把这个框架的默认日志依赖移除掉？Spring框架用的是commons-logging；</code></pre><p>如下为在SpringBoot中引入依赖后的<strong>转换jar包</strong></p>
+<p><img src="https://wx4.sinaimg.cn/mw690/007857NYgy1g8sreyk7njj30cp06odg2.jpg" alt="日志转换包"></p>
+<p>SpringBoot能自动适配所有的日志，而且底层使用slf4j+logback的方式记录日志，引入其他框架的时候，只需要 把这个框架依赖的日志框架排除掉即可；</p>
+<pre><code>&lt;dependency&gt;
+          &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+          &lt;artifactId&gt;spring‐core&lt;/artifactId&gt;              
+          &lt;exclusions&gt;
+              &lt;exclusion&gt;
+                    &lt;groupId&gt;commons‐logging&lt;/groupId&gt;
+                    &lt;artifactId&gt;commons‐logging&lt;/artifactId&gt;
+              &lt;/exclusion&gt;
+          &lt;/exclusions&gt;
+&lt;/dependency </code></pre><hr>
+<h1 id="五-日志的使用"><a href="#五-日志的使用" class="headerlink" title="五 日志的使用"></a>五 日志的使用</h1><p>SpringBoot默认帮我们配置好了日志；</p>
+<h2 id="默认配置"><a href="#默认配置" class="headerlink" title="默认配置"></a>默认配置</h2><pre><code>import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class DemoApplicationTests {
+//日志记录器
+Logger logger = LoggerFactory.getLogger(getClass());
+
+@Test
+void contextLoads() {
+    //日志的级别由低到高 trace&lt;debug&lt;info&lt;warn&lt;error
+    //可以调整输出的日志级别，日志就只会在这个级别以后的级别中生效
+    logger.trace(&quot;这是trace()日志&quot;);
+    logger.debug(&quot;这是debug日志&quot;);
+    //springboot默认提供的是info级别
+    logger.info(&quot;这是info日志&quot;);
+    logger.warn(&quot;这是warn日志&quot;);
+    logger.error(&quot;这是error日志&quot;);
+    }
+}</code></pre><p>当然我们可以对日志的输出格式、输出位置、默认级别等等做相应的调整</p>
+<pre><code>#指定日志的输出级别，默认条件为info级别的。
+logging.level.csu = trace
+
+#在当前目录下生成springboot.log日志
+#不指定目录则在当前目录下生成springboot.log日志
+#logging.file = springboot.log
+#也可以指定springboot.log的生成路径
+logging.file= F:/springboot.log
+
+#指定控制台输出的文件格式
+logging.pattern.console==%d{yyyy‐MM‐dd} [%thread] %‐5level %logger{50} ‐ %msg%n 
+
+#指定文件中日志的输出格式
+logging.pattern.file=%d{yyyy‐MM‐dd} === [%thread] === %‐5level === %logger{50} ==== %msg%n</code></pre><p>关于<strong>日志的输出格式简介</strong>：</p>
+<pre><code>日志输出格式： 
+
+%d表示日期时间 
+
+%thread表示线程名
+
+%‐5level：级别从左显示5个字符宽度          
+
+%logger{50} 表示logger名字长50个字符，否则按照句点分割。           
+
+%msg：日志消息，         
+
+%n是换行符</code></pre><h2 id="指定配置"><a href="#指定配置" class="headerlink" title="指定配置"></a>指定配置</h2><p>给类路径下放上每个日志框架自己的配置文件即可；SpringBoot就不使用他默认配置的了</p>
+<p>logback.xml：直接就被日志框架识别了； </p>
+<p>logback-spring.xml：日志框架就不直接加载日志的配置项，由SpringBoot解析日志配置，可以使用SpringBoot 的高级Proﬁle功能</p>
+<p>所以我们一般使用加上了“-spring”后缀的命名格式，如下所示在开发过程中就可以指定在开发环境和非开发环境使用的日志格式了。</p>
+<pre><code>&lt;springProfile name=&quot;dev&quot;&gt;                 
+    &lt;pattern&gt;%d{yyyy‐MM‐dd HH:mm:ss.SSS} ‐‐‐‐&gt; [%thread] ‐‐‐&gt; %‐5level  %logger{50} ‐ %msg%n&lt;/pattern&gt;             
+&lt;/springProfile&gt;             
+
+&lt;springProfile name=&quot;!dev&quot;&gt;                 
+    &lt;pattern&gt;%d{yyyy‐MM‐dd HH:mm:ss.SSS} ==== [%thread] ==== %‐5level  %logger{50} ‐ %msg%n&lt;/pattern&gt;             
+&lt;/springProfile&gt;</code></pre><p>如果直接使用没有“-spring”后缀的格式设置开发环境和非开发环境的日志格式会发生错误；</p>
+<p>当然我们也可以使用在配置中设置环境变量来进行开发环境选择：spring.profiles.active=dev<br><img src="https://wx3.sinaimg.cn/mw690/007857NYgy1g8sslk1dccj311j0ovjst.jpg" alt="环境变量设置">   </p>
+<hr>
+<h1 id="六-切换日志框架"><a href="#六-切换日志框架" class="headerlink" title="六 切换日志框架"></a>六 切换日志框架</h1><p>SpringBoot的默认方式为SLF4j+Logback形式的，现在我们将其切换成SLF4j+log4j的形式，具体操作如下：</p>
+<p><img src="https://wx1.sinaimg.cn/small/007857NYly1g8stgrfhm3j30kg0d70ti.jpg" alt="切换框架1"></p>
+<p><img src="https://wx2.sinaimg.cn/small/007857NYly1g8stgum4ucj30py0870tz.jpg" alt="切换框架2"></p>
+<p><img src="https://wx1.sinaimg.cn/mw690/007857NYly1g8stis21fpj30oa0dtta9.jpg" alt="切换框架3"></p>
+<p><img src="https://wx1.sinaimg.cn/mw690/007857NYly1g8stivul1dj30ry07zweu.jpg" alt="切换框架4"></p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/10/27/Hadoop学习笔记/" rel="next" title="Hadoop学习笔记">
+                  <i class="fa fa-chevron-left"></i> Hadoop学习笔记
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、常用的日志框架"><span class="nav-number">1.</span> <span class="nav-text">一、常用的日志框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、如何在系统中使用SLF4j"><span class="nav-number">2.</span> <span class="nav-text">二、如何在系统中使用SLF4j</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、遗留问题"><span class="nav-number">3.</span> <span class="nav-text">三、遗留问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、SpringBoot的日志依赖关系："><span class="nav-number">4.</span> <span class="nav-text">四、SpringBoot的日志依赖关系：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五-日志的使用"><span class="nav-number">5.</span> <span class="nav-text">五 日志的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#默认配置"><span class="nav-number">5.1.</span> <span class="nav-text">默认配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指定配置"><span class="nav-number">5.2.</span> <span class="nav-text">指定配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六-切换日志框架"><span class="nav-number">6.</span> <span class="nav-text">六 切换日志框架</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/header.jpg"
+      alt="Dongcheng">
+  <p class="site-author-name" itemprop="name">Dongcheng</p>
+  <div class="site-description" itemprop="description">Master record</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dongcheng</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+</body>
+</html>

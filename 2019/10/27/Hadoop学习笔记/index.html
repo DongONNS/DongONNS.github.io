@@ -55,18 +55,21 @@
   };
 </script>
 
-  <meta name="description" content="Master record">
+  <meta name="description" content="HDFS概述NameNode(nn):存储文件的元数据，如文件名、文件目录结构、文件属性（生成时间、副本数、文件权限），以及每个文件的块列表和和块所在的DataNode等。">
 <meta name="keywords" content="Java,Python,Big Data">
-<meta property="og:type" content="website">
-<meta property="og:title" content="残霜晓月">
-<meta property="og:url" content="http://yoursite.com/categories/Linux/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hadoop学习笔记">
+<meta property="og:url" content="http://yoursite.com/2019/10/27/Hadoop学习笔记/index.html">
 <meta property="og:site_name" content="残霜晓月">
-<meta property="og:description" content="Master record">
+<meta property="og:description" content="HDFS概述NameNode(nn):存储文件的元数据，如文件名、文件目录结构、文件属性（生成时间、副本数、文件权限），以及每个文件的块列表和和块所在的DataNode等。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wx2.sinaimg.cn/mw690/007857NYly1g8l91bg3iuj31h20oyqjl.jpg">
+<meta property="og:updated_time" content="2019-11-10T05:24:08.546Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="残霜晓月">
-<meta name="twitter:description" content="Master record">
-  <link rel="canonical" href="http://yoursite.com/categories/Linux/">
+<meta name="twitter:title" content="Hadoop学习笔记">
+<meta name="twitter:description" content="HDFS概述NameNode(nn):存储文件的元数据，如文件名、文件目录结构、文件属性（生成时间、副本数、文件权限），以及每个文件的块列表和和块所在的DataNode等。">
+<meta name="twitter:image" content="https://wx2.sinaimg.cn/mw690/007857NYly1g8l91bg3iuj31h20oyqjl.jpg">
+  <link rel="canonical" href="http://yoursite.com/2019/10/27/Hadoop学习笔记/">
 
 
 <script id="page-configurations">
@@ -74,13 +77,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>分类: Linux | 残霜晓月</title>
+  <title>Hadoop学习笔记 | 残霜晓月</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -188,21 +191,6 @@
 
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 </nav>
 </div>
     </header>
@@ -220,60 +208,166 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block category">
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">Linux<small>分类</small>
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/27/Hadoop学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="残霜晓月">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Hadoop学习笔记
+
+          
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-27 15:04:26" itemprop="dateCreated datePublished" datetime="2019-10-27T15:04:26+08:00">2019-10-27</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-10 13:24:08" itemprop="dateModified" datetime="2019-11-10T13:24:08+08:00">2019-11-10</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hadoop/" itemprop="url" rel="index"><span itemprop="name">hadoop</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+        <h2 id="HDFS概述"><a href="#HDFS概述" class="headerlink" title="HDFS概述"></a>HDFS概述</h2><p><strong>NameNode(nn)</strong>:存储文件的元数据，如文件名、文件目录结构、文件属性（生成时间、副本数、文件权限），以及每个文件的块列表和和块所在的DataNode等。</p><a id="more"></a>
+<p><strong>DataNode(dn)</strong>:在本地文件系统存储文件数据块以及数据块的校验和。</p>
+<p><strong>Secondary NameNode(2nn)</strong>:用来监控HDFS的辅助后台程序，每隔一段时间获取HDFS元数据的快照。</p>
+<p>yarn架构图</p>
+<p>常见的正则表达式</p>
+<h2 id="为什么不能一直格式化NameNode-格式化NameNode需要注意什么？"><a href="#为什么不能一直格式化NameNode-格式化NameNode需要注意什么？" class="headerlink" title="为什么不能一直格式化NameNode,格式化NameNode需要注意什么？"></a>为什么不能一直格式化NameNode,格式化NameNode需要注意什么？</h2><p>集群在工作的时候他的datanode的集群id和namenode的集群id是一样的，这样才能保证集群的正常工作，如果你格式化了namenode的集群id这个时候你的datanode的集群id是没有改变的，他们两个不一致的话集群无法正常工作。</p>
+<p>如果需要格式化NameNode的信息，那就需要datanode中的关于集群id的信息删除；</p>
+<p><img src="https://wx2.sinaimg.cn/mw690/007857NYly1g8l91bg3iuj31h20oyqjl.jpg" alt="格式化"></p>
+<p>关于YARN</p>
+<p>ResourceManager:集群资源的总管<br>NodeManager:单个节点资源的总管</p>
+<h2 id="HDFS的优缺点"><a href="#HDFS的优缺点" class="headerlink" title="HDFS的优缺点"></a>HDFS的优缺点</h2><blockquote>
+<p>优点</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>1.高容错性</p>
+<p>2.适合处理大数据</p>
+<p>3.可构建在廉价机器上</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>缺点</p>
+<blockquote>
+<p>1.不适合低延时数据访问</p>
+<p>2.无法高效的对大量小文件进行存储</p>
+<blockquote>
+<p>1.存储大量小文件的话，会占用NameNode的大量内存来存储文件目录和块信息，但NameNode的内存总是有限的</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2.小文件的存储时间会超过读取时间，违反了DFSDE的设计目标</p>
+</blockquote>
+<p>3.不支持并发写入，文件的随机修改</p>
+<blockquote>
+<p>一个文件只能有一个写，不允许多个线程同时写</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>仅支持数据的追加，不支持数据的随机修改</p>
+</blockquote>
+</blockquote>
+</blockquote>
 
-  
-  
+    </div>
 
-  
     
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
+    
+    
         
-          <a class="post-title-link" href="/2019/10/20/Linux笔记/" itemprop="url">
-            <span itemprop="name">Linux笔记</span>
-          </a>
+      
+
+      <footer class="post-footer">
+
         
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-10-20T12:34:24+08:00"
-              content="2019-10-20">
-          10-20
-        </time>
-      </div>
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/10/20/Linux笔记/" rel="next" title="Linux笔记">
+                  <i class="fa fa-chevron-left"></i> Linux笔记
+                </a>
+              
+            </div>
 
-    </header>
-  </article>
+            <span class="post-nav-divider"></span>
 
-
-
-    </div>
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/11/10/SpringBoot-日志/" rel="prev" title="SpringBoot-日志">
+                  SpringBoot-日志 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
@@ -292,6 +386,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -304,6 +403,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HDFS概述"><span class="nav-number">1.</span> <span class="nav-text">HDFS概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么不能一直格式化NameNode-格式化NameNode需要注意什么？"><span class="nav-number">2.</span> <span class="nav-text">为什么不能一直格式化NameNode,格式化NameNode需要注意什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HDFS的优缺点"><span class="nav-number">3.</span> <span class="nav-text">HDFS的优缺点</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
