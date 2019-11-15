@@ -55,19 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="多数方程不存在求根公式，因此求精确根非常困难，甚至不可能，从而寻找方程的近似根就显得特别重要，牛顿迭达法就是一种有效的求近似根的方法。">
+  <meta name="description" content="Master record">
 <meta name="keywords" content="Java,Python,Big Data">
-<meta property="og:type" content="article">
-<meta property="og:title" content="牛顿迭达法">
-<meta property="og:url" content="http://yoursite.com/2019/10/20/牛顿迭达法/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="残霜晓月">
+<meta property="og:url" content="http://yoursite.com/categories/爬虫/index.html">
 <meta property="og:site_name" content="残霜晓月">
-<meta property="og:description" content="多数方程不存在求根公式，因此求精确根非常困难，甚至不可能，从而寻找方程的近似根就显得特别重要，牛顿迭达法就是一种有效的求近似根的方法。">
+<meta property="og:description" content="Master record">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-20T11:23:04.375Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="牛顿迭达法">
-<meta name="twitter:description" content="多数方程不存在求根公式，因此求精确根非常困难，甚至不可能，从而寻找方程的近似根就显得特别重要，牛顿迭达法就是一种有效的求近似根的方法。">
-  <link rel="canonical" href="http://yoursite.com/2019/10/20/牛顿迭达法/">
+<meta name="twitter:title" content="残霜晓月">
+<meta name="twitter:description" content="Master record">
+  <link rel="canonical" href="http://yoursite.com/categories/爬虫/">
 
 
 <script id="page-configurations">
@@ -75,13 +74,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: true,
+    isPost: false,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>牛顿迭达法 | 残霜晓月</title>
+  <title>分类: 爬虫 | 残霜晓月</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -189,6 +188,21 @@
 
     
 
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
 </nav>
 </div>
     </header>
@@ -206,195 +220,60 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/20/牛顿迭达法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Dongcheng">
-      <meta itemprop="description" content="Master record">
-      <meta itemprop="image" content="/images/header.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="残霜晓月">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">牛顿迭达法
-
-          
+  <div class="post-block category">
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1 class="collection-header">爬虫<small>分类</small>
         </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-20 09:28:44 / 修改时间：19:23:04" itemprop="dateCreated datePublished" datetime="2019-10-20T09:28:44+08:00">2019-10-20</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构与算法/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+      </div>
 
       
-        <p>多数方程不存在求根公式，因此求精确根非常困难，甚至不可能，从而寻找方程的近似根就显得特别重要，牛顿迭达法就是一种有效的求近似根的方法。</p><a id="more"></a>
-<h1 id="一、问题引入"><a href="#一、问题引入" class="headerlink" title="一、问题引入"></a>一、问题引入</h1><blockquote>
-<p>##实现 int sqrt(int x) 函数。</p>
-</blockquote>
-<blockquote>
-<p>&emsp;&emsp;计算并返回 x 的平方根，其中 x 是非负整数。</p>
-</blockquote>
-<blockquote>
-<p>&emsp;&emsp;由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。</p>
-</blockquote>
-<pre><code>示例 1:
 
-输入: 4
+  
+  
 
-输出: 2</code></pre><br>
-
-<pre><code>示例 2:
-
-输入: 8
-
-输出: 2</code></pre><blockquote>
-<p>&emsp;&emsp;说明: 8 的平方根是 2.82842…, 由于返回类型是整数，小数部分将被舍去</p>
-</blockquote>
-<hr>
-<br>
-
-<p>###此处要求算的是一个数的平方根，所以我们可以很合理的考虑使用<strong>牛顿迭达法</strong>（也称牛顿法或牛顿-拉夫森法）</p>
-<blockquote>
-<p>###一、牛顿法的基本思想：</p>
-</blockquote>
-<p>&emsp;&emsp;通过迭代来实现，每次运算都让结果比之前好一点。</p>
-<p>&emsp;&emsp;哪怕只好一点点，在很多次迭代之后也可以得到一个很好的结果甚至最优或期望的结果。</p>
-<blockquote>
-<p>###二、牛顿法的目的：</p>
-</blockquote>
-<p><strong>&emsp;&emsp;牛顿法就是通过使原方程泰勒展开的一阶近似等于零不断获得更好的结果的求解方程零点的方法。</strong></p>
-<blockquote>
-<p>###三、牛顿迭达法的详解</p>
-</blockquote>
-<ul>
-<li><p>牛顿法是求解方程零点的方法</p>
-</li>
-<li><p>牛顿法利用泰勒展开的一阶近似的零点获得更接近真实零点的点</p>
-</li>
-<li><p>牛顿法通过迭代的方法不断的获得更好的解来求得最好的解</p>
-</li>
-</ul>
-<div align="center">![函数的泰勒展开](https://wx1.sinaimg.cn/mw690/007857NYly1g84fnxcv24j30yp0himya.jpg)
-
-
-
-<p>####<div align="left">具体的图像如下所示：</div></p>
-<div alogn="center">![二次函数迭达求零点](https://wx2.sinaimg.cn/mw690/007857NYly1g84fo1jounj30sc0lygmc.jpg)
-
-<div align="left"> &emsp;&emsp;图中最右边点为原来猜想的点，然后经过迭达后得到左边的橙色点，这样子逐步逼近到零点。
-
-<p>####&emsp;&emsp;当然对于这个公式还有个问题，为什么是一阶导而不是二阶导或者三阶导呢？</p>
-<pre><code>第一是一阶导已经能够满足我们的需求了；
-
-第二就是二阶导三阶导不一定存在，而且就算存在计算也会比较麻烦。</code></pre><br>
-
-
-<p>###&emsp;&emsp;好了，现在我们已经熟悉牛顿迭达法的原理了，那么解决上述问题就是轻而易举地事情，具体的代码如下：</p>
-<pre><code>class Solution {
-      int s;  
-      public int mySqrt(int x) {
-      s=x;
-      if(x==0) return 0;
-      return ((int)(sqrts(x)));
-      }
-
-public double sqrts(double x){
-      double res = (x + s / x) / 2;
-      if (res == x) {
-          return x;
-      } else {
-          return sqrts(res);
-      }
-   } 
-}</code></pre><p>&emsp;&emsp;根据牛顿迭达法我们知道 <strong><strong><code>x−f(x)/(2x)</code></strong></strong>就是一个比x更准确的的近似值，此处将 <code>f(x)=x^2-a</code> 代入到上述的公式中就得到<code>x−(x^2−a)/(2x)</code>，也就是<code>(x+a/x)/2</code>,(上述的a就是我们要求平方根的2)，循环的结束条件就是我们通过牛顿迭达法得到的值res已经达到稳定了（或者说不再发生变化了）。</p>
-<p>参考博客：<a href="https://blog.csdn.net/Timingspace/article/details/50947250" target="_blank" rel="noopener">牛顿法及牛顿法求解优化问题</a></p>
-</div></div></div>
+  
+    
+    <div class="collection-year">
+      <h1 class="collection-header">2019</h1>
     </div>
-
-    
-    
-    
-        
-      
-
-      <footer class="post-footer">
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-              
-                <a href="/2019/10/20/Daily-Plan/" rel="next" title="Daily Plan">
-                  <i class="fa fa-chevron-left"></i> Daily Plan
-                </a>
-              
-            </div>
-
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/10/20/Linux笔记/" rel="prev" title="Linux笔记">
-                  Linux笔记 <i class="fa fa-chevron-right"></i>
-                </a>
-              
-            </div>
-          </div>
-        
-      </footer>
-    
-  </div>
   
-  
-  
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+          <a class="post-title-link" href="/2019/11/15/正则表达式/" itemprop="url">
+            <span itemprop="name">正则表达式</span>
+          </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2019-11-15T20:01:15+08:00"
+              content="2019-11-15">
+          11-15
+        </time>
+      </div>
+
+    </header>
   </article>
 
+
+
+    </div>
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
@@ -413,11 +292,6 @@ public double sqrts(double x){
 
   <aside class="sidebar">
     <div class="sidebar-inner">
-        
-        
-        
-        
-      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -430,8 +304,6 @@ public double sqrts(double x){
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、问题引入"><span class="nav-number">1.</span> <span class="nav-text">一、问题引入</span></a></li></ol></div>
-        
       </div>
       <!--/noindex-->
 

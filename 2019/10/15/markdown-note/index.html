@@ -64,7 +64,8 @@
 <meta property="og:description" content="如何用markdown写博客？需要的语法都在这里">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://wx1.sinaimg.cn/mw690/007857NYgy1g7z99tuyqbj30hs0hsglq.jpg">
-<meta property="og:updated_time" content="2019-10-20T11:22:41.604Z">
+<meta property="og:image" content="https://wx3.sinaimg.cn/small/007857NYly1g8z372kcgrj305104r3ya.jpg">
+<meta property="og:updated_time" content="2019-11-15T14:23:09.339Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown常用语法">
 <meta name="twitter:description" content="如何用markdown写博客？需要的语法都在这里">
@@ -253,7 +254,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-20 19:22:41" itemprop="dateModified" datetime="2019-10-20T19:22:41+08:00">2019-10-20</time>
+                <time title="修改时间：2019-11-15 22:23:09" itemprop="dateModified" datetime="2019-11-15T22:23:09+08:00">2019-11-15</time>
               </span>
             
           
@@ -297,7 +298,7 @@
 
 <h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><hr>
 <br>
-<br>
+
 
 <blockquote>
 <h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a><strong>引用</strong></h1></blockquote>
@@ -314,7 +315,7 @@
 </blockquote>
 <hr>
 <br>
-<br>
+
 
 <blockquote>
 <h1 id="行开头加“点”"><a href="#行开头加“点”" class="headerlink" title="行开头加“点”"></a><strong>行开头加“点”</strong></h1></blockquote>
@@ -332,7 +333,6 @@
 </ul>
 <hr>
 <br>
-<br>
 
 <blockquote>
 <h1 id="加上序号"><a href="#加上序号" class="headerlink" title="加上序号"></a><strong>加上序号</strong></h1></blockquote>
@@ -345,7 +345,6 @@
 <p>3.red</p>
 <hr>
 <br>
-<br>
 
 <blockquote>
 <h1 id="代码块区域：直接点上面的code“-lt-gt-”就可以了；"><a href="#代码块区域：直接点上面的code“-lt-gt-”就可以了；" class="headerlink" title="代码块区域：直接点上面的code“&lt;&gt;”就可以了；"></a><strong>代码块区域：直接点上面的code“&lt;&gt;”就可以了；</strong></h1></blockquote>
@@ -354,7 +353,6 @@
         System.out.println(&quot;Hello MarkDown);
     }    
 }</code></pre><hr>
-<br>
 <br>
 
 <blockquote>
@@ -365,8 +363,6 @@ _这是斜体的方_</code></pre><p><em>这是斜体的方式</em></p>
 <p><em>这是斜体的方</em></p>
 <hr>
 <br>
-<br>
-
 
 <blockquote>
 <h1 id="粗体"><a href="#粗体" class="headerlink" title="粗体"></a><strong>粗体</strong></h1></blockquote>
@@ -376,15 +372,11 @@ __这是粗体__</code></pre><p><strong>这是粗体</strong></p>
 <p><strong>这是粗体</strong></p>
 <hr>
 <br>
-<br>
+># **标记行内小段代码**
+>加上 ‘’ 即可
 
-
-<blockquote>
-<h1 id="标记行内小段代码"><a href="#标记行内小段代码" class="headerlink" title="标记行内小段代码"></a><strong>标记行内小段代码</strong></h1><p>加上 ‘’ 即可</p>
-</blockquote>
 <pre><code>use the `printf()` function.</code></pre><p>use the <code>printf()</code> function.</p>
 <hr>
-<br>
 <br>
 
 <blockquote>
@@ -393,7 +385,6 @@ __这是粗体__</code></pre><p><strong>这是粗体</strong></p>
 &lt;http://example.com/&gt;</code></pre><p><em>示例：字节跳动招聘官网</em></p>
 <p><a href="https://job.bytedance.com/intern" target="_blank" rel="noopener">https://job.bytedance.com/intern</a></p>
 <hr>
-<br>
 <br>
 
 <blockquote>
@@ -417,30 +408,61 @@ __这是粗体__</code></pre><p><strong>这是粗体</strong></p>
 
 ![字节跳动](https://wx1.sinaimg.cn/mw690/007857NYgy1g7z99tuyqbj30hs0hsglq.jpg)</code></pre><p><img src="https://wx1.sinaimg.cn/mw690/007857NYgy1g7z99tuyqbj30hs0hsglq.jpg" alt="字节跳动"></p>
 <hr>
+<blockquote>
+<h1 id="如何实现首行缩进"><a href="#如何实现首行缩进" class="headerlink" title="如何实现首行缩进"></a><div align="left"><strong>如何实现首行缩进</strong></div></h1></blockquote>
+<pre><code>&amp;ensp;这是半方大的空白
+&amp;emsp;这是全方大的空白
+&amp;nbsp;这是不断行的空白</code></pre><div align="left">&ensp;这是半方大的空白
+
+<div align="left">&emsp;这是全方大的空白
+
+<div align="left">&nbsp;这是不断行的空白
+
+<br>
+---
+
+<blockquote>
+<h1 id="如何设置图片居中"><a href="#如何设置图片居中" class="headerlink" title="如何设置图片居中"></a><strong>如何设置图片居中</strong></h1></blockquote>
+<p>在图片标签之前加上<code>&lt;div align=center&gt;</code>标签</p>
+<pre><code>&lt;div align=center&gt;![字节跳动](https://wx1.sinaimg.cn/mw690/007857NYgy1g7z99tuyqbj30hs0hsglq.jpg)</code></pre><div id="1" align="center">![字节跳动](https://wx1.sinaimg.cn/mw690/007857NYgy1g7z99tuyqbj30hs0hsglq.jpg)
+
+<hr>
 <br>
 <br>
 
 <blockquote>
-<h1 id="表格（似乎方法不太成功，还没找到合适的方法）"><a href="#表格（似乎方法不太成功，还没找到合适的方法）" class="headerlink" title="表格（似乎方法不太成功，还没找到合适的方法）"></a><strong>表格</strong>（似乎方法不太成功，还没找到合适的方法）</h1></blockquote>
-<pre><code>表头|表头|表头
----|:--:|---:
-内容|内容|内容
-内容|内容|内容
-
-第二行分割表头和内容。
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a><strong>表格</strong></h1></blockquote>
+<p><img src="https://wx3.sinaimg.cn/small/007857NYly1g8z372kcgrj305104r3ya.jpg" alt="表格的表达方式"></p>
+<table>
+<thead>
+<tr>
+<th align="left">表头</th>
+<th align="center">表头</th>
+<th align="center">表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">内容</td>
+<td align="center">内容</td>
+<td align="center">内容</td>
+</tr>
+<tr>
+<td align="left">内容</td>
+<td align="center">内容</td>
+<td align="center">内容</td>
+</tr>
+</tbody></table>
+<pre><code>第二行分割表头和内容。
 - 有一个就行，为了对齐，多加了几个
 文字默认居左
 -两边加：表示文字居中
 -右边加：表示文字居右
 注：原生的语法两边都要用 | 包起来。</code></pre><hr>
 <br>
-<br>
-># **流程图**
 
-
-
-<hr>
-<br>
+<blockquote>
+<h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a><strong>流程图</strong></h1></blockquote>
+<p>此处留白先，不会用。</p>
 <br>
 ># **分割线**
 
@@ -473,26 +495,6 @@ _   底线
 .   英文句点
 
 !   惊叹号</code></pre><hr>
-<blockquote>
-<h1 id="如何实现首行缩进"><a href="#如何实现首行缩进" class="headerlink" title="如何实现首行缩进"></a><div align="left"><strong>如何实现首行缩进</strong></div></h1></blockquote>
-<pre><code>&amp;ensp;这是半方大的空白
-&amp;emsp;这是全方大的空白
-&amp;nbsp;这是不断行的空白</code></pre><div align="left">&ensp;这是半方大的空白
-
-<div align="left">&emsp;这是全方大的空白
-
-<div align="left">&nbsp;这是不断行的空白
-
-<br>
----
-
-<blockquote>
-<h1 id="如何设置图片居中"><a href="#如何设置图片居中" class="headerlink" title="如何设置图片居中"></a><strong>如何设置图片居中</strong></h1></blockquote>
-<p>在图片标签之前加上<code>&lt;div align=center&gt;</code>标签</p>
-<pre><code>&lt;div align=center&gt;![字节跳动](https://wx1.sinaimg.cn/mw690/007857NYgy1g7z99tuyqbj30hs0hsglq.jpg)</code></pre><div id="1" align="center">![字节跳动](https://wx1.sinaimg.cn/mw690/007857NYgy1g7z99tuyqbj30hs0hsglq.jpg)
-
-
-
 </div></div></div></div>
     </div>
 
@@ -570,7 +572,7 @@ _   底线
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number">2.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题"><span class="nav-number">2.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三级标题"><span class="nav-number">2.1.1.</span> <span class="nav-text">三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#四级标题"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#五级标题"><span class="nav-number">2.1.1.1.1.</span> <span class="nav-text">五级标题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用"><span class="nav-number">3.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#行开头加“点”"><span class="nav-number">4.</span> <span class="nav-text">行开头加“点”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#加上序号"><span class="nav-number">5.</span> <span class="nav-text">加上序号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码块区域：直接点上面的code“-lt-gt-”就可以了；"><span class="nav-number">6.</span> <span class="nav-text">代码块区域：直接点上面的code“&lt;&gt;”就可以了；</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#斜体"><span class="nav-number">7.</span> <span class="nav-text">斜体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#粗体"><span class="nav-number">8.</span> <span class="nav-text">粗体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标记行内小段代码"><span class="nav-number">9.</span> <span class="nav-text">标记行内小段代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自动连接"><span class="nav-number">10.</span> <span class="nav-text">自动连接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#行内链接"><span class="nav-number">11.</span> <span class="nav-text">行内链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图片"><span class="nav-number">12.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表格（似乎方法不太成功，还没找到合适的方法）"><span class="nav-number">13.</span> <span class="nav-text">表格（似乎方法不太成功，还没找到合适的方法）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#转义符号"><span class="nav-number">14.</span> <span class="nav-text">转义符号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何实现首行缩进"><span class="nav-number">15.</span> <span class="nav-text">如何实现首行缩进</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何设置图片居中"><span class="nav-number">16.</span> <span class="nav-text">如何设置图片居中</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number">2.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题"><span class="nav-number">2.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三级标题"><span class="nav-number">2.1.1.</span> <span class="nav-text">三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#四级标题"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#五级标题"><span class="nav-number">2.1.1.1.1.</span> <span class="nav-text">五级标题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用"><span class="nav-number">3.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#行开头加“点”"><span class="nav-number">4.</span> <span class="nav-text">行开头加“点”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#加上序号"><span class="nav-number">5.</span> <span class="nav-text">加上序号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码块区域：直接点上面的code“-lt-gt-”就可以了；"><span class="nav-number">6.</span> <span class="nav-text">代码块区域：直接点上面的code“&lt;&gt;”就可以了；</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#斜体"><span class="nav-number">7.</span> <span class="nav-text">斜体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#粗体"><span class="nav-number">8.</span> <span class="nav-text">粗体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自动连接"><span class="nav-number">9.</span> <span class="nav-text">自动连接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#行内链接"><span class="nav-number">10.</span> <span class="nav-text">行内链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图片"><span class="nav-number">11.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何实现首行缩进"><span class="nav-number">12.</span> <span class="nav-text">如何实现首行缩进</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何设置图片居中"><span class="nav-number">13.</span> <span class="nav-text">如何设置图片居中</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表格"><span class="nav-number">14.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流程图"><span class="nav-number">15.</span> <span class="nav-text">流程图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#转义符号"><span class="nav-number">16.</span> <span class="nav-text">转义符号</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -588,7 +590,7 @@ _   底线
         
           <a href="/archives">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -619,7 +621,9 @@ _   底线
         
           
         
-        <span class="site-state-item-count">8</span>
+          
+        
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>

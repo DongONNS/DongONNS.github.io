@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="多数方程不存在求根公式，因此求精确根非常困难，甚至不可能，从而寻找方程的近似根就显得特别重要，牛顿迭达法就是一种有效的求近似根的方法。">
+  <meta name="description" content="&amp;emsp;正则是一个非常重要的知识点，我在数据库、前端设计、爬虫等中都看到过很多，但是自己没有去刻意学习，每次都是自己去网上搜，今天就建立自己的正则库，方便自己以后翻阅，同时也用于把自己平时见到的一些巧妙的正则表达式往里面塞一塞。">
 <meta name="keywords" content="Java,Python,Big Data">
 <meta property="og:type" content="article">
-<meta property="og:title" content="牛顿迭达法">
-<meta property="og:url" content="http://yoursite.com/2019/10/20/牛顿迭达法/index.html">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="http://yoursite.com/2019/11/15/正则表达式/index.html">
 <meta property="og:site_name" content="残霜晓月">
-<meta property="og:description" content="多数方程不存在求根公式，因此求精确根非常困难，甚至不可能，从而寻找方程的近似根就显得特别重要，牛顿迭达法就是一种有效的求近似根的方法。">
+<meta property="og:description" content="&amp;emsp;正则是一个非常重要的知识点，我在数据库、前端设计、爬虫等中都看到过很多，但是自己没有去刻意学习，每次都是自己去网上搜，今天就建立自己的正则库，方便自己以后翻阅，同时也用于把自己平时见到的一些巧妙的正则表达式往里面塞一塞。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-20T11:23:04.375Z">
+<meta property="og:updated_time" content="2019-11-15T15:17:59.602Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="牛顿迭达法">
-<meta name="twitter:description" content="多数方程不存在求根公式，因此求精确根非常困难，甚至不可能，从而寻找方程的近似根就显得特别重要，牛顿迭达法就是一种有效的求近似根的方法。">
-  <link rel="canonical" href="http://yoursite.com/2019/10/20/牛顿迭达法/">
+<meta name="twitter:title" content="正则表达式">
+<meta name="twitter:description" content="&amp;emsp;正则是一个非常重要的知识点，我在数据库、前端设计、爬虫等中都看到过很多，但是自己没有去刻意学习，每次都是自己去网上搜，今天就建立自己的正则库，方便自己以后翻阅，同时也用于把自己平时见到的一些巧妙的正则表达式往里面塞一塞。">
+  <link rel="canonical" href="http://yoursite.com/2019/11/15/正则表达式/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>牛顿迭达法 | 残霜晓月</title>
+  <title>正则表达式 | 残霜晓月</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -212,7 +212,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/20/牛顿迭达法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/15/正则表达式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dongcheng">
@@ -224,7 +224,7 @@
       <meta itemprop="name" content="残霜晓月">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">牛顿迭达法
+        <h1 class="post-title" itemprop="name headline">正则表达式
 
           
         </h1>
@@ -240,7 +240,7 @@
                 
               
 
-              <time title="创建时间：2019-10-20 09:28:44 / 修改时间：19:23:04" itemprop="dateCreated datePublished" datetime="2019-10-20T09:28:44+08:00">2019-10-20</time>
+              <time title="创建时间：2019-11-15 20:01:15 / 修改时间：23:17:59" itemprop="dateCreated datePublished" datetime="2019-11-15T20:01:15+08:00">2019-11-15</time>
             </span>
           
             
@@ -253,7 +253,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构与算法/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/爬虫/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a></span>
 
                 
                 
@@ -272,88 +272,91 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>多数方程不存在求根公式，因此求精确根非常困难，甚至不可能，从而寻找方程的近似根就显得特别重要，牛顿迭达法就是一种有效的求近似根的方法。</p><a id="more"></a>
-<h1 id="一、问题引入"><a href="#一、问题引入" class="headerlink" title="一、问题引入"></a>一、问题引入</h1><blockquote>
-<p>##实现 int sqrt(int x) 函数。</p>
-</blockquote>
-<blockquote>
-<p>&emsp;&emsp;计算并返回 x 的平方根，其中 x 是非负整数。</p>
-</blockquote>
-<blockquote>
-<p>&emsp;&emsp;由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。</p>
-</blockquote>
-<pre><code>示例 1:
-
-输入: 4
-
-输出: 2</code></pre><br>
-
-<pre><code>示例 2:
-
-输入: 8
-
-输出: 2</code></pre><blockquote>
-<p>&emsp;&emsp;说明: 8 的平方根是 2.82842…, 由于返回类型是整数，小数部分将被舍去</p>
-</blockquote>
-<hr>
-<br>
-
-<p>###此处要求算的是一个数的平方根，所以我们可以很合理的考虑使用<strong>牛顿迭达法</strong>（也称牛顿法或牛顿-拉夫森法）</p>
-<blockquote>
-<p>###一、牛顿法的基本思想：</p>
-</blockquote>
-<p>&emsp;&emsp;通过迭代来实现，每次运算都让结果比之前好一点。</p>
-<p>&emsp;&emsp;哪怕只好一点点，在很多次迭代之后也可以得到一个很好的结果甚至最优或期望的结果。</p>
-<blockquote>
-<p>###二、牛顿法的目的：</p>
-</blockquote>
-<p><strong>&emsp;&emsp;牛顿法就是通过使原方程泰勒展开的一阶近似等于零不断获得更好的结果的求解方程零点的方法。</strong></p>
-<blockquote>
-<p>###三、牛顿迭达法的详解</p>
-</blockquote>
-<ul>
-<li><p>牛顿法是求解方程零点的方法</p>
+        <p>&emsp;正则是一个非常重要的知识点，我在数据库、前端设计、爬虫等中都看到过很多，但是自己没有去刻意学习，每次都是自己去网上搜，今天就建立自己的正则库，方便自己以后翻阅，同时也用于把自己平时见到的一些巧妙的正则表达式往里面塞一塞。</p><a id="more"></a>
+<h3 id="一、什么是正则表达式？"><a href="#一、什么是正则表达式？" class="headerlink" title="一、什么是正则表达式？"></a>一、什么是正则表达式？</h3><p>&emsp;&emsp;正则表达式，又称规则表达式，通常被用来检索、替换那些符合某个模式(规则)的文本。正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。</p>
+<h3 id="二、正则能干嘛？"><a href="#二、正则能干嘛？" class="headerlink" title="二、正则能干嘛？"></a>二、正则能干嘛？</h3><ul>
+<li><p>一是给定的字符串是否符合正则表达式的过滤逻辑（这个过程可称为“匹配”）；</p>
 </li>
-<li><p>牛顿法利用泰勒展开的一阶近似的零点获得更接近真实零点的点</p>
-</li>
-<li><p>牛顿法通过迭代的方法不断的获得更好的解来求得最好的解</p>
+<li><p>二是通过正则表达式，从文本字符串中获取我们想要的特定部分（这个过程可称为“过滤”）。</p>
 </li>
 </ul>
-<div align="center">![函数的泰勒展开](https://wx1.sinaimg.cn/mw690/007857NYly1g84fnxcv24j30yp0himya.jpg)
+<h3 id="三正表达式的语法"><a href="#三正表达式的语法" class="headerlink" title="三正表达式的语法"></a>三正表达式的语法</h3><pre><code>^  表示匹配字符串的开始位置  (例外  用在中括号中[ ] 时,可以理解为取反,表示不匹配括号中字符串)
 
+$  表示匹配字符串的结束位置
 
+*  表示匹配 零次到多次
 
-<p>####<div align="left">具体的图像如下所示：</div></p>
-<div alogn="center">![二次函数迭达求零点](https://wx2.sinaimg.cn/mw690/007857NYly1g84fo1jounj30sc0lygmc.jpg)
++  表示匹配 一次到多次 (至少有一次)
 
-<div align="left"> &emsp;&emsp;图中最右边点为原来猜想的点，然后经过迭达后得到左边的橙色点，这样子逐步逼近到零点。
+?  表示匹配零次或一次
 
-<p>####&emsp;&emsp;当然对于这个公式还有个问题，为什么是一阶导而不是二阶导或者三阶导呢？</p>
-<pre><code>第一是一阶导已经能够满足我们的需求了；
+.  表示匹配单个字符 
 
-第二就是二阶导三阶导不一定存在，而且就算存在计算也会比较麻烦。</code></pre><br>
+|  表示为或者,两项中取一项
 
+(  ) 小括号表示匹配括号中全部字符
 
-<p>###&emsp;&emsp;好了，现在我们已经熟悉牛顿迭达法的原理了，那么解决上述问题就是轻而易举地事情，具体的代码如下：</p>
-<pre><code>class Solution {
-      int s;  
-      public int mySqrt(int x) {
-      s=x;
-      if(x==0) return 0;
-      return ((int)(sqrts(x)));
-      }
+[  ] 中括号表示匹配括号中一个字符 范围描述 如[0-9 a-z A-Z]
 
-public double sqrts(double x){
-      double res = (x + s / x) / 2;
-      if (res == x) {
-          return x;
-      } else {
-          return sqrts(res);
-      }
-   } 
-}</code></pre><p>&emsp;&emsp;根据牛顿迭达法我们知道 <strong><strong><code>x−f(x)/(2x)</code></strong></strong>就是一个比x更准确的的近似值，此处将 <code>f(x)=x^2-a</code> 代入到上述的公式中就得到<code>x−(x^2−a)/(2x)</code>，也就是<code>(x+a/x)/2</code>,(上述的a就是我们要求平方根的2)，循环的结束条件就是我们通过牛顿迭达法得到的值res已经达到稳定了（或者说不再发生变化了）。</p>
-<p>参考博客：<a href="https://blog.csdn.net/Timingspace/article/details/50947250" target="_blank" rel="noopener">牛顿法及牛顿法求解优化问题</a></p>
-</div></div></div>
+{  } 大括号用于限定匹配次数  如 {n}表示匹配n个字符  {n,}表示至少匹配n个字符  {n,m}表示至少n,最多m
+
+\  转义字符 如上基本符号匹配都需要转义字符   如 \*  表示匹配*号
+
+\w 表示英文字母和数字
+
+\W  非字母和数字
+
+\d  表示数字
+
+\D  非数字</code></pre><h3 id="四、常用的正则表达式"><a href="#四、常用的正则表达式" class="headerlink" title="四、常用的正则表达式"></a>四、常用的正则表达式</h3><p>常用的正则表达式(转)<br>匹配中文字符的正则表达式： <code>[\u4e00-\u9fa5]</code></p>
+<p>匹配双字节字符(包括汉字在内)：<code>[^\x00-\xff]</code></p>
+<p>匹配空行的正则表达式：<code>\n[\s| ]*\r</code></p>
+<p>匹配HTML标记的正则表达式：<code>/&lt;(.*)&gt;.*&lt;\/\1&gt;|&lt;(.*) \/&gt;/</code> </p>
+<p>匹配首尾空格的正则表达式：<code>(^\s*)|(\s*$)</code></p>
+<p>匹配IP地址的正则表达式：<code>/(\d+)\.(\d+)\.(\d+)\.(\d+)/g //</code></p>
+<p>匹配Email地址的正则表达式：<code>\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</code></p>
+<p>匹配网址URL的正则表达式：<code>http://(/[\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?</code></p>
+<p>sql语句：<code>^(select|drop|delete|create|update|insert).*$</code></p>
+<p>1、非负整数：<code>^\d+$</code></p>
+<p>2、正整数：<code>^[0-9]*[1-9][0-9]*$</code></p>
+<p>3、非正整数：<code>^((-\d+)|(0+))$</code></p>
+<p>4、负整数：<code>^-[0-9]*[1-9][0-9]*$</code> </p>
+<p>5、整数：<code>^-?\d+$</code> </p>
+<p>6、非负浮点数：<code>^\d+(\.\d+)?$</code></p>
+<p>7、正浮点数：<code>^((0-9)+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$</code></p>
+<p>8、非正浮点数：<code>^((-\d+\.\d+)?)|(0+(\.0+)?))$</code></p>
+<p>9、负浮点数：<code>^(-((正浮点数正则式)))$</code></p>
+<p>10、英文字符串：<code>^[A-Za-z]+$</code> </p>
+<p>11、英文大写串：<code>^[A-Z]+$</code> </p>
+<p>12、英文小写串：<code>^[a-z]+$</code> </p>
+<p>13、英文字符数字串：<code>^[A-Za-z0-9]+$</code></p>
+<p>14、英数字加下划线串：<code>^\w+$</code></p>
+<p>15、E-mail地址：<code>^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$</code></p>
+<p>16、URL：<code>^[a-zA-Z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\s*)?$</code><br>或：<code>^http:\/\/[A-Za-z0-9]+\.[A-Za-z0-9]+[\/=\?%\-&amp;_~</code>@[]&#39;:+!]<em>([^&lt;&gt;&quot;&quot;])</em>$`</p>
+<p>17、邮政编码：<code>^[1-9]\d{5}$</code></p>
+<p>18、中文：<code>^[\u0391-\uFFE5]+$</code></p>
+<p>19、电话号码：<code>^((\d2,3)|(\d{3}\-))?(0\d2,3|0\d{2,3}-)?[1-9]\d{6,7}(\-\d{1,4})?$</code></p>
+<p>20、手机号码：<code>^((\d2,3)|(\d{3}\-))?13\d{9}$</code></p>
+<p>21、双字节字符(包括汉字在内)：<code>^\x00-\xff</code></p>
+<p>22、匹配首尾空格：<code>(^\s*)|(\s*$)</code>（像vbscript那样的trim函数）</p>
+<p>23、匹配HTML标记：<code>&lt;(.*)&gt;.*&lt;\/\1&gt;|&lt;(.*) \/&gt;</code></p>
+<p>24、匹配空行：<code>\n[\s| ]*\r</code></p>
+<p>25、提取信息中的网络链接：<code>(h|H)(r|R)(e|E)(f|F) *= *(&#39;|&quot;)?(\w|\\|\/|\.)+(&#39;|&quot;| *|&gt;)?</code></p>
+<p>26、提取信息中的邮件地址：<code>\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</code></p>
+<p>27、提取信息中的图片链接：<code>(s|S)(r|R)(c|C) *= *(&#39;|&quot;)?(\w|\\|\/|\.)+(&#39;|&quot;| *|&gt;)?</code></p>
+<p>28、提取信息中的IP地址：<code>(\d+)\.(\d+)\.(\d+)\.(\d+)</code></p>
+<p>29、提取信息中的中国手机号码：<code>(86)*0*13\d{9}</code></p>
+<p>30、提取信息中的中国固定电话号码：<code>(\d3,4|\d{3,4}-|\s)?\d{8}</code></p>
+<p>31、提取信息中的中国电话号码（包括移动和固定电话）：<code>(\d3,4|\d{3,4}-|\s)?\d{7,14}</code></p>
+<p>32、提取信息中的中国邮政编码：<code>[1-9]{1}(\d+){5}</code></p>
+<p>33、提取信息中的浮点数（即小数）：<code>(-?\d*)\.?\d+</code></p>
+<p>34、提取信息中的任何数字 ：<code>(-?\d*)(\.\d+)?</code> </p>
+<p>35、IP：<code>(\d+)\.(\d+)\.(\d+)\.(\d+)</code></p>
+<p>36、电话区号：<code>/^0\d{2,3}$/</code></p>
+<p>37、腾讯QQ号：<code>^[1-9]*[1-9][0-9]*$</code></p>
+<p>38、帐号(字母开头，允许5-16字节，允许字母数字下划线)：<code>^[a-zA-Z][a-zA-Z0-9_]{4,15}$</code></p>
+<p>39、中文、英文、数字及下划线：<code>^[\u4e00-\u9fa5_a-zA-Z0-9]+$</code></p>
+
     </div>
 
     
@@ -369,8 +372,8 @@ public double sqrts(double x){
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/10/20/Daily-Plan/" rel="next" title="Daily Plan">
-                  <i class="fa fa-chevron-left"></i> Daily Plan
+                <a href="/2019/11/13/springboot2——Metrics/" rel="next" title="springboot2——Metrics">
+                  <i class="fa fa-chevron-left"></i> springboot2——Metrics
                 </a>
               
             </div>
@@ -378,10 +381,6 @@ public double sqrts(double x){
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/10/20/Linux笔记/" rel="prev" title="Linux笔记">
-                  Linux笔记 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -430,7 +429,7 @@ public double sqrts(double x){
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、问题引入"><span class="nav-number">1.</span> <span class="nav-text">一、问题引入</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、什么是正则表达式？"><span class="nav-number">1.</span> <span class="nav-text">一、什么是正则表达式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、正则能干嘛？"><span class="nav-number">2.</span> <span class="nav-text">二、正则能干嘛？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三正表达式的语法"><span class="nav-number">3.</span> <span class="nav-text">三正表达式的语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、常用的正则表达式"><span class="nav-number">4.</span> <span class="nav-text">四、常用的正则表达式</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
