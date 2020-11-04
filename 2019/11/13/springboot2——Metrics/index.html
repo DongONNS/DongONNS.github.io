@@ -1,308 +1,181 @@
-<!DOCTYPE html>
-
-
-
-
-
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
-
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
-
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
-
-  <meta name="description" content="Metrics&amp;emsp;&amp;emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prometh">
-<meta name="keywords" content="Java,Python,Big Data">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>springboot2——Metrics | Dongonns</title><meta name="keywords" content="Java,Python,Big Data"><meta name="author" content="Dongcheng"><meta name="copyright" content="Dongcheng"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="Metrics&amp;emsp;&amp;emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prometh">
 <meta property="og:type" content="article">
 <meta property="og:title" content="springboot2——Metrics">
-<meta property="og:url" content="http://yoursite.com/2019/11/13/springboot2——Metrics/index.html">
-<meta property="og:site_name" content="残霜晓月">
+<meta property="og:url" content="http://yoursite.com/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/index.html">
+<meta property="og:site_name" content="Dongonns">
 <meta property="og:description" content="Metrics&amp;emsp;&amp;emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prometh">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-13T12:58:57.430Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2019-11-13T12:49:11.000Z">
+<meta property="article:modified_time" content="2019-11-13T12:58:57.430Z">
+<meta property="article:author" content="Dongcheng">
+<meta property="article:tag" content="Java,Python,Big Data">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="springboot2——Metrics">
-<meta name="twitter:description" content="Metrics&amp;emsp;&amp;emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prometh">
-  <link rel="canonical" href="http://yoursite.com/2019/11/13/springboot2——Metrics/">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
 
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
-  };
-</script>
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
 
-  <title>springboot2——Metrics | 残霜晓月</title>
-  <meta name="generator" content="Hexo 3.9.0">
-  
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
 
-
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2019-11-13 20:58:57'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-  <div class="container use-motion">
-    <div class="headband">
-		<a href="https://github.com/DongONNS" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-	</div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">残霜晓月</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-        <p class="site-subtitle">许韶华不负，愿来日可期！</p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-
-<nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
-        <li class="menu-item menu-item-home">
-      
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>首页</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-categories">
-      
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-archives">
-      
-    
-
-    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>归档</a>
-
-  </li>
-  </ul>
-
-    
-
-</nav>
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-      <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/13/springboot2——Metrics/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Dongcheng">
-      <meta itemprop="description" content="Master record">
-      <meta itemprop="image" content="/images/header.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="残霜晓月">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">springboot2——Metrics
-
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-11-13 20:49:11 / 修改时间：20:58:57" itemprop="dateCreated datePublished" datetime="2019-11-13T20:49:11+08:00">2019-11-13</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Monitor-System/" itemprop="url" rel="index"><span itemprop="name">Monitor System</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <h1 id="Metrics"><a href="#Metrics" class="headerlink" title="Metrics"></a>Metrics</h1><p>&emsp;&emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prometheus、SignalFx、Simple (in-memory)、StatsD、Wavefront。</p><a id="more"></a>
-<p>&emsp;&emsp;要了解有关Micrometer功能的更多信息，请参阅其参考文档，特别是<a href="https://dongonns.github.io/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" target="_blank" rel="noopener">概念</a>部分。</p>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Dongonns" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Dongonns</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">springboot2——Metrics</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-11-13T12:49:11.000Z" title="发表于 2019-11-13 20:49:11">2019-11-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2019-11-13T12:58:57.430Z" title="更新于 2019-11-13 20:58:57">2019-11-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Monitor-System/">Monitor System</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Metrics"><a href="#Metrics" class="headerlink" title="Metrics"></a>Metrics</h1><p>&emsp;&emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prometheus、SignalFx、Simple (in-memory)、StatsD、Wavefront。</p>
+<p>&emsp;&emsp;要了解有关Micrometer功能的更多信息，请参阅其参考文档，特别是<a target="_blank" rel="noopener" href="https://dongonns.github.io/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/">概念</a>部分。</p>
 <hr>
 <h2 id="1-入门"><a href="#1-入门" class="headerlink" title="1 入门"></a>1 入门</h2><p>&emsp;&emsp;Spring Boot自动配置组合MeterRegistry，并为其在类路径上找到的每个支持的实现向组合添加注册表。在micrometer-registry-{system}运行时类路径中具有依赖项足以让Spring Boot配置注册表。</p>
 <p>&emsp;&emsp;大多数注册表具有共同的特征。例如，即使Micrometer注册表实现位于类路径中，您也可以禁用特定的注册表。例如，禁用Datadog：</p>
 <pre><code>management.metrics.export.datadog.enabled=false</code></pre><p>&emsp;&emsp;Spring Boot还会将任何自动配置的注册表添加到Metrics该类的全局静态复合注册表中，除非您明确告诉它不要：</p>
 <pre><code>management.metrics.use-global-registry=false</code></pre><p>&emsp;&emsp;您可以注册任意数量的MeterRegistryCustomizerbean来进一步配置注册表，例如在向注册表注册任何计量器(meter)之前应用通用标签：</p>
 <pre><code>@Bean
-MeterRegistryCustomizer&lt;MeterRegistry&gt; metricsCommonTags() {
+MeterRegistryCustomizer&lt;MeterRegistry&gt; metricsCommonTags() &#123;
     return registry -&gt; registry.config().commonTags(&quot;region&quot;, &quot;us-east-1&quot;);
-}</code></pre><p>&emsp;&emsp;您可以通过更具体地了解通用类型，将自定义项应用于特定的注册表实现：</p>
+&#125;</code></pre><p>&emsp;&emsp;您可以通过更具体地了解通用类型，将自定义项应用于特定的注册表实现：</p>
 <pre><code>@Bean
-MeterRegistryCustomizer&lt;GraphiteMeterRegistry&gt; graphiteMetricsNamingConvention() {
+MeterRegistryCustomizer&lt;GraphiteMeterRegistry&gt; graphiteMetricsNamingConvention() &#123;
     return registry -&gt; registry.config().namingConvention(MY_CUSTOM_CONVENTION);
-}</code></pre><p>&emsp;&emsp;完成该设置后，您可以注入MeterRegistry组件并注册指标：</p>
+&#125;</code></pre><p>&emsp;&emsp;完成该设置后，您可以注入MeterRegistry组件并注册指标：</p>
 <pre><code>@Component
-public class SampleBean {
+public class SampleBean &#123;
 
     private final Counter counter;
 
-    public SampleBean(MeterRegistry registry) {
+    public SampleBean(MeterRegistry registry) &#123;
         this.counter = registry.counter(&quot;received.messages&quot;);
-}
+&#125;
 
-public void handleMessage(String message) {
+public void handleMessage(String message) &#123;
     this.counter.increment();
     // handle message implementation
-    }
-}</code></pre><p>&emsp;&emsp;Spring Boot还配置了<a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-metrics-meter" target="_blank" rel="noopener">内置工具</a>（即MeterBinder实现），您可以通过配置或专用注释标记来控制它们。</p>
+    &#125;
+&#125;</code></pre><p>&emsp;&emsp;Spring Boot还配置了<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-metrics-meter">内置工具</a>（即MeterBinder实现），您可以通过配置或专用注释标记来控制它们。</p>
 <h2 id="2-支持的监控系统–Prometheus"><a href="#2-支持的监控系统–Prometheus" class="headerlink" title="2 支持的监控系统–Prometheus"></a>2 支持的监控系统–Prometheus</h2><p>&emsp;&emsp;Prometheus希望抓取或轮询单个应用程序实例以获取指标。Spring Boot提供了一个可用的执行器端点/actuator/prometheus以适当的格式显示Prometheus抓取。</p>
-<p>&emsp;&emsp;端点默认情况下不可用，必须公开，有关更多详细信息，请参见<a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-endpoints-exposing-endpoints" target="_blank" rel="noopener">暴露端点</a>。</p>
+<p>&emsp;&emsp;端点默认情况下不可用，必须公开，有关更多详细信息，请参见<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-endpoints-exposing-endpoints">暴露端点</a>。</p>
 <p>&emsp;&emsp;这是scrape_config要添加到的示例prometheus.yml：</p>
 <pre><code>scrape_configs:
   - job_name: &apos;spring&apos;
@@ -338,19 +211,19 @@ public void handleMessage(String message) {
 </li>
 </ul>
 <ul>
-<li><a href="https://docs.spring.io/spring-integration/docs/5.2.1.RELEASE/reference/html/system-management.html#micrometer-integration" target="_blank" rel="noopener">Spring集成指标</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-integration/docs/5.2.1.RELEASE/reference/html/system-management.html#micrometer-integration">Spring集成指标</a></li>
 </ul>
 <h3 id="Spring-MVC指标"><a href="#Spring-MVC指标" class="headerlink" title="Spring MVC指标"></a>Spring MVC指标</h3><p>&emsp;&emsp;通过自动配置，可以检测由Spring MVC处理的请求。当management.metrics.web.server.request.autotime.enabled为true时，将对所有请求进行这种检测。或者，当设置为false时，可以通过添加@Timed到请求处理方法来启用检测：</p>
 <pre><code>@RestController
 @Timed 
-public class MyController {
+public class MyController &#123;
 
     @GetMapping(&quot;/api/people&quot;)
-    @Timed(extraTags = { &quot;region&quot;, &quot;us-east-1&quot; }) 
+    @Timed(extraTags = &#123; &quot;region&quot;, &quot;us-east-1&quot; &#125;) 
     @Timed(value = &quot;all.people&quot;, longTask = true) 
-    public List&lt;Person&gt; listPeople() { ... }
+    public List&lt;Person&gt; listPeople() &#123; ... &#125;
 
-}</code></pre><p>&emsp;&emsp;1.控制器类，用于对控制器中的每个请求处理程序启用计时。</p>
+&#125;</code></pre><p>&emsp;&emsp;1.控制器类，用于对控制器中的每个请求处理程序启用计时。</p>
 <p>&emsp;&emsp;2.一种启用单个端点的方法。如果您将它放在类中，则不必这样做，但是可以用于进一步为此特定端点自定义timer计时器。</p>
 <p>&emsp;&emsp;3.一种longTask = true用于为该方法启用长任务计时器的方法。长任务计时器需要一个单独的度量metric名称，并且可以与短任务计时器堆叠在一起。</p>
 <p>&emsp;&emsp;默认情况下，指标名称为http.server.requests。可以通过设置management.metrics.web.server.request.metric-name属性来自定义名称。</p>
@@ -442,24 +315,24 @@ public class MyController {
 <p>&emsp;&emsp;默认情况下，Spring Boot为所有支持的数据源提供元数据。如果您喜欢的数据源不支持开箱即用，则可以添加其他DataSourcePoolMetadataProvider组件。请参阅DataSourcePoolMetadataProvidersConfiguration示例。</p>
 <p>&emsp;&emsp;此外，Hikari特定指标带有hikaricp前缀。每个度量标准都以“池”的名称标记（可以通过来控制spring.datasource.name）。</p>
 <h2 id="4-注册自定义指标"><a href="#4-注册自定义指标" class="headerlink" title="4 注册自定义指标"></a>4 注册自定义指标</h2><p>&emsp;&emsp;要注册自定义指标，请插入MeterRegistry到您的组件中，如以下示例所示：</p>
-<pre><code>class Dictionary {
+<pre><code>class Dictionary &#123;
 
     private final List&lt;String&gt; words = new CopyOnWriteArrayList&lt;&gt;();
 
-    Dictionary(MeterRegistry registry) {
+    Dictionary(MeterRegistry registry) &#123;
         registry.gaugeCollectionSize(&quot;dictionary.size&quot;, Tags.empty(), this.words);
-    }
+    &#125;
 
     // …
 
-}</code></pre><p>&emsp;&emsp;如果发现您反复在组件或应用程序中检测一组metrics，则可以将此组metrics封装在MeterBinder实现中。默认情况下，所有MeterBinderbean的metrics都将自动绑定到Spring-managed MeterRegistry。</p>
+&#125;</code></pre><p>&emsp;&emsp;如果发现您反复在组件或应用程序中检测一组metrics，则可以将此组metrics封装在MeterBinder实现中。默认情况下，所有MeterBinderbean的metrics都将自动绑定到Spring-managed MeterRegistry。</p>
 <h2 id="5-自定义单个指标"><a href="#5-自定义单个指标" class="headerlink" title="5 自定义单个指标"></a>5 自定义单个指标</h2><p>&emsp;&emsp;如果需要将自定义应用于特定Meter实例，则可以使用该io.micrometer.core.instrument.config.MeterFilter接口。默认情况下，所有MeterFilter组件都会自动应用于MicroMeter的MeterRegistry.Config。</p>
 <p>&emsp;&emsp;例如，如果要将所有仪表ID中以com.example开头的mytag.region标签重命名为mytag.area，则可以执行以下操作：</p>
 <pre><code>@Bean
 
-public MeterFilter renameRegionTagMeterFilter() {
+public MeterFilter renameRegionTagMeterFilter() &#123;
     return MeterFilter.renameTag(&quot;com.example&quot;, &quot;mytag.region&quot;, &quot;mytag.area&quot;);
-}</code></pre><h3 id="通用标签"><a href="#通用标签" class="headerlink" title="通用标签"></a>通用标签</h3><p>&emsp;&emsp;通用标签通常用于在操作环境，如主机，实例，区域，堆栈等，进行维度深入分析。通用标签适用于所有仪表，并可以按以下示例所示进行配置：</p>
+&#125;</code></pre><h3 id="通用标签"><a href="#通用标签" class="headerlink" title="通用标签"></a>通用标签</h3><p>&emsp;&emsp;通用标签通常用于在操作环境，如主机，实例，区域，堆栈等，进行维度深入分析。通用标签适用于所有仪表，并可以按以下示例所示进行配置：</p>
 <pre><code>management.metrics.tags.region=us-east-1
 management.metrics.tags.stack=prod</code></pre><p>&emsp;&emsp;上面的示例将us-east-1和prod分别添加到region和stack到所有仪表。</p>
 <p>如果使用Graphite，则常用标签的顺序很重要。由于使用这种方法不能保证通用标签的顺序，因此建议Graphite用户定义一个自定义MeterFilter。</p>
@@ -494,235 +367,10 @@ management.metrics.tags.stack=prod</code></pre><p>&emsp;&emsp;上面的示例将
 <td align="center">发布包含您的SLA定义的存储桶的累积直方图</td>
 </tr>
 </tbody></table>
-<p>&emsp;&emsp;有关percentiles-histogram，percentiles并sla概念更多的细节，请参阅“<a href="https://micrometer.io/docs/concepts#_histograms_and_percentiles" target="_blank" rel="noopener">Histogram and percentiles</a>”部分文档。</p>
-<h2 id="6-指标端点"><a href="#6-指标端点" class="headerlink" title="6 指标端点"></a>6 指标端点</h2><p>&emsp;&emsp;Spring Boot提供了一个metrics端点，可用于诊断检查应用程序收集的指标。端点默认情况下不可用，必须公开，有关更多详细信息，请参见<a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-endpoints-exposing-endpoints" target="_blank" rel="noopener">暴露端点</a>。</p>
+<p>&emsp;&emsp;有关percentiles-histogram，percentiles并sla概念更多的细节，请参阅“<a target="_blank" rel="noopener" href="https://micrometer.io/docs/concepts#_histograms_and_percentiles">Histogram and percentiles</a>”部分文档。</p>
+<h2 id="6-指标端点"><a href="#6-指标端点" class="headerlink" title="6 指标端点"></a>6 指标端点</h2><p>&emsp;&emsp;Spring Boot提供了一个metrics端点，可用于诊断检查应用程序收集的指标。端点默认情况下不可用，必须公开，有关更多详细信息，请参见<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-endpoints-exposing-endpoints">暴露端点</a>。</p>
 <p>&emsp;&emsp;路径 /actuator/metrics 展示可用meter名称的列表。您可以通过提供特定的meter名称作为选择器来向下浏览以查看有关该仪表的信息,例如:/actuator/metrics/jvm.memory.max。</p>
 <p>&emsp;&emsp;您在此处使用的名称应与代码中使用的名称相匹配，而不是已经针对监视系统进行了命名约定标准化后的名称。</p>
 <p>&emsp;&emsp;您还可以tag=KEY:VALUE在URL的末尾添加任意数量的查询参数，以在维度上进一步细分meter，例如/actuator/metrics/jvm.memory.max?tag=area:nonheap。</p>
 <p>&emsp;&emsp;报告的测量值是与仪表名称和已应用的任何标签相匹配的所有仪表的统计信息的总和。因此，在上面的示例中，返回的“值”统计量是堆的“代码缓存”，“压缩类空间”和“元空间”区域的最大内存占用量的总和。如果您只想查看“ Metaspace”的最大大小，则可以添加一个额外的tag=id:Metaspace，即/actuator/metrics/jvm.memory.max?tag=area:nonheap&amp;tag=id:Metaspace。</p>
-
-    </div>
-
-    
-    
-    
-        
-      
-
-      <footer class="post-footer">
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-              
-                <a href="/2019/11/12/java基础-基本数据类型/" rel="next" title="java基础--基本数据类型">
-                  <i class="fa fa-chevron-left"></i> java基础--基本数据类型
-                </a>
-              
-            </div>
-
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/11/15/正则表达式/" rel="prev" title="正则表达式">
-                  正则表达式 <i class="fa fa-chevron-right"></i>
-                </a>
-              
-            </div>
-          </div>
-        
-      </footer>
-    
-  </div>
-  
-  
-  
-  </article>
-
-  </div>
-
-
-          </div>
-          
-
-        </div>
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-        
-        
-        
-        
-      
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Metrics"><span class="nav-number">1.</span> <span class="nav-text">Metrics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-入门"><span class="nav-number">1.1.</span> <span class="nav-text">1 入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-支持的监控系统–Prometheus"><span class="nav-number">1.2.</span> <span class="nav-text">2 支持的监控系统–Prometheus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-支持的指标"><span class="nav-number">1.3.</span> <span class="nav-text">3 支持的指标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-MVC指标"><span class="nav-number">1.3.1.</span> <span class="nav-text">Spring MVC指标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP客户端指标"><span class="nav-number">1.4.</span> <span class="nav-text">HTTP客户端指标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存指标"><span class="nav-number">1.4.1.</span> <span class="nav-text">缓存指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据源指标"><span class="nav-number">1.4.2.</span> <span class="nav-text">数据源指标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-注册自定义指标"><span class="nav-number">1.5.</span> <span class="nav-text">4 注册自定义指标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-自定义单个指标"><span class="nav-number">1.6.</span> <span class="nav-text">5 自定义单个指标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通用标签"><span class="nav-number">1.6.1.</span> <span class="nav-text">通用标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Per-meter属性"><span class="nav-number">1.6.2.</span> <span class="nav-text">Per-meter属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-指标端点"><span class="nav-number">1.7.</span> <span class="nav-text">6 指标端点</span></a></li></ol></li></ol></div>
-        
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image"
-      src="/images/header.jpg"
-      alt="Dongcheng">
-  <p class="site-author-name" itemprop="name">Dongcheng</p>
-  <div class="site-description" itemprop="description">Master record</div>
-</div>
-  <nav class="site-state motion-element">
-      <div class="site-state-item site-state-posts">
-        
-          <a href="/archives">
-        
-          <span class="site-state-item-count">15</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-categories">
-        
-          
-            <a href="/categories/">
-          
-        
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">分类</span>
-        </a>
-      </div>
-    
-  </nav>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Dongcheng</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-  </div>
-
-  
-
-
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
-<script src="/js/schemes/muse.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-
-
-</body>
-</html>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Dongcheng</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/">http://yoursite.com/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com" target="_blank">Dongonns</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/11/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">正则表达式</div></div></a></div><div class="next-post pull-right"><a href="/2019/11/12/java%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">java基础--基本数据类型</div></div></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Dongcheng</div><div class="author-info__description">Master record</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Metrics"><span class="toc-number">1.</span> <span class="toc-text">Metrics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%85%A5%E9%97%A8"><span class="toc-number">1.1.</span> <span class="toc-text">1 入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%94%AF%E6%8C%81%E7%9A%84%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F%E2%80%93Prometheus"><span class="toc-number">1.2.</span> <span class="toc-text">2 支持的监控系统–Prometheus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%94%AF%E6%8C%81%E7%9A%84%E6%8C%87%E6%A0%87"><span class="toc-number">1.3.</span> <span class="toc-text">3 支持的指标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-MVC%E6%8C%87%E6%A0%87"><span class="toc-number">1.3.1.</span> <span class="toc-text">Spring MVC指标</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8C%87%E6%A0%87"><span class="toc-number">1.4.</span> <span class="toc-text">HTTP客户端指标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%93%E5%AD%98%E6%8C%87%E6%A0%87"><span class="toc-number">1.4.1.</span> <span class="toc-text">缓存指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%BA%90%E6%8C%87%E6%A0%87"><span class="toc-number">1.4.2.</span> <span class="toc-text">数据源指标</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%B3%A8%E5%86%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E6%A0%87"><span class="toc-number">1.5.</span> <span class="toc-text">4 注册自定义指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8D%95%E4%B8%AA%E6%8C%87%E6%A0%87"><span class="toc-number">1.6.</span> <span class="toc-text">5 自定义单个指标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E7%94%A8%E6%A0%87%E7%AD%BE"><span class="toc-number">1.6.1.</span> <span class="toc-text">通用标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Per-meter%E5%B1%9E%E6%80%A7"><span class="toc-number">1.6.2.</span> <span class="toc-text">Per-meter属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%8C%87%E6%A0%87%E7%AB%AF%E7%82%B9"><span class="toc-number">1.7.</span> <span class="toc-text">6 指标端点</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2019/11/16/Springboot%E5%AD%A6%E4%B9%A0/" title="Springboot学习"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Springboot学习"/></a><div class="content"><a class="title" href="/2019/11/16/Springboot%E5%AD%A6%E4%B9%A0/" title="Springboot学习">Springboot学习</a><time datetime="2019-11-16T14:17:43.000Z" title="发表于 2019-11-16 22:17:43">2019-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式"/></a><div class="content"><a class="title" href="/2019/11/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">正则表达式</a><time datetime="2019-11-15T12:01:15.000Z" title="发表于 2019-11-15 20:01:15">2019-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/" title="springboot2——Metrics"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="springboot2——Metrics"/></a><div class="content"><a class="title" href="/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/" title="springboot2——Metrics">springboot2——Metrics</a><time datetime="2019-11-13T12:49:11.000Z" title="发表于 2019-11-13 20:49:11">2019-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/12/java%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="java基础--基本数据类型"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java基础--基本数据类型"/></a><div class="content"><a class="title" href="/2019/11/12/java%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="java基础--基本数据类型">java基础--基本数据类型</a><time datetime="2019-11-12T14:54:49.000Z" title="发表于 2019-11-12 22:54:49">2019-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" title="MicroMeter基础概念"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MicroMeter基础概念"/></a><div class="content"><a class="title" href="/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" title="MicroMeter基础概念">MicroMeter基础概念</a><time datetime="2019-11-12T14:41:32.000Z" title="发表于 2019-11-12 22:41:32">2019-11-12</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By Dongcheng</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
