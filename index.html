@@ -1,165 +1,336 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dongonns - To change the fate of the first to change their own.</title><meta name="keywords" content="Java,Python,Big Data"><meta name="author" content="Dongcheng"><meta name="copyright" content="Dongcheng"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="Master record">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Master record">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Dongonns">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Dongonns">
 <meta property="og:description" content="Master record">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/null">
 <meta property="article:author" content="Dongcheng">
 <meta property="article:tag" content="Java,Python,Big Data">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/null"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  ClickShowText: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  justifiedGallery: {
-    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isanchor: false
-};
 
-var saveToLocal = {
-  set: function setWithExpiry(key, value, ttl) {
-    const now = new Date()
-    const expiryDay = ttl * 86400000
-    const item = {
-      value: value,
-      expiry: now.getTime() + expiryDay,
-    }
-    localStorage.setItem(key, JSON.stringify(item))
-  },
+<link rel="canonical" href="http://yoursite.com/">
 
-  get: function getWithExpiry(key) {
-    const itemStr = localStorage.getItem(key)
 
-    if (!itemStr) {
-      return undefined
-    }
-    const item = JSON.parse(itemStr)
-    const now = new Date()
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
 
-    if (now.getTime() > item.expiry) {
-      localStorage.removeItem(key)
-      return undefined
-    }
-    return item.value
-  }
-}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2020-11-04 21:42:31'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
+  <title>Dongonns</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
   }
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(function () {  window.activateDarkMode = function () {
-    document.documentElement.setAttribute('data-theme', 'dark')
-    if (document.querySelector('meta[name="theme-color"]') !== null) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-    }
-  }
-  window.activateLightMode = function () {
-    document.documentElement.setAttribute('data-theme', 'light')
-   if (document.querySelector('meta[name="theme-color"]') !== null) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-    }
-  }
-  const autoChangeMode = 'false'
-  const t = saveToLocal.get('theme')
-  if (autoChangeMode === '1') {
-    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
-    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
-    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
-    if (t === undefined) {
-      if (isLightMode) activateLightMode()
-      else if (isDarkMode) activateDarkMode()
-      else if (isNotSpecified || hasNoSupport) {
-        const now = new Date()
-        const hour = now.getHours()
-        const isNight = hour <= 6 || hour >= 18
-        isNight ? activateDarkMode() : activateLightMode()
-      }
-      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-        if (saveToLocal.get('theme') === undefined) {
-          e.matches ? activateDarkMode() : activateLightMode()
-        }
-      })
-    } else if (t === 'light') activateLightMode()
-    else activateDarkMode()
-  } else if (autoChangeMode === '2') {
-    const now = new Date()
-    const hour = now.getHours()
-    const isNight = hour <= 6 || hour >= 18
-    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
-    else if (t === 'light') activateLightMode()
-    else activateDarkMode()
-  } else {
-    if (t === 'dark') activateDarkMode()
-    else if (t === 'light') activateLightMode()
-  }const asideStatus = saveToLocal.get('aside-status')
-if (asideStatus !== undefined) {
-   if (asideStatus === 'hide') {
-     document.documentElement.classList.add('hide-aside')
-   } else {
-     document.documentElement.classList.remove('hide-aside')
-   }
-}})()</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Dongonns" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Dongonns</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">Dongonns</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/11/16/Springboot%E5%AD%A6%E4%B9%A0/" title="Springboot学习">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Springboot学习"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/16/Springboot%E5%AD%A6%E4%B9%A0/" title="Springboot学习">Springboot学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-16T14:17:43.000Z" title="发表于 2019-11-16 22:17:43">2019-11-16</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/springboot/">springboot</a></span></div><div class="content">@PoatConstruct有什么作用PostConstruct注释用于在完成依赖项注入以执行任何初始化之后需要执行的方法。必须在类投入使用之前调用此方法。
-所有支持依赖注入的类都必须支持此注释。即使类没有请求注入任何资源，也必须调用使用PostConstruct注释的方法。
-只有一个方法可以使用此批注进行批注。
-应用PostConstruct注释的方法必须满足以下所有条件：除了拦截器之外，方法绝不能有任何参数，在这种情况下它采用Interceptor规范定义的InvocationContext对象。
-在拦截器类上定义的方法必须具有以下签名之一：
-void （InvocationContext）Object （InvocationContext）抛出异常注意：PostConstruct拦截器方法不能抛出应用程序异常，但可以声明它抛出检查异常，包括java.lang.Exception，
-如果相同的拦截器方法除了生命周期事件之外插入业务或超时方法。
-如果PostConstruct拦截器方法返回一个值，容器将忽略它。
-在非拦截器类上定义的方法必须具有以下签名：void （）应用PostCo ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/11/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">正则表达式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-15T12:01:15.000Z" title="发表于 2019-11-15 20:01:15">2019-11-15</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a></span></div><div class="content">&emsp;正则是一个非常重要的知识点，我在数据库、前端设计、爬虫等中都看到过很多，但是自己没有去刻意学习，每次都是自己去网上搜，今天就建立自己的正则库，方便自己以后翻阅，同时也用于把自己平时见到的一些巧妙的正则表达式往里面塞一塞。
-一、什么是正则表达式？&emsp;&emsp;正则表达式，又称规则表达式，通常被用来检索、替换那些符合某个模式(规则)的文本。正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。
-二、正则能干嘛？
-一是给定的字符串是否符合正则表达式的过滤逻辑（这个过程可称为“匹配”）；
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-二是通过正则表达式，从文本字符串中获取我们想要的特定部分（这个过程可称为“过滤”）。
+<link rel="alternate" href="/atom.xml" title="Dongonns" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Dongonns</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">To change the fate of the first to change their own.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
 
 
-三正表达式的语法^  表示匹配字符串的开始位置  (例外  用在中括号中[ ] 时,可以理解为取反,表示不匹配括号中字符串)
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/16/Springboot%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/16/Springboot%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Springboot学习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-16 22:17:43 / 修改时间：22:22:55" itemprop="dateCreated datePublished" datetime="2019-11-16T22:17:43+08:00">2019-11-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/springboot/" itemprop="url" rel="index"><span itemprop="name">springboot</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="PoatConstruct有什么作用"><a href="#PoatConstruct有什么作用" class="headerlink" title="@PoatConstruct有什么作用"></a>@PoatConstruct有什么作用</h2><p>PostConstruct注释用于在完成依赖项注入以执行任何初始化之后需要执行的方法。必须在类投入使用之前调用此方法。</p>
+<p>所有支持依赖注入的类都必须支持此注释。即使类没有请求注入任何资源，也必须调用使用PostConstruct注释的方法。</p>
+<p>只有一个方法可以使用此批注进行批注。</p>
+<p>应用PostConstruct注释的方法必须满足以下所有条件：除了拦截器之外，方法绝不能有任何参数，在这种情况下它采用Interceptor规范定义的InvocationContext对象。</p>
+<p>在拦截器类上定义的方法必须具有以下签名之一：</p>
+<p>void <METHOD>（InvocationContext）Object <METHOD>（InvocationContext）抛出异常注意：<br>PostConstruct拦截器方法不能抛出应用程序异常，但可以声明它抛出检查异常，包括java.lang.Exception，</p>
+<p>如果相同的拦截器方法除了生命周期事件之外插入业务或超时方法。</p>
+<p>如果PostConstruct拦截器方法返回一个值，容器将忽略它。</p>
+<p>在非拦截器类上定义的方法必须具有以下签名：void <METHOD>（）应用PostConstruct的方法可以是public，protected，package private或private。</p>
+<p>除应用程序客户端外，该方法绝不能是静态的。</p>
+<p>该方法可能是最终的。如果该方法抛出一个未经检查的异常，那么该类绝不能投入使用，除非EJB可以处理异常甚至从它们恢复的EJB。</p>
+<h3 id="构造方法-gt-Autowired-gt-PostConstruct"><a href="#构造方法-gt-Autowired-gt-PostConstruct" class="headerlink" title="构造方法 &gt; @Autowired &gt; @PostConstruct"></a>构造方法 &gt; @Autowired &gt; @PostConstruct</h3><p>1、从Java EE5规范开始，Servlet中增加了两个影响Servlet生命周期的注解，@PostConstruct和@PreDestroy，这两个注解被用来修饰一个非静态的void（）方法。写法有如下两种方式：</p>
+<p>@PostConstruct</p>
+<p>public void someMethod(){}</p>
+<p>或者</p>
+<p>public @PostConstruct void someMethod(){}</p>
+<p>被@PostConstruct修饰的方法会在服务器加载Servlet的时候运行，并且只会被服务器执行一次。PostConstruct在构造函数之后执行，init（）方法之前执行。PreDestroy（）方法在destroy（）方法知性之后执行</p>
+<p>执行顺序</p>
+<h4 id="另外，spring中Constructor、-Autowired、-PostConstruct的顺序"><a href="#另外，spring中Constructor、-Autowired、-PostConstruct的顺序" class="headerlink" title="另外，spring中Constructor、@Autowired、@PostConstruct的顺序"></a>另外，spring中Constructor、@Autowired、@PostConstruct的顺序</h4><h4 id="其实从依赖注入的字面意思就可以知道，要将对象p注入到对象a，那么首先就必须得生成对象a和对象p，才能执行注入。所以，如果一个类A中有个成员变量p被-Autowried注解，那么-Autowired注入是发生在A的构造方法执行完之后的。"><a href="#其实从依赖注入的字面意思就可以知道，要将对象p注入到对象a，那么首先就必须得生成对象a和对象p，才能执行注入。所以，如果一个类A中有个成员变量p被-Autowried注解，那么-Autowired注入是发生在A的构造方法执行完之后的。" class="headerlink" title="其实从依赖注入的字面意思就可以知道，要将对象p注入到对象a，那么首先就必须得生成对象a和对象p，才能执行注入。所以，如果一个类A中有个成员变量p被@Autowried注解，那么@Autowired注入是发生在A的构造方法执行完之后的。"></a>其实从依赖注入的字面意思就可以知道，要将对象p注入到对象a，那么首先就必须得生成对象a和对象p，才能执行注入。所以，如果一个类A中有个成员变量p被@Autowried注解，那么@Autowired注入是发生在A的构造方法执行完之后的。</h4><h4 id="如果想在生成对象时完成某些初始化操作，而偏偏这些初始化操作又依赖于依赖注入，那么久无法在构造函数中实现。为此，可以使用-PostConstruct注解一个方法来完成初始化，-PostConstruct注解的方法将会在依赖注入完成后被自动调用。"><a href="#如果想在生成对象时完成某些初始化操作，而偏偏这些初始化操作又依赖于依赖注入，那么久无法在构造函数中实现。为此，可以使用-PostConstruct注解一个方法来完成初始化，-PostConstruct注解的方法将会在依赖注入完成后被自动调用。" class="headerlink" title="如果想在生成对象时完成某些初始化操作，而偏偏这些初始化操作又依赖于依赖注入，那么久无法在构造函数中实现。为此，可以使用@PostConstruct注解一个方法来完成初始化，@PostConstruct注解的方法将会在依赖注入完成后被自动调用。"></a>如果想在生成对象时完成某些初始化操作，而偏偏这些初始化操作又依赖于依赖注入，那么久无法在构造函数中实现。为此，可以使用@PostConstruct注解一个方法来完成初始化，@PostConstruct注解的方法将会在依赖注入完成后被自动调用。</h4><h4 id="Constructor-gt-gt-Autowired-gt-gt-PostConstruct"><a href="#Constructor-gt-gt-Autowired-gt-gt-PostConstruct" class="headerlink" title="Constructor &gt;&gt; @Autowired &gt;&gt; @PostConstruct"></a>Constructor &gt;&gt; @Autowired &gt;&gt; @PostConstruct</h4><hr>
+<h2 id="Aspect的作用是什么？"><a href="#Aspect的作用是什么？" class="headerlink" title="@Aspect的作用是什么？"></a>@Aspect的作用是什么？</h2><p>AOP为Aspect Oriented Programming的缩写，意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术.AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。</p>
+<p>在spring AOP中业务逻辑仅仅只关注业务本身，将日志记录，性能统计，安全控制，事务处理，异常处理等代码从业务逻辑代码中划分出来，通过对这些行为的分离，我们希望可以将它们独立到非指导业务逻辑的方法中，进而改变这些行为的时候不影响业务逻辑的代码。</p>
+<pre><code>@Aspect:作用是把当前类标识为一个切面供容器读取
+
+@Pointcut：Pointcut是植入Advice的触发条件。每个Pointcut的定义包括2部分，一是表达式，二是方法签名。方法签名必须是 public及void型。可以将Pointcut中的方法看作是一个被Advice引用的助记符，因为表达式不直观，因此我们可以通过方法签名的方式为 此表达式命名。因此Pointcut中的方法只需要方法签名，而不需要在方法体内编写实际代码。
+
+@Around：环绕增强，相当于MethodInterceptor
+
+@AfterReturning：后置增强，相当于AfterReturningAdvice，方法正常退出时执行
+
+@Before：标识一个前置增强方法，相当于BeforeAdvice的功能，相似功能的还有
+
+@AfterThrowing：异常抛出增强，相当于ThrowsAdvice
+
+@After: final增强，不管是抛出异常或者正常退出都会执行</code></pre><p>Spring AOP面向切面编程，可以用来配置事务、做日志、权限验证、在用户请求时做一些处理等等。用@Aspect做一个切面，就可以直接实现。</p>
+<p>1.首先定义一个切面类，加上@Component  @Aspect这两个注解   </p>
+<pre><code>@Component
+@Aspect
+public class LogAspect &#123;
+
+private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);
+private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+
+
+&#125;</code></pre><p>2.定义切点     </p>
+<pre><code>private final String POINT_CUT = &quot;execution(public * com.xhx.springboot.controller.*.*(..))&quot;;
+
+@Pointcut(POINT_CUT)
+public void pointCut()&#123;&#125;</code></pre><p>切点表达式中，..两个点表明多个，<em>代表一个，  上面表达式代表切入com.xhx.springboot.controller包下的所有类的所有方法，方法参数不限，返回类型不限。  其中访问修饰符可以不写，不能用</em>，，第一个<em>代表返回类型不限，第二个</em>表示所有类，第三个*表示所有方法，..两个点表示方法里的参数不限。  然后用@Pointcut切点注解，想在一个空方法上面，一会儿在Advice通知中，直接调用这个空方法就行了，也可以把切点表达式卸载Advice通知中的，单独定义出来主要是为了好管理。</p>
+<p>3.Advice，通知增强，主要包括五个注解Before,After,AfterReturning,AfterThrowing,Around，下面代码中关键地方都有注释，我都列出来了。</p>
+<pre><code>@Before  在切点方法之前执行
+
+@After  在切点方法之后执行
+
+@AfterReturning 切点方法返回后执行
+
+@AfterThrowing 切点方法抛异常执行
+
+@Around 属于环绕增强，能控制切点执行前，执行后，，用这个注解后，程序抛异常，会影响@AfterThrowing这个注解</code></pre>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="post-title-link" itemprop="url">正则表达式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-15 20:01:15 / 修改时间：23:17:59" itemprop="dateCreated datePublished" datetime="2019-11-15T20:01:15+08:00">2019-11-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>&emsp;正则是一个非常重要的知识点，我在数据库、前端设计、爬虫等中都看到过很多，但是自己没有去刻意学习，每次都是自己去网上搜，今天就建立自己的正则库，方便自己以后翻阅，同时也用于把自己平时见到的一些巧妙的正则表达式往里面塞一塞。</p>
+<h3 id="一、什么是正则表达式？"><a href="#一、什么是正则表达式？" class="headerlink" title="一、什么是正则表达式？"></a>一、什么是正则表达式？</h3><p>&emsp;&emsp;正则表达式，又称规则表达式，通常被用来检索、替换那些符合某个模式(规则)的文本。正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。</p>
+<h3 id="二、正则能干嘛？"><a href="#二、正则能干嘛？" class="headerlink" title="二、正则能干嘛？"></a>二、正则能干嘛？</h3><ul>
+<li><p>一是给定的字符串是否符合正则表达式的过滤逻辑（这个过程可称为“匹配”）；</p>
+</li>
+<li><p>二是通过正则表达式，从文本字符串中获取我们想要的特定部分（这个过程可称为“过滤”）。</p>
+</li>
+</ul>
+<h3 id="三正表达式的语法"><a href="#三正表达式的语法" class="headerlink" title="三正表达式的语法"></a>三正表达式的语法</h3><pre><code>^  表示匹配字符串的开始位置  (例外  用在中括号中[ ] 时,可以理解为取反,表示不匹配括号中字符串)
 
 $  表示匹配字符串的结束位置
 
@@ -169,67 +340,1775 @@ $  表示匹配字符串的结束位置
 
 ?  表示匹配零次或一次
 
-.  表示匹配单个字 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/" title="springboot2——Metrics">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="springboot2——Metrics"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/" title="springboot2——Metrics">springboot2——Metrics</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-13T12:49:11.000Z" title="发表于 2019-11-13 20:49:11">2019-11-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Monitor-System/">Monitor System</a></span></div><div class="content">Metrics&emsp;&emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prometheus、SignalFx、Simple (in-memory)、StatsD、Wavefront。
-&emsp;&emsp;要了解有关Micrometer功能的更多信息，请参阅其参考文档，特别是概念部分。
+.  表示匹配单个字符 
 
-1 入门&emsp;&emsp;Spring Boot自动配置组合MeterRegistry，并为其在类路径上找到的每个支持的实现向组合添加注册表。在micrometer-registry-{system}运行时类路径中具有依赖项足以让Spring Boot配置注册表。
-&emsp;&emsp;大多数注册表具有共同的特征。例如，即使Micrometer注册表实现位于类路径中，您也可以禁用特 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/11/12/java%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="java基础--基本数据类型">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java基础--基本数据类型"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/12/java%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="java基础--基本数据类型">java基础--基本数据类型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-12T14:54:49.000Z" title="发表于 2019-11-12 22:54:49">2019-11-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/java/">java</a></span></div><div class="content">一、注释的写法1.1 单行注释   //这是单行注释
-1.2 多行注释
-/*这是
-      多行注释*/1.3 文档注释
-/**
+|  表示为或者,两项中取一项
+
+(  ) 小括号表示匹配括号中全部字符
+
+[  ] 中括号表示匹配括号中一个字符 范围描述 如[0-9 a-z A-Z]
+
+&#123;  &#125; 大括号用于限定匹配次数  如 &#123;n&#125;表示匹配n个字符  &#123;n,&#125;表示至少匹配n个字符  &#123;n,m&#125;表示至少n,最多m
+
+\  转义字符 如上基本符号匹配都需要转义字符   如 \*  表示匹配*号
+
+\w 表示英文字母和数字
+
+\W  非字母和数字
+
+\d  表示数字
+
+\D  非数字</code></pre><h3 id="四、常用的正则表达式"><a href="#四、常用的正则表达式" class="headerlink" title="四、常用的正则表达式"></a>四、常用的正则表达式</h3><p>常用的正则表达式(转)<br>匹配中文字符的正则表达式： <code>[\u4e00-\u9fa5]</code></p>
+<p>匹配双字节字符(包括汉字在内)：<code>[^\x00-\xff]</code></p>
+<p>匹配空行的正则表达式：<code>\n[\s| ]*\r</code></p>
+<p>匹配HTML标记的正则表达式：<code>/&lt;(.*)&gt;.*&lt;\/\1&gt;|&lt;(.*) \/&gt;/</code> </p>
+<p>匹配首尾空格的正则表达式：<code>(^\s*)|(\s*$)</code></p>
+<p>匹配IP地址的正则表达式：<code>/(\d+)\.(\d+)\.(\d+)\.(\d+)/g //</code></p>
+<p>匹配Email地址的正则表达式：<code>\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</code></p>
+<p>匹配网址URL的正则表达式：<code>http://(/[\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?</code></p>
+<p>sql语句：<code>^(select|drop|delete|create|update|insert).*$</code></p>
+<p>1、非负整数：<code>^\d+$</code></p>
+<p>2、正整数：<code>^[0-9]*[1-9][0-9]*$</code></p>
+<p>3、非正整数：<code>^((-\d+)|(0+))$</code></p>
+<p>4、负整数：<code>^-[0-9]*[1-9][0-9]*$</code> </p>
+<p>5、整数：<code>^-?\d+$</code> </p>
+<p>6、非负浮点数：<code>^\d+(\.\d+)?$</code></p>
+<p>7、正浮点数：<code>^((0-9)+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$</code></p>
+<p>8、非正浮点数：<code>^((-\d+\.\d+)?)|(0+(\.0+)?))$</code></p>
+<p>9、负浮点数：<code>^(-((正浮点数正则式)))$</code></p>
+<p>10、英文字符串：<code>^[A-Za-z]+$</code> </p>
+<p>11、英文大写串：<code>^[A-Z]+$</code> </p>
+<p>12、英文小写串：<code>^[a-z]+$</code> </p>
+<p>13、英文字符数字串：<code>^[A-Za-z0-9]+$</code></p>
+<p>14、英数字加下划线串：<code>^\w+$</code></p>
+<p>15、E-mail地址：<code>^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$</code></p>
+<p>16、URL：<code>^[a-zA-Z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\s*)?$</code><br>或：<code>^http:\/\/[A-Za-z0-9]+\.[A-Za-z0-9]+[\/=\?%\-&amp;_~</code>@[]&#39;:+!]<em>([^&lt;&gt;&quot;&quot;])</em>$`</p>
+<p>17、邮政编码：<code>^[1-9]\d&#123;5&#125;$</code></p>
+<p>18、中文：<code>^[\u0391-\uFFE5]+$</code></p>
+<p>19、电话号码：<code>^((\d2,3)|(\d&#123;3&#125;\-))?(0\d2,3|0\d&#123;2,3&#125;-)?[1-9]\d&#123;6,7&#125;(\-\d&#123;1,4&#125;)?$</code></p>
+<p>20、手机号码：<code>^((\d2,3)|(\d&#123;3&#125;\-))?13\d&#123;9&#125;$</code></p>
+<p>21、双字节字符(包括汉字在内)：<code>^\x00-\xff</code></p>
+<p>22、匹配首尾空格：<code>(^\s*)|(\s*$)</code>（像vbscript那样的trim函数）</p>
+<p>23、匹配HTML标记：<code>&lt;(.*)&gt;.*&lt;\/\1&gt;|&lt;(.*) \/&gt;</code></p>
+<p>24、匹配空行：<code>\n[\s| ]*\r</code></p>
+<p>25、提取信息中的网络链接：<code>(h|H)(r|R)(e|E)(f|F) *= *(&#39;|&quot;)?(\w|\\|\/|\.)+(&#39;|&quot;| *|&gt;)?</code></p>
+<p>26、提取信息中的邮件地址：<code>\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</code></p>
+<p>27、提取信息中的图片链接：<code>(s|S)(r|R)(c|C) *= *(&#39;|&quot;)?(\w|\\|\/|\.)+(&#39;|&quot;| *|&gt;)?</code></p>
+<p>28、提取信息中的IP地址：<code>(\d+)\.(\d+)\.(\d+)\.(\d+)</code></p>
+<p>29、提取信息中的中国手机号码：<code>(86)*0*13\d&#123;9&#125;</code></p>
+<p>30、提取信息中的中国固定电话号码：<code>(\d3,4|\d&#123;3,4&#125;-|\s)?\d&#123;8&#125;</code></p>
+<p>31、提取信息中的中国电话号码（包括移动和固定电话）：<code>(\d3,4|\d&#123;3,4&#125;-|\s)?\d&#123;7,14&#125;</code></p>
+<p>32、提取信息中的中国邮政编码：<code>[1-9]&#123;1&#125;(\d+)&#123;5&#125;</code></p>
+<p>33、提取信息中的浮点数（即小数）：<code>(-?\d*)\.?\d+</code></p>
+<p>34、提取信息中的任何数字 ：<code>(-?\d*)(\.\d+)?</code> </p>
+<p>35、IP：<code>(\d+)\.(\d+)\.(\d+)\.(\d+)</code></p>
+<p>36、电话区号：<code>/^0\d&#123;2,3&#125;$/</code></p>
+<p>37、腾讯QQ号：<code>^[1-9]*[1-9][0-9]*$</code></p>
+<p>38、帐号(字母开头，允许5-16字节，允许字母数字下划线)：<code>^[a-zA-Z][a-zA-Z0-9_]&#123;4,15&#125;$</code></p>
+<p>39、中文、英文、数字及下划线：<code>^[\u4e00-\u9fa5_a-zA-Z0-9]+$</code></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/" class="post-title-link" itemprop="url">springboot2——Metrics</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-13 20:49:11 / 修改时间：20:58:57" itemprop="dateCreated datePublished" datetime="2019-11-13T20:49:11+08:00">2019-11-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Monitor-System/" itemprop="url" rel="index"><span itemprop="name">Monitor System</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Metrics"><a href="#Metrics" class="headerlink" title="Metrics"></a>Metrics</h1><p>&emsp;&emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prometheus、SignalFx、Simple (in-memory)、StatsD、Wavefront。</p>
+<p>&emsp;&emsp;要了解有关Micrometer功能的更多信息，请参阅其参考文档，特别是<a target="_blank" rel="noopener" href="https://dongonns.github.io/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/">概念</a>部分。</p>
+<hr>
+<h2 id="1-入门"><a href="#1-入门" class="headerlink" title="1 入门"></a>1 入门</h2><p>&emsp;&emsp;Spring Boot自动配置组合MeterRegistry，并为其在类路径上找到的每个支持的实现向组合添加注册表。在micrometer-registry-{system}运行时类路径中具有依赖项足以让Spring Boot配置注册表。</p>
+<p>&emsp;&emsp;大多数注册表具有共同的特征。例如，即使Micrometer注册表实现位于类路径中，您也可以禁用特定的注册表。例如，禁用Datadog：</p>
+<pre><code>management.metrics.export.datadog.enabled=false</code></pre><p>&emsp;&emsp;Spring Boot还会将任何自动配置的注册表添加到Metrics该类的全局静态复合注册表中，除非您明确告诉它不要：</p>
+<pre><code>management.metrics.use-global-registry=false</code></pre><p>&emsp;&emsp;您可以注册任意数量的MeterRegistryCustomizerbean来进一步配置注册表，例如在向注册表注册任何计量器(meter)之前应用通用标签：</p>
+<pre><code>@Bean
+MeterRegistryCustomizer&lt;MeterRegistry&gt; metricsCommonTags() &#123;
+    return registry -&gt; registry.config().commonTags(&quot;region&quot;, &quot;us-east-1&quot;);
+&#125;</code></pre><p>&emsp;&emsp;您可以通过更具体地了解通用类型，将自定义项应用于特定的注册表实现：</p>
+<pre><code>@Bean
+MeterRegistryCustomizer&lt;GraphiteMeterRegistry&gt; graphiteMetricsNamingConvention() &#123;
+    return registry -&gt; registry.config().namingConvention(MY_CUSTOM_CONVENTION);
+&#125;</code></pre><p>&emsp;&emsp;完成该设置后，您可以注入MeterRegistry组件并注册指标：</p>
+<pre><code>@Component
+public class SampleBean &#123;
+
+    private final Counter counter;
+
+    public SampleBean(MeterRegistry registry) &#123;
+        this.counter = registry.counter(&quot;received.messages&quot;);
+&#125;
+
+public void handleMessage(String message) &#123;
+    this.counter.increment();
+    // handle message implementation
+    &#125;
+&#125;</code></pre><p>&emsp;&emsp;Spring Boot还配置了<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-metrics-meter">内置工具</a>（即MeterBinder实现），您可以通过配置或专用注释标记来控制它们。</p>
+<h2 id="2-支持的监控系统–Prometheus"><a href="#2-支持的监控系统–Prometheus" class="headerlink" title="2 支持的监控系统–Prometheus"></a>2 支持的监控系统–Prometheus</h2><p>&emsp;&emsp;Prometheus希望抓取或轮询单个应用程序实例以获取指标。Spring Boot提供了一个可用的执行器端点/actuator/prometheus以适当的格式显示Prometheus抓取。</p>
+<p>&emsp;&emsp;端点默认情况下不可用，必须公开，有关更多详细信息，请参见<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-endpoints-exposing-endpoints">暴露端点</a>。</p>
+<p>&emsp;&emsp;这是scrape_config要添加到的示例prometheus.yml：</p>
+<pre><code>scrape_configs:
+  - job_name: &apos;spring&apos;
+    metrics_path: &apos;/actuator/prometheus&apos;
+    static_configs:
+  - targets: [&apos;HOST:PORT&apos;]</code></pre><p>&emsp;&emsp;对于短暂的或批处理的工作，其时间可能不够长，无法被抓取，可以使用Prometheus Pushgateway支持将其指标暴露给Prometheus。要启用Prometheus Pushgateway支持，请在项目中添加以下依赖项：</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;io.prometheus&lt;/groupId&gt;
+    &lt;artifactId&gt;simpleclient_pushgateway&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre><p>&emsp;&emsp;当在类路径中存在Prometheus Pushgateway依赖项时，Spring Boot会自动配置PrometheusPushGatewayManager组件。这可以管理将指标推送到Prometheus Pushgateway。PrometheusPushGatewayManager可以在使用属性management.metrics.export.prometheus.pushgateway配置。对于高级配置，您还可以提供自己的PrometheusPushGatewayManager组件。</p>
+<h2 id="3-支持的指标"><a href="#3-支持的指标" class="headerlink" title="3 支持的指标"></a>3 支持的指标</h2><p>&emsp;&emsp;如果适用，Spring Boot将注册以下核心指标：</p>
+<ul>
+<li>JVM指标，报告以下各项的利用率：</li>
+</ul>
+<p>&emsp;&emsp;&emsp;&emsp;各种内存和缓冲池</p>
+<p>&emsp;&emsp;&emsp;&emsp;与垃圾收集有关的统计数据</p>
+<p>&emsp;&emsp;&emsp;&emsp;线程利用率</p>
+<p>&emsp;&emsp;&emsp;&emsp;加载/卸载的类数</p>
+<ul>
+<li><p>CPU指标</p>
+</li>
+<li><p>文件描述符指标</p>
+</li>
+<li><p>卡夫卡消耗指标</p>
+</li>
+<li><p>Log4j2指标：记录每个级别记录到Log4j2的事件数</p>
+</li>
+<li><p>Logback指标：记录每个级别记录到Logback的事件数</p>
+</li>
+<li><p>正常运行时间指标：报告正常运行时间的量度和代表应用程序绝对启动时间的固定量度</p>
+</li>
+<li><p>Tomcat指标（server.tomcat.mbeanregistry.enabled必须设置true为才能注册所有Tomcat指标）</p>
+</li>
+</ul>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-integration/docs/5.2.1.RELEASE/reference/html/system-management.html#micrometer-integration">Spring集成指标</a></li>
+</ul>
+<h3 id="Spring-MVC指标"><a href="#Spring-MVC指标" class="headerlink" title="Spring MVC指标"></a>Spring MVC指标</h3><p>&emsp;&emsp;通过自动配置，可以检测由Spring MVC处理的请求。当management.metrics.web.server.request.autotime.enabled为true时，将对所有请求进行这种检测。或者，当设置为false时，可以通过添加@Timed到请求处理方法来启用检测：</p>
+<pre><code>@RestController
+@Timed 
+public class MyController &#123;
+
+    @GetMapping(&quot;/api/people&quot;)
+    @Timed(extraTags = &#123; &quot;region&quot;, &quot;us-east-1&quot; &#125;) 
+    @Timed(value = &quot;all.people&quot;, longTask = true) 
+    public List&lt;Person&gt; listPeople() &#123; ... &#125;
+
+&#125;</code></pre><p>&emsp;&emsp;1.控制器类，用于对控制器中的每个请求处理程序启用计时。</p>
+<p>&emsp;&emsp;2.一种启用单个端点的方法。如果您将它放在类中，则不必这样做，但是可以用于进一步为此特定端点自定义timer计时器。</p>
+<p>&emsp;&emsp;3.一种longTask = true用于为该方法启用长任务计时器的方法。长任务计时器需要一个单独的度量metric名称，并且可以与短任务计时器堆叠在一起。</p>
+<p>&emsp;&emsp;默认情况下，指标名称为http.server.requests。可以通过设置management.metrics.web.server.request.metric-name属性来自定义名称。</p>
+<p>&emsp;&emsp;默认情况下，与Spring MVC相关的指标带有以下信息标记：</p>
+<table>
+<thead>
+<tr>
+<th align="center">标签</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">exception</td>
+<td align="center">处理请求时引发的任何异常的简单类名。</td>
+</tr>
+<tr>
+<td align="center">method</td>
+<td align="center">请求的方法（例如GET或POST）</td>
+</tr>
+<tr>
+<td align="center">outcome</td>
+<td align="center">基于响应状态码的请求结果。1xx是INFORMATIONAL，2xx是SUCCESS，3xx是REDIRECTION，4xx CLIENT_ERROR和5xx是SERVER_ERROR</td>
+</tr>
+<tr>
+<td align="center">status</td>
+<td align="center">响应的HTTP状态代码（例如200或500）</td>
+</tr>
+<tr>
+<td align="center">uri</td>
+<td align="center">变量替换之前的请求URI模板（如果可能）（例如，/api/person/{id}）</td>
+</tr>
+</tbody></table>
+<p>&emsp;&emsp;要自定义标签，请提供@Bean实现的WebMvcTagsProvider。</p>
+<h2 id="HTTP客户端指标"><a href="#HTTP客户端指标" class="headerlink" title="HTTP客户端指标"></a>HTTP客户端指标</h2><p>&emsp;&emsp;启动器同时管理仪表RestTemplate和WebClient。为此，您必须注入自动配置的构建器并使用它来创建实例：</p>
+<ul>
+<li><p>RestTemplateBuilder 对于 RestTemplate</p>
+</li>
+<li><p>WebClient.Builder 对于 WebClient</p>
+</li>
+</ul>
+<p>&emsp;&emsp;也可以手动应用负责此工具的定制程序，即MetricsRestTemplateCustomizer和MetricsWebClientCustomizer。</p>
+<p>&emsp;&emsp;默认情况下，指标名称为http.client.requests。可以通过设置management.metrics.web.client.request.metric-name属性来自定义名称。</p>
+<p>&emsp;&emsp;默认情况下，通过检测的客户端生成的指标会标记以下信息：</p>
+<table>
+<thead>
+<tr>
+<th align="center">标签</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">clientName</td>
+<td align="center">URI的主机部分</td>
+</tr>
+<tr>
+<td align="center">method</td>
+<td align="center">请求的方法（例如GET或POST）</td>
+</tr>
+<tr>
+<td align="center">outcome</td>
+<td align="center">基于响应状态码的请求结果。1xx是INFORMATIONAL，2xx是SUCCESS，3xx是REDIRECTION，4xx CLIENT_ERROR和5xx是SERVER_ERROR，否则UNKNOWN</td>
+</tr>
+<tr>
+<td align="center">status</td>
+<td align="center">响应的HTTP状态代码（例如200或500）（IO_ERROR如果存在I / O问题），否则CLIENT_ERROR</td>
+</tr>
+<tr>
+<td align="center">uri</td>
+<td align="center">变量替换之前的请求URI模板（如果可能）（例如，/api/person/{id}）</td>
+</tr>
+</tbody></table>
+<p>&emsp;&emsp;要自定义标签，并根据您选择的客户端，可以提供@Bean实现RestTemplateExchangeTagsProvider或WebClientExchangeTagsProvider。RestTemplateExchangeTags和WebClientExchangeTags中有方便的静态函数。</p>
+<h3 id="缓存指标"><a href="#缓存指标" class="headerlink" title="缓存指标"></a>缓存指标</h3><p>&emsp;&emsp;通过自动配置可以在启动时使用前缀为Cache的指标来检测所有可用的cache。对于解百纳的cache信息是进行了标准化设置的。此外定制的cache指标也是可用的。</p>
+<p>&emsp;&emsp;支持以下缓存库：</p>
+<ul>
+<li><p>Caffeine</p>
+</li>
+<li><p>EhCache 2</p>
+</li>
+<li><p>Hazelcast</p>
+</li>
+<li><p>Any compliant JCache (JSR-107) 的实现</p>
+</li>
+</ul>
+<p>&emsp;&emsp;指标由cache的名称以及CacheManager从Bean名称派生的的名称标记(添加tag)。</p>
+<p>&emsp;&emsp;只有启动时可用的缓存才绑定到注册表。对于在启动阶段后即时或以编程方式创建的缓存，需要显式注册。可以使用CacheMetricsRegistrarBean来简化该过程。</p>
+<h3 id="数据源指标"><a href="#数据源指标" class="headerlink" title="数据源指标"></a>数据源指标</h3><p>&emsp;&emsp;自动配置可使前缀为jdbc.connections的metric指标的所有DataSource对象可视化。数据源检测产生的gauge表示池中当前活动，空闲，最大允许和最小允许的连接。</p>
+<p>&emsp;&emsp;metrics还通过DataSource基于bean名称的计算名称来标记（添加tag）。</p>
+<p>&emsp;&emsp;默认情况下，Spring Boot为所有支持的数据源提供元数据。如果您喜欢的数据源不支持开箱即用，则可以添加其他DataSourcePoolMetadataProvider组件。请参阅DataSourcePoolMetadataProvidersConfiguration示例。</p>
+<p>&emsp;&emsp;此外，Hikari特定指标带有hikaricp前缀。每个度量标准都以“池”的名称标记（可以通过来控制spring.datasource.name）。</p>
+<h2 id="4-注册自定义指标"><a href="#4-注册自定义指标" class="headerlink" title="4 注册自定义指标"></a>4 注册自定义指标</h2><p>&emsp;&emsp;要注册自定义指标，请插入MeterRegistry到您的组件中，如以下示例所示：</p>
+<pre><code>class Dictionary &#123;
+
+    private final List&lt;String&gt; words = new CopyOnWriteArrayList&lt;&gt;();
+
+    Dictionary(MeterRegistry registry) &#123;
+        registry.gaugeCollectionSize(&quot;dictionary.size&quot;, Tags.empty(), this.words);
+    &#125;
+
+    // …
+
+&#125;</code></pre><p>&emsp;&emsp;如果发现您反复在组件或应用程序中检测一组metrics，则可以将此组metrics封装在MeterBinder实现中。默认情况下，所有MeterBinderbean的metrics都将自动绑定到Spring-managed MeterRegistry。</p>
+<h2 id="5-自定义单个指标"><a href="#5-自定义单个指标" class="headerlink" title="5 自定义单个指标"></a>5 自定义单个指标</h2><p>&emsp;&emsp;如果需要将自定义应用于特定Meter实例，则可以使用该io.micrometer.core.instrument.config.MeterFilter接口。默认情况下，所有MeterFilter组件都会自动应用于MicroMeter的MeterRegistry.Config。</p>
+<p>&emsp;&emsp;例如，如果要将所有仪表ID中以com.example开头的mytag.region标签重命名为mytag.area，则可以执行以下操作：</p>
+<pre><code>@Bean
+
+public MeterFilter renameRegionTagMeterFilter() &#123;
+    return MeterFilter.renameTag(&quot;com.example&quot;, &quot;mytag.region&quot;, &quot;mytag.area&quot;);
+&#125;</code></pre><h3 id="通用标签"><a href="#通用标签" class="headerlink" title="通用标签"></a>通用标签</h3><p>&emsp;&emsp;通用标签通常用于在操作环境，如主机，实例，区域，堆栈等，进行维度深入分析。通用标签适用于所有仪表，并可以按以下示例所示进行配置：</p>
+<pre><code>management.metrics.tags.region=us-east-1
+management.metrics.tags.stack=prod</code></pre><p>&emsp;&emsp;上面的示例将us-east-1和prod分别添加到region和stack到所有仪表。</p>
+<p>如果使用Graphite，则常用标签的顺序很重要。由于使用这种方法不能保证通用标签的顺序，因此建议Graphite用户定义一个自定义MeterFilter。</p>
+<h3 id="Per-meter属性"><a href="#Per-meter属性" class="headerlink" title="Per-meter属性"></a>Per-meter属性</h3><p>Per-meter适用于以给定名称开头的所有meter ID。例如，以下将禁用所有ID以example.remote开头的meter。</p>
+<pre><code>management.metrics.enable.example.remote=false</code></pre><p>&emsp;&emsp;以下属性允许per-meter自定义：</p>
+<p>表8.per-meter自定义</p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">management.metrics.enable</td>
+<td align="center">是否拒绝仪表发出任何指标</td>
+</tr>
+<tr>
+<td align="center">management.metrics.distribution.percentiles-histogram</td>
+<td align="center">是否发布适合于计算可凝集（跨维度）百分位数逼近的直方图</td>
+</tr>
+<tr>
+<td align="center">management.metrics.distribution.minimum-expected-value，management.metrics.distribution.maximum-expected-value</td>
+<td align="center">通过限制期望值的范围来发布较少的直方图bucket</td>
+</tr>
+<tr>
+<td align="center">management.metrics.distribution.percentiles</td>
+<td align="center">发布在应用程序中计算的百分位值</td>
+</tr>
+<tr>
+<td align="center">management.metrics.distribution.sla</td>
+<td align="center">发布包含您的SLA定义的存储桶的累积直方图</td>
+</tr>
+</tbody></table>
+<p>&emsp;&emsp;有关percentiles-histogram，percentiles并sla概念更多的细节，请参阅“<a target="_blank" rel="noopener" href="https://micrometer.io/docs/concepts#_histograms_and_percentiles">Histogram and percentiles</a>”部分文档。</p>
+<h2 id="6-指标端点"><a href="#6-指标端点" class="headerlink" title="6 指标端点"></a>6 指标端点</h2><p>&emsp;&emsp;Spring Boot提供了一个metrics端点，可用于诊断检查应用程序收集的指标。端点默认情况下不可用，必须公开，有关更多详细信息，请参见<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-endpoints-exposing-endpoints">暴露端点</a>。</p>
+<p>&emsp;&emsp;路径 /actuator/metrics 展示可用meter名称的列表。您可以通过提供特定的meter名称作为选择器来向下浏览以查看有关该仪表的信息,例如:/actuator/metrics/jvm.memory.max。</p>
+<p>&emsp;&emsp;您在此处使用的名称应与代码中使用的名称相匹配，而不是已经针对监视系统进行了命名约定标准化后的名称。</p>
+<p>&emsp;&emsp;您还可以tag=KEY:VALUE在URL的末尾添加任意数量的查询参数，以在维度上进一步细分meter，例如/actuator/metrics/jvm.memory.max?tag=area:nonheap。</p>
+<p>&emsp;&emsp;报告的测量值是与仪表名称和已应用的任何标签相匹配的所有仪表的统计信息的总和。因此，在上面的示例中，返回的“值”统计量是堆的“代码缓存”，“压缩类空间”和“元空间”区域的最大内存占用量的总和。如果您只想查看“ Metaspace”的最大大小，则可以添加一个额外的tag=id:Metaspace，即/actuator/metrics/jvm.memory.max?tag=area:nonheap&amp;tag=id:Metaspace。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/12/java%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/12/java%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">java基础--基本数据类型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-12 22:54:49" itemprop="dateCreated datePublished" datetime="2019-11-12T22:54:49+08:00">2019-11-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-13 00:13:47" itemprop="dateModified" datetime="2019-11-13T00:13:47+08:00">2019-11-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="一、注释的写法"><a href="#一、注释的写法" class="headerlink" title="一、注释的写法"></a>一、注释的写法</h1><p>1.1 单行注释   //这是单行注释</p>
+<p>1.2 多行注释</p>
+<pre><code>/*这是
+      多行注释*/</code></pre><p>1.3 文档注释</p>
+<pre><code>/**
 *
 *
-*/    </div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" title="MicroMeter基础概念">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MicroMeter基础概念"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" title="MicroMeter基础概念">MicroMeter基础概念</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-12T14:41:32.000Z" title="发表于 2019-11-12 22:41:32">2019-11-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Monitor-System/">Monitor System</a></span></div><div class="content">一、目的&emsp;&emsp;MicroMeter是针对基于JVM的应用程序的Metrics标准检测库。它为最流行的监视系统提供了一个基于可视化客户端的简单外观，使我们无需供应商锁定即可对基于JVM的应用程序代码进行可视化。它旨在在最大限度地提高指标工作可移植性的同时，几乎不增加指标收集活动的开销。
+*/    </code></pre>
+      
+    </div>
 
-二、支持的监控系统&emsp;&emsp;MicroMeter不是分布式跟踪系统或事件日志记录器。阿德里安·科尔（Adrian Cole）关于“ 可观测性3种方式”的演讲在强调这些不同类型的系统之间的差异方面做得很好。
-&emsp;&emsp;MicroMeter包含一个带有可视化一起SPI的核心模块，一组包含各种监视系统的实现（每个系统称为注册表）的模块，以及一个测试套件。学习监视系统理解下面三个重要特征：
-2.1 维度&emsp;&emsp;系统是否支持通过标记键/值对丰富metrics名称（tags）。如果系统不是为维度性的，则它是分层的，这意味着它仅支持平面度量标准名称。将metrics指标发布到分层系统时，Micrometer会展平标签键/值对的集合并将其添加到名称中。
-2. ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/11/11/%E5%B0%8F%E6%8A%80%E5%B7%A7/" title="小技巧">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小技巧"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/11/%E5%B0%8F%E6%8A%80%E5%B7%A7/" title="小技巧">小技巧</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-11T11:24:12.000Z" title="发表于 2019-11-11 19:24:12">2019-11-11</time></span></div><div class="content">for(i=0;i&lt;n;i++){}
-for(i=n;i;i–){}下面这一项是boolean比较，编译速度要快上一倍；
-不用申请额外空间完成数值交换a = a^bb = a^ba = a^b
-BitMask将帅问题
-python代码实现一遍然后再写一个文档说明。
-模考必考的大体类型KNN算法和聚类算法
-信息熵的概念信息熵的算法解决过拟合问题–剪枝，避免决策树太深
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
 
-AI一、资源管理工具1.1 Kubernate1.2 Docker1.3 OpenStack
-二、硬件加速2.1 InfiniBand2.2 NVMESSD2.3 GPU2.4 FPGA2.5 ASIC
-cpu为什么会发热？计算机发生了信息丢失时就会发热，
-</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/11/11/posts/" title="posts">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="posts"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/11/posts/" title="posts">posts</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-11T11:23:48.000Z" title="发表于 2019-11-11 19:23:48">2019-11-11</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/11/10/SpringBoot-%E6%97%A5%E5%BF%97/" title="SpringBoot-日志">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SpringBoot-日志"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/10/SpringBoot-%E6%97%A5%E5%BF%97/" title="SpringBoot-日志">SpringBoot-日志</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-10T02:06:55.000Z" title="发表于 2019-11-10 10:06:55">2019-11-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/SpringBoot/">SpringBoot</a></span></div><div class="content">在我们的日常开发中，通常需要查看日志来帮我们解决程序运行中的一些错误问题及对程序运行过程的监控，这篇文章主要是讲解在SpringBoot中日志的工作原理、日志实现类的选择、日志的展示及存储方式等内容。
-一、常用的日志框架JUL、JCL、Jboss-logging、logback、log4j、log4j2、slf4j….
-其中属于日志门面（日志的抽象层）的是：JCL（Jakarta Commons Logging）    SLF4j（Simple Logging Facade for Java）、jboss-logging    
-属于日志的实现类的是：Log4j2 Logback、Log4j JUL（java.util.logging） 
-我们一般是选择SLF4j作为抽象层，Logback作为实现类
-springboot也是选用的SLF4j和Logback
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/">
 
-二、如何在系统中使用SLF4j开发的时候，日志记录方法的调用，不应该来直接调用日志的实现类，而是调用日志抽象层里面的方法；给系统里面导入slf4j的jar和 logback的实现jar
-具体的实现代码如下：
-import org. ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/10/27/Hadoop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Hadoop学习笔记">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hadoop学习笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/27/Hadoop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Hadoop学习笔记">Hadoop学习笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-27T07:04:26.000Z" title="发表于 2019-10-27 15:04:26">2019-10-27</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/hadoop/">hadoop</a></span></div><div class="content">HDFS概述NameNode(nn):存储文件的元数据，如文件名、文件目录结构、文件属性（生成时间、副本数、文件权限），以及每个文件的块列表和和块所在的DataNode等。
-DataNode(dn):在本地文件系统存储文件数据块以及数据块的校验和。
-Secondary NameNode(2nn):用来监控HDFS的辅助后台程序，每隔一段时间获取HDFS元数据的快照。
-yarn架构图
-常见的正则表达式
-为什么不能一直格式化NameNode,格式化NameNode需要注意什么？集群在工作的时候他的datanode的集群id和namenode的集群id是一样的，这样才能保证集群的正常工作，如果你格式化了namenode的集群id这个时候你的datanode的集群id是没有改变的，他们两个不一致的话集群无法正常工作。
-如果需要格式化NameNode的信息，那就需要datanode中的关于集群id的信息删除；
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
 
-关于YARN
-ResourceManager:集群资源的总管NodeManager:单个节点资源的总管
-HDFS的优缺点
-优点
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">MicroMeter基础概念</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-12 22:41:32 / 修改时间：22:47:46" itemprop="dateCreated datePublished" datetime="2019-11-12T22:41:32+08:00">2019-11-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Monitor-System/" itemprop="url" rel="index"><span itemprop="name">Monitor System</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="一、目的"><a href="#一、目的" class="headerlink" title="一、目的"></a>一、目的</h1><p>&emsp;&emsp;MicroMeter是针对基于JVM的应用程序的Metrics标准检测库。它为最流行的监视系统提供了一个基于可视化客户端的简单外观，使我们无需供应商锁定即可对基于JVM的应用程序代码进行可视化。它旨在在最大限度地提高指标工作可移植性的同时，几乎不增加指标收集活动的开销。</p>
+<hr>
+<h1 id="二、支持的监控系统"><a href="#二、支持的监控系统" class="headerlink" title="二、支持的监控系统"></a>二、支持的监控系统</h1><p>&emsp;&emsp;MicroMeter不是分布式跟踪系统或事件日志记录器。阿德里安·科尔（Adrian Cole）关于“ 可观测性3种方式”的演讲在强调这些不同类型的系统之间的差异方面做得很好。</p>
+<p>&emsp;&emsp;MicroMeter包含一个带有可视化一起SPI的核心模块，一组包含各种监视系统的实现（每个系统称为注册表）的模块，以及一个测试套件。学习监视系统理解下面三个重要特征：</p>
+<h2 id="2-1-维度"><a href="#2-1-维度" class="headerlink" title="2.1 维度"></a>2.1 维度</h2><p>&emsp;&emsp;系统是否支持通过标记键/值对丰富metrics名称（tags）。如果系统不是为维度性的，则它是分层的，这意味着它仅支持平面度量标准名称。将metrics指标发布到分层系统时，Micrometer会展平标签键/值对的集合并将其添加到名称中。</p>
+<h2 id="2-2-速率聚合（Rate-aggregation）"><a href="#2-2-速率聚合（Rate-aggregation）" class="headerlink" title="2.2 速率聚合（Rate aggregation）"></a>2.2 速率聚合（Rate aggregation）</h2><p>&emsp;&emsp;在本文中，我们指的是在规定的时间间隔内集合一组样本。一些监视系统希望某些类型的离散样本（例如计数）在发布之前由应用程序转换为比率。有些人希望总是发送累积值。还有其他人对此没有意见。</p>
+<h2 id="2-3-发布"><a href="#2-3-发布" class="headerlink" title="2.3 发布"></a>2.3 发布</h2><p>&emsp;&emsp;一些系统希望在闲暇时轮询应用程序以获取指标，而另一些系统则希望按固定间隔将指标推送给他们。</p>
+<hr>
+<h1 id="三、注册表（Registry）"><a href="#三、注册表（Registry）" class="headerlink" title="三、注册表（Registry）"></a>三、注册表（Registry）</h1><p>&emsp;&emsp;Meter是用于收集有关应用程序的一组度量（我们分别称为metrics指标）的接口。MicroMeter里面的Meters是从MeterRegistry中创建并保存在其中的。每个支持的监视系统都有一个的实现的MeterRegistry。注册表的创建方式因每个监控系统的实现方式而不同。</p>
+<p>&emsp;&emsp;MicroMeter包装带有SimpleMeterRegistry，可在内存中保存每个meter的最新值，并且不会将数据导出到任何地方。如果您还没有首选的监视系统，则可以使用简单的注册表开始使用指标：</p>
+<pre><code>MeterRegistry registry = new SimpleMeterRegistry();</code></pre><p>注：一个SimpleMeterRegistry是基于Spring的应用程序自动注入的。</p>
+<h2 id="3-1-复合注册表"><a href="#3-1-复合注册表" class="headerlink" title="3.1 复合注册表"></a>3.1 复合注册表</h2><p>&emsp;&emsp;MicroMeter提供了一个CompositeMeterRegistry可以添加多个注册表的功能，使我们可以同时将Metrics指标发布到多个监视系统。</p>
+<pre><code>CompositeMeterRegistry composite = new CompositeMeterRegistry();
+
+Counter compositeCounter = composite.counter(&quot;counter&quot;);
+compositeCounter.increment(); (1)
+
+SimpleMeterRegistry simple = new SimpleMeterRegistry();
+composite.add(simple); (2)
+
+compositeCounter.increment(); (3)</code></pre><p>1.组合中没有注册表之前，增量为NOOPd。此时计数器的计数仍将为0。</p>
+<p>2.一个名为“ counter”的计数器被注册到简单注册表中。</p>
+<p>3.简单注册表计数器以及组合中任何其他注册表的计数器都会增加。 </p>
+<h2 id="3-2-全局注册表"><a href="#3-2-全局注册表" class="headerlink" title="3.2 全局注册表"></a>3.2 全局注册表</h2><p>&emsp;&emsp;MicroMeter提供了一个静态全局注册表Metrics.globalRegistry和一组静态生成器，用于基于此注册表生成meters。globalRegistry是一个复合注册表。(我是不是可以理解成Metrics就是默认完成了那个Metrics.globalRegistry，然后我们就可以肆无忌惮的使用Mtrics.xxx了)</p>
+<pre><code>class MyComponent &#123;
+Counter featureCounter = Metrics.counter(&quot;feature&quot;, &quot;region&quot;, &quot;test&quot;); (1)
+
+void feature() &#123;
+    featureCounter.increment();
+&#125;
+
+void feature2(String type) &#123;
+    Metrics.counter(&quot;feature.2&quot;, &quot;type&quot;, type).increment(); (2)
+    &#125;
+&#125;
+
+class MyApplication &#123;
+void start() &#123;
+    // wire your monitoring system to global static state
+    Metrics.addRegistry(new SimpleMeterRegistry()); (3)
+    &#125;    
+&#125;</code></pre><p>&emsp;&emsp;1.只要能够实现（尤其是在可视化性能至关重要的地方），请将Meter实例存储在字段中，以避免在每次使用时查找其名称/标签。</p>
+<p>&emsp;&emsp;2.当需要根据本地上下文确定标记时，您别无选择，只能在方法体内构造/查找Meter。查找成本只是单个哈希查找，因此对于大多数用途而言，这是可以接受的。</p>
+<p>&emsp;&emsp;3.创建meters后添加注册表也是可以的，例如Metrics.counter(…​)。这些meters将被添加到每个注册表，因为它已绑定到全局组合。</p>
+<h2 id="3-4-Meters"><a href="#3-4-Meters" class="headerlink" title="3.4 Meters"></a>3.4 Meters</h2><p>&emsp;&emsp;MicroMeter包含的它支持Meter原语集包括：Timer，Counter，Gauge，DistributionSummary，LongTaskTimer，FunctionCounter，FunctionTimer，和TimeGauge。不同的meter类型得出不同数量的时间序列指标metrics。例如，虽然有一个单独的表示Gauge类型的指标，但是Timer类型的指标既得出时间事件的计数，也含有时间事件总的计数。</p>
+<p>&emsp;&emsp;meter是通过其名称和维度进行唯一标识的。我们可以“维度”和“标签”是一个意思，而“MicroMeter”层面Tag仅仅是因为它更短。作为一般规则，应该可以使用该名称作为枢轴。维度允许时间切面以特定的命名指标进行深入分析并推断数据。这意味着，如果仅选择名称，则用户可以使用其他维度和显示值的原因进行追溯。</p>
+<h1 id="五-命名meters"><a href="#五-命名meters" class="headerlink" title="五 命名meters"></a>五 命名meters</h1><p>&emsp;&emsp;MicroMeter采用命名约定，用“.”（点）字符分隔小写单词。不同的监视系统对命名约定有不同的建议，并且某些命名约定可能与一个系统兼容，而与另一个系统不兼容。监视系统的每个Micrometer实施都附带一个命名约定，该约定将小写点标记法名称转换为监视系统推荐的命名约定。此外，此命名约定实现还清除了监视系统不允许的Metrics标准名称和特殊字符标签。您可以使用以下方法在注册表中实现NamingConvention并设置注册表，从而覆盖注册表的默认命名约定：</p>
+<pre><code>registry.config().namingConvention(myCustomNamingConvention);</code></pre><p>&emsp;&emsp;有了适当的命名约定，在Micrometer中注册的以下timer计时器在各种监视系统中就可以很好的使用了：</p>
+<pre><code>registry.timer(&quot;http.server.requests&quot;);</code></pre><p>&emsp;&emsp;Prometheus- http_server_requests_duration_seconds</p>
+<p>&emsp;&emsp;Atlas- httpServerRequests</p>
+<p>&emsp;&emsp;Graphite- http.server.requests</p>
+<p>&emsp;&emsp;InfluxDB- http_server_requests</p>
+<p>&emsp;&emsp;通过遵守Micrometer的小写点标记约定，我们就可以确保跨监视系统的metrics名称具有最大的可移植性。</p>
+<h2 id="5-1-标签命名"><a href="#5-1-标签命名" class="headerlink" title="5.1 标签命名"></a>5.1 标签命名</h2><blockquote>
+<p>tip</p>
+<blockquote>
+<p>命名标签时，建议使用与metrics名称相同的小写点标记。利用标签的这种一致的命名约定，可以更好地转换为相应监视系统的惯用命名方案。</p>
+</blockquote>
+</blockquote>
+<p>假设我们正在尝试测量http请求的数量和数据库调用的数量。</p>
+<p>推荐方法：</p>
+<pre><code>registry.counter(&quot;database.calls&quot;, &quot;db&quot;, &quot;users&quot;)
+
+registry.counter(&quot;http.requests&quot;, &quot;uri&quot;, &quot;/api/users&quot;)</code></pre><p>&emsp;&emsp;这个变量提供了足够的文本信息，因此，如果仅选择名称，则可以推断出该值，并且至少具有潜在的意义。例如，如果我们选择“database.calls”则可以看到所有数据库的调用总数。然后，我们可以分组或选择“db”以进一步细分或对呼叫对每个数据库的贡献进行比较分析。</p>
+<p>不合适的方法</p>
+<pre><code>registry.counter(&quot;calls&quot;,
+                &quot;class&quot;, &quot;database&quot;,
+                &quot;db&quot;, &quot;users&quot;);
+
+
+registry.counter(&quot;calls&quot;,
+                &quot;class&quot;, &quot;http&quot;,
+                &quot;uri&quot;, &quot;/api/users&quot;);</code></pre><p>&emsp;&emsp;在这种方法中，如果选择，calls我们将获得一个值，该值是对数据库和API端点的调用次数的总和。如果没有进一步的维度向下钻取，该时间序列将无用。</p>
+<h2 id="5-2-通用标签"><a href="#5-2-通用标签" class="headerlink" title="5.2 通用标签"></a>5.2 通用标签</h2><p>&emsp;&emsp;可以在注册表级别定义公用标签，并将其添加到报告给监视系统的每个度量标准中。通常用于在操作环境（例如主机，实例，区域，堆栈等）上进行维度深入分析。</p>
+<pre><code>registry.config().commonTags(&quot;stack&quot;, &quot;prod&quot;, &quot;region&quot;, &quot;us-east-1&quot;);
+registry.config().commonTags(Arrays.asList(Tag.of(&quot;stack&quot;, &quot;prod&quot;), Tag.of(&quot;region&quot;, &quot;us-east-1&quot;))); 
+// equivalently</code></pre><p>&emsp;&emsp;调用commonTags追加其他通用标签。</p>
+<blockquote>
+<p>重要</p>
+<blockquote>
+<p>如果我们在Spring环境中，需要通过添加MeterRegistryCustomizerBean来添加通用标签，以确保在自动配置meter绑定程序之前应用了通用标签。</p>
+</blockquote>
+</blockquote>
+<h2 id="5-3-标签值"><a href="#5-3-标签值" class="headerlink" title="5.3 标签值"></a>5.3 标签值</h2><p>&emsp;&emsp;标签值必须非空</p>
+<blockquote>
+<p>警告</p>
+<blockquote>
+<p>注意来自用户提供的来源的标记值可能会破坏指标的基数。我们应该始终保持规范并绑定用户提供的输入。有时原因是非常细微的。考虑用于记录服务端点上的HTTP请求的URI标记。如果我们不将404约束为NOT_FOUND之类的值，则metrics的维度将随着找不到的每个资源而增长。</p>
+</blockquote>
+</blockquote>
+<hr>
+<h1 id="6-Meter过滤器"><a href="#6-Meter过滤器" class="headerlink" title="6.Meter过滤器"></a>6.Meter过滤器</h1><p>&emsp;&emsp;每个注册表都可以配置meter过滤器，使我们可以更好地控制如何注册仪表，何时注册仪表以及发出何种统计信息。Meter过滤器具有三个基本功能：</p>
+<p>&emsp;&emsp;1.拒绝（或接受）meter被注册。</p>
+<p>&emsp;&emsp;2.转换Meter的ID（例如，更改名称，添加或删除标签，更改描述或基本单位）。</p>
+<p>&emsp;&emsp;3.配置某些meter类型的分布统计信息。</p>
+<p>&emsp;&emsp;MeterFilter的实现以编程方式添加到注册表中：</p>
+<pre><code>registry.config()
+.meterFilter(MeterFilter.ignoreTags(&quot;too.much.information&quot;))
+.meterFilter(MeterFilter.denyNameStartsWith(&quot;jvm&quot;));</code></pre><p>&emsp;&emsp;按顺序应用Meter过滤器，并将变换或配置meter的结果链接在一起。</p>
+<h2 id="6-1-拒绝-接受meters"><a href="#6-1-拒绝-接受meters" class="headerlink" title="6.1 拒绝/接受meters"></a>6.1 拒绝/接受meters</h2><p>&emsp;&emsp;接受/拒绝过滤器的详细形式为：</p>
+<pre><code>new MeterFilter() &#123;
+    @Override
+    public MeterFilterReply accept(Meter.Id id) &#123;
+       if(id.getName().contains(&quot;test&quot;)) &#123;
+          return MeterFilterReply.DENY;
+       &#125;
+       return MeterFilterReply.NEUTRAL;
+        &#125;
+    &#125;</code></pre><p>&emsp;&emsp;MeterFilterReply具有三种可能的状态：</p>
+<ul>
+<li><p>DENY-请勿注册该仪表。当我们尝试注册一个与另一个注册表冲突的meter,过滤器返回DENY注册表将返回meter的NOOP版本（例如NoopCounter，NoopTimer）。我们的代码可以继续与NOOP计量器进行交互，但是记录在其中的任何内容都将以最小的开销立即被丢弃。</p>
+</li>
+<li><p>NEUTRAL-如果没有其他meter过滤器返回DENY，则meter的注册将照常进行。</p>
+</li>
+<li><p>ACCEPT-如果过滤器返回ACCEPT，meter将立即注册，而不会询问任何其他过滤器的接受方法。</p>
+</li>
+</ul>
+<h3 id="6-1-1-便利的方法"><a href="#6-1-1-便利的方法" class="headerlink" title="6.1.1 便利的方法"></a>6.1.1 便利的方法</h3><h3 id="6-1-2-链接-拒绝-接受meters"><a href="#6-1-2-链接-拒绝-接受meters" class="headerlink" title="6.1.2 链接 拒绝/接受meters"></a>6.1.2 链接 拒绝/接受meters</h3><h2 id="6-2-转换metrics"><a href="#6-2-转换metrics" class="headerlink" title="6.2 转换metrics"></a>6.2 转换metrics</h2><p>&emsp;&emsp;转换过滤器如下所示：</p>
+<pre><code>new MeterFilter() &#123;
+    @Override
+    public Meter.Id map(Meter.Id id) &#123;
+       if(id.getName().startsWith(&quot;test&quot;)) &#123;
+          return id.withName(&quot;extra.&quot; + id.getName()).withTag(&quot;extra.tag&quot;, &quot;value&quot;);
+       &#125;
+       return id;
+    &#125;
+&#125;</code></pre><p>&emsp;&emsp;该过滤器有条件地向meters添加以名称“ test”开头的名称前缀和附加标签。</p>
+<p>&emsp;&emsp;MeterFilter 为许多常见的转换案例提供了便利构建器：</p>
+<p>&emsp;&emsp;commonTags(Iterable<Tag>)-向所有指标添加一组标签。强烈建议为应用名称，主机，区域等添加通用标签。</p>
+<p>&emsp;&emsp;ignoreTags(String…​)-从每个仪表上舍弃匹配的标签键。当标签可证明变得过高的基数并开始给监视系统施加压力或开销增大，使得我们不能快速更改所有检测点时，此功能特别有用。</p>
+<p>&emsp;&emsp;replaceTagValues(String tagKey, Function&lt;String, String&gt; replacement, String…​ exceptions)-根据为所有匹配的标记键提供的映射替换标记值。通过将标签值的某些部分映射到其他内容，可以用来减少标签的总基数。</p>
+<p>&emsp;&emsp;renameTag(String meterNamePrefix, String fromTagKey, String toTagKey) -重命名以给定前缀开头的每个指标的标签键。</p>
+<h2 id="6-3-配置分布统计"><a href="#6-3-配置分布统计" class="headerlink" title="6.3 配置分布统计"></a>6.3 配置分布统计</h2><p>&emsp;&emsp;Timer和DistributionSummary除了可以通过过滤器配置的计数、总数和最大值的基本信息外，还包含一组可选的分布统计信息。这些分布统计信息包括预先计算的百分位数，SLA和直方图。</p>
+<pre><code>new MeterFilter() &#123;
+    @Override
+    public DistributionStatisticConfig configure(Meter.Id id, DistributionStatisticConfig config) &#123;
+        if (id.getName().startsWith(prefix)) &#123;
+            return DistributionStatisticConfig.builder()
+                    .publishPercentiles(0.9, 0.95)
+                    .build()
+                    .merge(config);
+        &#125;
+        return config;
+    &#125;
+&#125;;</code></pre><p>&emsp;&emsp;通常，我们应该仅对我们希望配置的切片创建一个新的DistributionStatisticConfig并且将它与输入的配置合并。这样，我们就可以下拉注册表提供的分发统计信息的默认值，并将多个过滤器链接在一起，每个过滤器都可以配置分发统计信息的一部分（例如，我们可能希望所有http请求都具有100ms的SLA，但在一些关键请求上只需要百分位端点）。</p>
+<p>&emsp;&emsp;MeterFilter 为以下人员提供便利构建器：</p>
+<p>&emsp;&emsp;maxExpected(Duration/long) -控制从timer或summary中得到的百分比直方图桶的上限。</p>
+<p>&emsp;&emsp;minExpected(Duration/long) -控制从timer或summary中得到的百分比直方图桶的下限。</p>
+<p>&emsp;&emsp;Spring Boot提供了基于属性的过滤器，用于通过名称前缀配置SLA，百分比和百分比直方图。</p>
+<h1 id="7-速率聚合"><a href="#7-速率聚合" class="headerlink" title="7.速率聚合"></a>7.速率聚合</h1><p>&emsp;&emsp;Micrometer知道特定的监视系统希望在metrics发布之前还是在服务器端作为查询的一部分临时在客户端进行速率聚合。它根据监视系统期望的样式累积metrics。</p>
+<p>&emsp;&emsp;并非所有测量指标都进行速率聚合进行报告或展示。例如，gauge和long task timer的任务就不是速率聚合。 </p>
+<p>&emsp;&emsp;执行服务器端速率聚合的监视系统希望在每个发布间隔报告绝对值。例如，自从应用程序的开始运行，在每个发布间隔所有counter增量的绝对值都会发布。</p>
+<p>&emsp;&emsp;假设我们有一个略微偏向的随机游走，它选择每10ms增加一次counter计数器。如果我们在监控系统，比如Prometheus这样的系统中查看原始计数器值，则会看到逐步单调递增的函数（步长是Prometheus轮询或抓取数据的间隔）。</p>
+<p><img src="https://wx4.sinaimg.cn/mw690/007857NYly1g8v8j33vttj30i708zmxx.jpg" alt="rate1"></p>
+<p>&emsp;&emsp;在某个时间窗口内没有速率聚合的counter很少是有用的，因为表示的是计数器递增的速度和服务寿命的函数。在上面的示例中，服务重新启动时，counter降回零。新实例（例如在生产部署中）投入使用后，速率聚合图像将返回到约55的值。</p>
+<p>&emsp;&emsp;如果我们已实现零停机时间部署（例如通过红黑部署），则应该能够在速率汇总图上轻松设置最低警报阈值，而无需重新启动服务导致计数器值下降。</p>
+<blockquote>
+<p>重要</p>
+<blockquote>
+<p>对于大多数生产目的，无论是警报，自动数据分析等，都是基于速率汇总数据进行自动化的。</p>
+</blockquote>
+</blockquote>
+<h2 id="7-2-客户端"><a href="#7-2-客户端" class="headerlink" title="7.2 客户端"></a>7.2 客户端</h2><p>另一类监视系统：</p>
+<p>&emsp;&emsp;1.期望速率汇总数据。考虑到对于大多数生产目的的关键需求指标，我们应该基于速率而不是绝对值来做出决策，这样的系统将得益于无需进行太多数学运算即可满足查询的需求。</p>
+<p>&emsp;&emsp;2.几乎没有数学运算或没有数学运算，即可使我们可以通过查询对数据进行速率聚合。对于这些系统，发布预先聚合的数据是构建有意义的表示的唯一方法。</p>
+<p>&emsp;&emsp;MicroMeter通过累积当前发布间隔数据的步长值来有效维护速率数据。当对步长值进行轮询时（例如，在发布时），如果步长值检测到当前间隔已过去，则它将当前数据移至“先前”状态。该先前状态是报告的，直到下次当前数据覆盖它为止。以下是当前和先前状态以及轮询之间相互作用的说明：</p>
+<p>&emsp;&emsp;poll函数返回的值始终是每秒的速率*间隔。如果上面说明的步长值表示counter的值，则可以说计数器在第一个间隔中看到了“每秒0.3增量”，这可以在第二个间隔中的任何时间报告给后端。</p>
+<p>&emsp;&emsp;MicroMeterde的timer至少跟踪一个计数和总时间，作为单独的测量。假设我们以10秒的间隔配置发布，并且看到20个请求，每个请求花费100毫秒。然后在第一个间隔中：</p>
+<pre><code>1.count = 10秒*（20个请求/ 10秒）= 20个请求
+
+2.totalTime = 10秒*（20 * 100毫秒/ 10秒）= 2秒</code></pre><p>&emsp;&emsp;该count统计信息很有意义，可以单独使用–它是吞吐量的度量。totalTime表示间隔中所有请求的总延迟。另外：</p>
+<pre><code>totalTime / count = 2秒/ 20个请求= 0.1秒/请求= 100 ms /请求</code></pre><p>&emsp;&emsp;这是平均延迟的有用度量。当将相同的思想应用于分布汇总totalAmount并count从中得出时，该度量称为分布平均值。平均延迟只是按时间（timer）度量的分发summary的分发平均值。犹如Atlas一些监测系统计算从这些统计分布平均提供设施和MicroMeter将发布totalTime和count作为单独统计。其他如Datadog则没有内置此类操作，Micrometer将计算客户端的平均分配并将其发送出去。<br><img src="https://wx4.sinaimg.cn/mw690/007857NYly1g8v8gqzxc1j31cm0fpjtr.jpg" alt="rate分析"><br>&emsp;&emsp;发布时间间隔的速率足以推断出在任何时间窗口内大于或等于发布时间间隔的速率。在我们的示例中，如果服务在给定的分钟内继续接收20个请求，在每10秒间每个请花费100ms，那么我们可以说：</p>
+<p>&emsp;&emsp;1.MicroMeter每10秒报告一次total–“ 20个请求” 。监视系统简单地将这六个10秒的间隔相加即可得出每分钟120个请求的结论。请注意，是进行进行求和操作的是监视系统，而不是MicroMeter。</p>
+<p>&emsp;&emsp;2.MicroMeter每隔10 秒报告一次totalTime–“ 2秒” 。监视系统可以对一分钟内的所有总时间统计信息求和，以在分钟间隔内产生总时间的“ 12秒”。然后，平均延迟就如我们期望的那样：12秒/ 120个请求= 100 ms /请求。</p>
+<hr>
+<h1 id="8-Counters"><a href="#8-Counters" class="headerlink" title="8.Counters"></a>8.Counters</h1><p>Couners报告一个指标，计数。该Counter接口允许我们以固定数量递增，该数量必须为正。</p>
+<blockquote>
+<p>tip</p>
+<blockquote>
+<p>永远不要记数一些我们可以使用Timer或用DistributionSummary记录的东西！Timer和DistributionSummary会发布除了其他的测量事件之外，还有事件的计数。</p>
+</blockquote>
+</blockquote>
+<p>&emsp;&emsp;建立图表并根据Counter发出警报时，通常我们应该最感兴趣的是测量在给定时间间隔内某些事件的速率。考虑一个简单的队列，Counter可用于衡量事物的插入和移除速度。</p>
+<p>&emsp;&emsp;人们首先想到的是可视化绝对数值，而不是速率，但绝对数量通常是既是一些事务的使用速率的函数也是可视化条件下应用程序实例的使用寿命。在某些时间间隔内构建仪表板和Counter速率警报会忽略应用程序的寿命，让我们在应用程序启动后很长时间才看到异常行为。</p>
+<blockquote>
+<p>注意</p>
+<blockquote>
+<p>在进入使用计数器之前，请务必通读Timer部分，因为Timer会记录计时事件的计数，因为Counter记录了时间事件的计数作为度量的一部分。对于我们打算计时的那些代码，我们无需单独添加计数器。</p>
+</blockquote>
+</blockquote>
+<p>&emsp;&emsp;以下代码模拟了一个真实的Counter，该Counter的rate在较短的时间范围内显示出一些扰动。</p>
+<pre><code>Normal rand = ...; // a random generator
+
+
+MeterRegistry registry = ...
+
+Counter counter = registry.counter(&quot;counter&quot;); (1)
+
+
+Flux.interval(Duration.ofMillis(10))
+    .doOnEach(d -&gt; &#123;
+        if (rand.nextDouble() + 0.1 &gt; 0) &#123; (2)
+            counter.increment(); (3)
+        &#125;
+    &#125;)
+    .blockLast();</code></pre><p>&emsp;&emsp;1.可以使用名称和（可选）一组标签从注册表本身创建大多数Counter。</p>
+<p>&emsp;&emsp;2.略微偏向的随机游走。</p>
+<p>&emsp;&emsp;3.这就是我们与Conuter交互的方式。我们也可以用counter.increment(n)在单个操作中调用增加1以上的值。</p>
+<p>&emsp;&emsp;Counter接口本身还有一个流利的计数器构建器，可以访问不太常用的选项，例如基本单位和说明。我们可以通过调用将计数器注册为构造计数器的最后一步register。</p>
+<pre><code>Counter counter = Counter
+    .builder(&quot;counter&quot;)
+    .baseUnit(&quot;beans&quot;) // optional
+    .description(&quot;a description of what this counter does&quot;) // optional
+    .tags(&quot;region&quot;, &quot;test&quot;) // optional
+    .register(registry);</code></pre><h2 id="8-1-功能–追踪Counter"><a href="#8-1-功能–追踪Counter" class="headerlink" title="8.1 功能–追踪Counter"></a>8.1 功能–追踪Counter</h2><p>&emsp;&emsp;MicroMeter还提供了一种更不常用的计数器模式，该模式跟踪单调递增的函数（函数保持不变或随时间增加，但从不减少）。一些监视系统（例如Prometheus）将Counter的累积值推送到后端，但是其他系统则发布Counter在推送间隔内递增的速率。通过采用这种模式，我们可以让监控系统的Micrometer实施选择是否对Counter进行归一化评估，并且计数器可以在不同类型的监控系统之间保持可移植性。</p>
+<pre><code>Cache cache = ...; // suppose we have a Guava cache with stats recording on
+
+registry.more().counter(&quot;evictions&quot;, tags, cache, c -&gt; c.stats().evictionCount()); (1)</code></pre><p>&emsp;&emsp;1.evictionCount() 是一个单调递增的函数，从生命周期的开始就随着每次缓存逐出而递增。</p>
+<p>&emsp;&emsp;功能–跟踪Counter,与监视系统的速率归一化功能（无论是查询语言的人工产物还是数据被推送到系统的方式）配合使用，在功能的累积值之上增加了一层丰富性。可以推断值增加的速率，这样的速率是否在一个可接受的范围，随着时间的推移是在增加或降低。</p>
+<blockquote>
+<p>警告</p>
+<blockquote>
+<p>MicroMeter不能为您保证函数的单调性。通过使用此签名，我们可以根据对定义的了解来断言其单调性。</p>
+</blockquote>
+</blockquote>
+<p>&emsp;&emsp;FunctionCounter接口本身也具有用于功能计数器的流利的构建器，可以访问不太常用的选项，例如基本单元和描述。我们可以通过调用将计数器注册为构造计数器的最后一步register(MeterRegistry)。</p>
+<pre><code>MyCounterState state = ...;
+
+FunctionCounter counter = FunctionCounter
+    .builder(&quot;counter&quot;, state, state -&gt; state.count())
+    .baseUnit(&quot;beans&quot;) // optional
+    .description(&quot;a description of what this counter does&quot;) // optional
+    .tags(&quot;region&quot;, &quot;test&quot;) // optional
+    .register(registry);</code></pre><h1 id="9-Gauge"><a href="#9-Gauge" class="headerlink" title="9.Gauge"></a>9.Gauge</h1><p>&emsp;&emsp;Gauge是获取当前值的处理器。Gauge的典型示例是运行状态下的<strong>集合或映射的大小或线程数</strong>。</p>
+<blockquote>
+<p>tip</p>
+<blockquote>
+<p>Gauge对于监视具有自然上限的事物很有用。不建议使用Gauge来监视诸如请求计数之类的事情，因为它们会在应用程序实例生命周期内不受限制地增长。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>tip</p>
+<blockquote>
+<p>能用Counter计量的东西千万不要用Gauge！</p>
+</blockquote>
+</blockquote>
+<p>&emsp;&emsp;MicroMeter的立场是应该对Gauge进行采样而不进行设置，因此没有关于样品之间可能发生的情况的信息。毕竟，在将Gauge值报告给Metrics后端后，Gauge上设置的任何中间值都会丢失，因此首先设置这些中间值似乎没有什么价值。</p>
+<p>&emsp;&emsp;如果有帮助，可以将其Gauge视为“heisen-gauge”-仅在观察到时才会改变的仪表。开箱即用提供的所有其他Meter类型都会在向数据后端发送数据时累积中间计数。</p>
+<p>&emsp;&emsp;该MeterRegistry接口包含用于构建Gauge以观察数值、方法、、集合和映射的方法。</p>
+<pre><code>List&lt;String&gt; list = registry.gauge(&quot;listGauge&quot;, Collections.emptyList(), new ArrayList&lt;&gt;(), List::size); (1)
+List&lt;String&gt; list2 = registry.gaugeCollectionSize(&quot;listSize2&quot;, Tags.empty(), new ArrayList&lt;&gt;()); (2)
+Map&lt;String, Integer&gt; map = registry.gaugeMapSize(&quot;mapGauge&quot;, Tags.empty(), new HashMap&lt;&gt;());</code></pre><p>&emsp;&emsp;1.gauge的一种较常见的形式是监视某些非数字对象。最后一个参数建立了一个函数，该函数用于在观察gauge时确定gauge的值。</p>
+<p>&emsp;&emsp;2.对于(1)的一种更方便的形式，用于您只想监视集合大小的情况。</p>
+<p>&emsp;&emsp;创建gauge的所有不同形式都仅保持对要观察的对象的弱引用，以免阻止对象的垃圾收集。</p>
+<h2 id="9-1-手动增减仪表"><a href="#9-1-手动增减仪表" class="headerlink" title="9.1 手动增减仪表"></a>9.1 手动增减仪表</h2><p>&emsp;&emsp;gauge可制成可以跟踪任何java.lang.Number亚型，如java.util.concurrent.atomic中发现的AtomicInteger和AtomicLong，和Guava的AtomicDouble类似的类型。</p>
+<pre><code>AtomicInteger n = registry.gauge(&quot;numberGauge&quot;, new AtomicInteger(0));
+n.set(1);
+n.set(2);</code></pre><p>&emsp;&emsp;请注意，这种形式与其他meter类型不同，Gauge在创建一个meter时，我们不会得到引用，而是要观察到的东西。这是因为存在”heisen-gauge”原理，gauge一经创建便是自给自足的，因此我们无需与之交互。这使MicroMeter可以只向我们退还已检测的对象，从而可以快速创建一个可观察对象并围绕该对象设置metrics指标。</p>
+<p>&emsp;&emsp;此模式应比DoubleFunction表格少见。请记住，频繁设置观察值会Number导致许多中间值无法发布。仅在发布时将gauge的瞬时值发送到监视系统。</p>
+<blockquote>
+<p>警告</p>
+<blockquote>
+<p>尝试使用原始数字或其java.lang对象形式之一构造gauge总是不正确的。这些数字是不可变的，因此gauge无法更改。尝试用不同的编号“重新注册”量规是行不通的，因为注册表仅对名称和标签组成的唯一组合维护一个仪表。</p>
+</blockquote>
+</blockquote>
+<h2 id="9-2-Gauge的构建器"><a href="#9-2-Gauge的构建器" class="headerlink" title="9.2 Gauge的构建器"></a>9.2 Gauge的构建器</h2><p>&emsp;&emsp;该接口包含一个流利的gauge构建器：</p>
+<pre><code>Gauge gauge = Gauge
+    .builder(&quot;gauge&quot;, myObj, myObj::gaugeValue)
+    .description(&quot;a description of what this gauge does&quot;) // optional
+    .tags(&quot;region&quot;, &quot;test&quot;) // optional
+    .register(registry);</code></pre><p>&emsp;&emsp;通常，返回的Gauge实例仅在测试中有用，因为gauge已设置为在注册后自动跟踪数值。</p>
+<h2 id="9-3-我的Gauge为什么报告NaN或消失？"><a href="#9-3-我的Gauge为什么报告NaN或消失？" class="headerlink" title="9.3 我的Gauge为什么报告NaN或消失？"></a>9.3 我的Gauge为什么报告NaN或消失？</h2><p>&emsp;&emsp;MicroMeter对于创建强引用对象非常谨慎，避免那些对象无法进行垃圾收集，一旦被测量的对象被取消引用并被垃圾回收，Micrometer将开始报告测量值的NaN或不报告，具体取决于注册表的实现方式。</p>
+<p>&emsp;&emsp;如果看到gauge报告了几分钟，然后消失或报告了NaN，则几乎可以肯定地表明被测量的基础对象已被垃圾回收。</p>
+<hr>
+<h1 id="10-Timer"><a href="#10-Timer" class="headerlink" title="10 Timer"></a>10 Timer</h1><p>&emsp;&emsp;计时器用于测量短时延以及此类事件的频率。所有实现的Timer将按照时间序列报告至少总时间和事件计数。尽管可以将Timers用于其他用例，但请注意不支持负值，并且记录更长的持续时间可能会导致总时间溢出（以Long.MAX_VALUE纳秒计）（292.3年）。</p>
+<p>&emsp;&emsp;例如，考虑一个图表，它显示了对典型Web服务器的请求延迟。可以期望服务器快速响应许多请求，因此计时器将每秒更新多次。</p>
+<p>&emsp;&emsp;Counter的适当基本单位因指标后端的不同而有所不同。MicroMeter对此毫无疑问，但是由于存在混淆的可能性，与Timers 相互作用时需要TimeUnit。Micrometer知道每种实现的首选项，并根据实现在适当的基本单元中发布我们的时间安排。</p>
+<pre><code>public interface Timer extends Meter &#123;
+    ...
+    void record(long amount, TimeUnit unit);
+    void record(Duration duration);
+    double totalTime(TimeUnit unit);
+&#125;</code></pre><p>&emsp;&emsp;该接口包含一个流畅的Timer构建器：</p>
+<pre><code>Timer timer = Timer
+.builder(&quot;my.timer&quot;)
+.description(&quot;a description of what this timer does&quot;) // optional
+.tags(&quot;region&quot;, &quot;test&quot;) // optional
+.register(registry);</code></pre><h2 id="10-1-记录代码块"><a href="#10-1-记录代码块" class="headerlink" title="10.1 记录代码块"></a>10.1 记录代码块</h2><p>&emsp;&emsp;该Timer接口公开了一些方便的重载，用于内联时间记录，例如：</p>
+<pre><code>timer.record(() -&gt; dontCareAboutReturnValue());
+timer.recordCallable(() -&gt; returnValue());
+
+Runnable r = timer.wrap(() -&gt; dontCareAboutReturnValue()); (1)
+
+Callable c = timer.wrap(() -&gt; returnValue());</code></pre><p>1.包装Runnable或Callable返回其可视化版本以供以后使用。</p>
+<blockquote>
+<p>注意</p>
+<blockquote>
+<p>Timer实际上只是一个专门的分布式summary，它知道如何将持续时间缩放到每个监视系统的基本时间单位，并且具有自动确定的基本单位。在每种情况下，如果要测量时间，都应使用Timer而不是DistributionSummary。</p>
+</blockquote>
+</blockquote>
+<h2 id="10-2-将开始状态存储在Timer-Sample"><a href="#10-2-将开始状态存储在Timer-Sample" class="headerlink" title="10.2 将开始状态存储在Timer.Sample"></a>10.2 将开始状态存储在Timer.Sample</h2><p>&emsp;&emsp;您也可以将启动状态存储在示例实例中，以后可以将其停止。该示例记录基于注册表时钟的开始时间。开始采样后，执行要计时的代码，并通过调用stop(Timer)采样完成操作。</p>
+<pre><code>Timer.Sample sample = Timer.start(registry);
+
+// do stuff
+
+Response response = ...
+
+sample.stop(registry.timer(&quot;my.timer&quot;, &quot;response&quot;, response.status()));</code></pre><p>&emsp;&emsp;请注意，在停止采样之前，如何确定采样所用的计时器。这使我们能够根据我们正在计时的操作的结束状态动态地确定某些标签。</p>
+<h2 id="10-3-Timed注解"><a href="#10-3-Timed注解" class="headerlink" title="10.3 @Timed注解"></a>10.3 @Timed注解</h2><p>&emsp;&emsp;micrometer-core模块包含一个@Timed注释，框架可以使用该注释向特定类型的方法（例如为Web请求端点提供服务的方法）或通常为所有方法添加计时支持。</p>
+<blockquote>
+<p>警告</p>
+<blockquote>
+<p>Micrometer的Spring Boot配置无法@Timed在任意方法上识别。</p>
+</blockquote>
+</blockquote>
+<p>&emsp;&emsp;还包含一个可孵化的AspectJ方面micrometer-core，在应用程序中，我们可以通过编译/加载AspectJ编织，或通过框架工具比如Spring Aop等其他方式解释AspectJ切面和代理目标方法。如下是一个示例Spring AOP配置：</p>
+<pre><code>@Configuration
+public class TimedConfiguration &#123;
+@Bean
+public TimedAspect timedAspect(MeterRegistry registry) &#123;
+  return new TimedAspect(registry);
+   &#125;
+&#125;</code></pre><p>&emsp;&emsp;在AspectJ代理实例中，应用程序TimedAspect的@Timed用于任何任意方法。</p>
+<h2 id="10-4-功能–跟踪timers"><a href="#10-4-功能–跟踪timers" class="headerlink" title="10.4 功能–跟踪timers"></a>10.4 功能–跟踪timers</h2><p>&emsp;&emsp;MicroMeter还提供了一种不常用的计时器模式，该模式可跟踪两个单调递增的函数（一个函数随时间保持不变或增加，但从不减小）：计数函数和总时间函数。某些监视系统（例如Prometheus）将计数器的累积值（在这种情况下适用于计数和总时间函数）推送到后端，但其他系统则发布计数器在推送间隔内递增的速率。通过采用这种模式，我们可以让监控系统的Micrometer实现选择是否对timer进行速率聚合，并且计时器可以在不同类型的监控系统之间保持可移植性。</p>
+<pre><code>IMap&lt;?, ?&gt; cache = ...; // suppose we have a Hazelcast cache
+registry.more().timer(&quot;cache.gets.latency&quot;, Tags.of(&quot;name&quot;, cache.getName()), cache,
+    c -&gt; c.getLocalMapStats().getGetOperationCount(), (1)
+    c -&gt; c.getLocalMapStats().getTotalGetLatency(),
+    TimeUnit.NANOSECONDS (2)
+);</code></pre><p>&emsp;&emsp;1.getGetOperationCount() 是一个单调递增的函数，它从生命周期的开始就随着每个缓存的获取而递增。</p>
+<p>&emsp;&emsp;2.这表示由getTotalGetLatency()表示的时间单位。每个注册表实现均指定其预期的基本时间单位是什么，并且报告的总时间将缩放为该值。</p>
+<p>&emsp;&emsp;功能–跟踪timer与监视系统的速率归一功能（无论是查询语言的人工产物还是数据被推送到系统的方式）配合使用，在功能的累积值之上增加了一层丰富性，我们可以推断吞吐量和延迟的速率，该速率是否在可接受的范围内，随时间增加还是减少等。</p>
+<blockquote>
+<p>警告</p>
+<blockquote>
+<p>MicroMeter不能为我们保证count和total time功能的单调性。通过使用此签名，您可以根据对定义的了解来断言它们的单调性。</p>
+</blockquote>
+</blockquote>
+<p>&emsp;&emsp;FunctionTimer接口本身还有一个流利的FunctionTimer构建器，可用于访问不常用的选项，例如基本单元和描述。您可以通过调用register(MeterRegistry)为构造计时器的最后一步)。</p>
+<pre><code>IMap&lt;?, ?&gt; cache = ...
+
+
+FunctionTimer.builder(&quot;cache.gets.latency&quot;, cache,
+        c -&gt; c.getLocalMapStats().getGetOperationCount(),
+        c -&gt; c.getLocalMapStats().getTotalGetLatency(),
+        TimeUnit.NANOSECONDS)
+    .tags(&quot;name&quot;, cache.getName())
+    .description(&quot;Cache gets&quot;)
+    .register(registry);</code></pre><h2 id="10-5-暂停检测"><a href="#10-5-暂停检测" class="headerlink" title="10.5 暂停检测"></a>10.5 暂停检测</h2><p>&emsp;&emsp;MicroMeter使用LatencyUtils包来补偿协同遗漏—系统和VM暂停导致的额外延迟会延迟您的延迟统计信息。百分位数和SLA计数之类的分布统计信息受暂停检测器实现的影响，该实现会在此处和此处添加额外的延迟以补偿暂停。</p>
+<p>&emsp;&emsp;MicroMeter支持两种暂停检测器实施方式：基于时钟漂移的检测器和无操作检测器。在MicroMeter的1.0.10/1.1.4/1.2.0版本之前，默认情况下配置了时钟漂移检测器以报告尽可能准确的度量标准，而无需进行进一步配置。从1.0.10/1.1.4/1.2.0版本开始，默认情况下配置无操作检测器，但可以如下配置时钟漂移检测器。</p>
+<p>&emsp;&emsp;基于时钟漂移的检测器具有可配置的睡眠间隔和暂停阈值。CPU消耗与sleepInterval、暂停检测精度成反比。这两个值的100ms是合理的默认值，以提供对长时间停顿事件的适当检测，同时消耗可忽略的CPU时间。</p>
+<p>&emsp;&emsp;我们可以使用以下方法自定义暂停检测器：</p>
+<pre><code>registry.config().pauseDetector(new ClockDriftPauseDetector(sleepInterval, pauseThreshold));
+
+registry.config().pauseDetector(new NoPauseDetector());</code></pre><p>&emsp;&emsp;将来，我们可能会提供进一步的检测器实现。例如，在某些情况下，可以从GC日志中推断出一些暂停，而不需要恒定的CPU负载，尽管负载很小。将来的JDK也可能会提供对暂停事件的直接访问。</p>
+<h2 id="10-6-内存占用估算"><a href="#10-6-内存占用估算" class="headerlink" title="10.6 内存占用估算"></a>10.6 内存占用估算</h2><p>&emsp;&emsp;Timer是最消耗内存的meter，其总占用空间可能会因我们选择的选项而有很大差异。下表是基于各种功能使用情况的内存消耗表。这些数字假定没有标签，并且环形缓冲区的长度为3。添加标签当然会增加总数，增加缓冲区的长度也会有所增加。总存储量也可能会有所不同，具体取决于注册表的实现。</p>
+<ul>
+<li><p>R =环形缓冲区的长度。在所有示例中，我们假定默认值为3。R用设置Timer.Builder#distributionStatisticBufferLength。</p>
+</li>
+<li><p>B =总直方图桶。可以是SLA边界或百分比直方图桶。默认情况下，计时器被限制为最小期望值1ms和最大期望值30秒，如果适用，则为百分比直方图产生66个桶。</p>
+</li>
+<li><p>I =暂停补偿的间隔估算器。1.7 kb</p>
+</li>
+</ul>
+<ul>
+<li>M =最大衰减时间。104字节</li>
+</ul>
+<ul>
+<li><p>Fb =固定边界直方图。30b * B * R</p>
+</li>
+<li><p>Pp =百分位数精度。默认情况下为1。通常在[0，3]范围内。Pp用设置Timer.Builder#percentilePrecision。</p>
+</li>
+<li><p>Hdr（Pp）=高动态范围直方图。</p>
+</li>
+</ul>
+<p>若 Pp = 0：1.9kb * R + 0.8kb</p>
+<p>若 Pp = 1：3.8kb * R + 1.1kb</p>
+<p>若 Pp = 2：18.2kb * R + 4.7kb</p>
+<p>若 Pp = 3：66kb * R + 33kb</p>
+<table>
+<thead>
+<tr>
+<th align="center">暂停检测</th>
+<th align="center">客户端百分位数</th>
+<th align="center">Cool</th>
+<th align="center">直方图和/或SLA</th>
+<th align="center">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">YES</td>
+<td align="center">NO</td>
+<td align="center">NO</td>
+<td align="center">I+M</td>
+<td align="center">~1.8kb</td>
+</tr>
+<tr>
+<td align="center">YES</td>
+<td align="center">NO</td>
+<td align="center">YES</td>
+<td align="center">I+M+Fb</td>
+<td align="center">对于默认的百分比直方图，〜7.7kb</td>
+</tr>
+<tr>
+<td align="center">YES</td>
+<td align="center">YES</td>
+<td align="center">YES</td>
+<td align="center">I+M+Hdr(Pp)</td>
+<td align="center">要添加默认值的0.95％，否则为〜14.3kb</td>
+</tr>
+<tr>
+<td align="center">NO</td>
+<td align="center">NO</td>
+<td align="center">NO</td>
+<td align="center">M</td>
+<td align="center">〜0.1kb</td>
+</tr>
+<tr>
+<td align="center">NO</td>
+<td align="center">NO</td>
+<td align="center">YES</td>
+<td align="center">M+Fb</td>
+<td align="center">对于默认的百分比直方图，〜6kb</td>
+</tr>
+<tr>
+<td align="center">NO</td>
+<td align="center">YES</td>
+<td align="center">YES</td>
+<td align="center">M+Hdr(Pp)</td>
+<td align="center">要添加默认值的0.95％，否则为〜12.6kb</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意</p>
+<blockquote>
+<p>这些估计是基于Micrometer 1.0.3中所做的改进，并且假定至少使用该版本。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>注意</p>
+<blockquote>
+<p>特别是对于Prometheus ，无论您如何尝试通过进行配置Timer.Builder，R 始终等于1 。这对于</p>
+</blockquote>
+</blockquote>
+<p>&emsp;&emsp;Prometheus来说是特殊情况，因为它期望永不翻转的累积直方图数据。</p>
+<h1 id="11-分布式-summaries"><a href="#11-分布式-summaries" class="headerlink" title="11 分布式 summaries"></a>11 分布式 summaries</h1><p>&emsp;&emsp;分布式summaries用于跟踪事件的分布。它在结构上类似于计时器，但记录的值不代表时间单位。例如，分布式summary可用于衡量命中服务器的请求的有效负载大小。</p>
+<p>&emsp;&emsp;要创建一个分布式summary：</p>
+<pre><code>DistributionSummary summary = registry.summary(&quot;response.size&quot;);</code></pre><p>&emsp;&emsp;该接口包含一个流利的分布式summary构建器：</p>
+<pre><code>DistributionSummary summary = DistributionSummary
+    .builder(&quot;response.size&quot;)
+    .description(&quot;a description of what this summary does&quot;) // optional
+    .baseUnit(&quot;bytes&quot;) // optional (1)
+    .tags(&quot;region&quot;, &quot;test&quot;) // optional
+    .scale(100) // optional (2)
+    .register(registry);</code></pre><p>&emsp;&emsp;1.添加基本​​单元以获得最大的可移植性-基本单元是某些监视系统的命名约定的一部分。如果忘记的话，将其保留下来并违反命名约定不会有任何不利影响。</p>
+<p>&emsp;&emsp;2.可选的，我们可以提供一个比例因子，每个记录的样本在记录时将乘以该比例。</p>
+<h2 id="11-1-标度和直方图"><a href="#11-1-标度和直方图" class="headerlink" title="11.1 标度和直方图"></a>11.1 标度和直方图</h2><p>&emsp;&emsp;MicroMeter的预选百分比直方图桶都是从1到最大long的整数。目前minimumExpectedValue和maximumExpectedValue用来控制桶的基数。如果我们尝试检测到您的最小/最大值产生较小的范围并将预选的存储桶域缩放到summary的范围，则我们没有其他方法可以控制桶的基数。</p>
+<p>&emsp;&emsp;相反，如果summary的域受到更多限制，则按固定因子缩放摘要的范围。到目前为止，我们所听到的用例是域为[0,1]的比率的汇总。然后：</p>
+<pre><code>DistributionSummary.builder(&quot;my.ratio&quot;).scale(100).register(registry)</code></pre><p>&emsp;&emsp;这样，比率最终会在[0,100]的范围内，我们可以将其设置maximumExpectedValue为100。如果您关心特定的比率，则将其与自定义SLA边界配对：</p>
+<pre><code>DistributionSummary.builder(&quot;my.ratio&quot;)
+   .scale(100)
+   .sla(70, 80, 90)
+   .register(registry)</code></pre><h2 id="11-2-内存占用估算"><a href="#11-2-内存占用估算" class="headerlink" title="11.2 内存占用估算"></a>11.2 内存占用估算</h2><p>&emsp;&emsp;分布式summary的总内存占用量可能会变化很大，具体取决于我们选择的选项。下表是基于各种功能使用情况的内存消耗表。这些数字假定没有标签，并且环形缓冲区的长度为3。添加标签当然会增加总数，增加缓冲区的长度也会有所增加。总存储量也可能会有所不同，具体取决于注册表的实现。</p>
+<ul>
+<li><p>R =环形缓冲区的长度。在所有示例中，我们假定默认值为3。R用设置DistributionSummary.Builder#distributionStatisticBufferLength。</p>
+</li>
+<li><p>B =总直方图桶。可以是SLA边界或百分比直方图桶。默认情况下，摘要没有最小和最大期望值，因此请装运所有276个预定的直方图桶。当您打算运送百分位直方图时，应始终使用minimumExpectedValue和来固定分布摘要maximumExpectedValue。</p>
+</li>
+<li><p>M =最大衰减时间。104字节</p>
+</li>
+<li><p>Fb =固定边界直方图。30b * B * R</p>
+</li>
+<li><p>Pp =百分位数精度。默认情况下为1。通常在[0，3]范围内。Pp用设置DistributionSummary.Builder#percentilePrecision。</p>
+</li>
+<li><p>Hdr（Pp）=高动态范围直方图。</p>
+</li>
+</ul>
+<p>当Pp = 0时：1.9kb * R + 0.8kb</p>
+<p>当Pp = 1时：3.8kb * R + 1.1kb</p>
+<p>当Pp = 2时：18.2kb * R + 4.7kb</p>
+<p>当Pp = 3时：66kb * R + 33kb</p>
+<table>
+<thead>
+<tr>
+<th align="center">客户端</th>
+<th align="center">百分位数直方图和/或SLA</th>
+<th align="right">公式</th>
+<th align="center">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">NO</td>
+<td align="center">NO</td>
+<td align="right">M</td>
+<td align="center">〜0.1kb</td>
+</tr>
+<tr>
+<td align="center">NO</td>
+<td align="center">YES</td>
+<td align="right">M+Fb</td>
+<td align="center">对于固定在66个桶中的百分位直方图，〜6kb</td>
+</tr>
+<tr>
+<td align="center">YES</td>
+<td align="center">YES</td>
+<td align="right">M+Hdr(Pp)</td>
+<td align="center">要添加默认值的0.95％，否则为〜12.6kb</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意</p>
+<blockquote>
+<p>这些估计是基于Micrometer1.0.3中所做的改进，并且假定至少使用该版本。</p>
+</blockquote>
+<p>注意</p>
+<blockquote>
+<p>特别是对于Prometheus ，无论您如何尝试通过DistributionSummary.Builder进行配置，R 始终等于1。这对于Prometheus来说是特殊情况，因为它期望的是永不翻转的累积直方图数据。</p>
+</blockquote>
+</blockquote>
+<hr>
+<h1 id="12-长任务timers"><a href="#12-长任务timers" class="headerlink" title="12.长任务timers"></a>12.长任务timers</h1><p>&emsp;&emsp;长任务timers是一种特殊的timer，可让我们在正在测量的事件仍在运行时测量时间。在任务完成之前，计时器不会持续记录时间。</p>
+<p>&emsp;&emsp;现在考虑一个后台过程来刷新数据存储中的元数据。例如，Edda缓存AWS资源，例如实例、卷、自动扩展组等。通常，所有数据都可以在几分钟内刷新。如果AWS服务出现问题，则可能需要更长的时间。长任务timer可用于跟踪刷新元数据的总时间。</p>
+<p>&emsp;&emsp;例如，在Spring应用程序中，通常使用来实现如此长时间运行的进程@Scheduled。MicroMeter提供了特殊的@Timed注释，用于使用长任务timer来可视化这些过程。</p>
+<pre><code>@Timed(value = &quot;aws.scrape&quot;, longTask = true)
+@Scheduled(fixedDelay = 360000)
+void scrapeResources() &#123;
+// find instances, volumes, auto-scaling groups, etc...
+&#125;</code></pre><p>&emsp;&emsp;@Timed是否生效取决于应用程序框架。如果所选择的框架不支持它，我们仍然可以使用长任务计时器：</p>
+<pre><code>LongTaskTimer scrapeTimer = registry.more().longTaskTimer(&quot;scrape&quot;);
+
+void scrapeResources() &#123;
+    scrapeTimer.record(() =&gt; &#123;
+        // find instances, volumes, auto-scaling groups, etc...
+    &#125;);
+&#125;</code></pre><p>&emsp;&emsp;如果我们想在此过程超过阈值时发出警报，则需要longtasktimer，超过阈值后，我们将在第一个报告间隔收到该警报。如果使用常规timer，则直到该过程完成后的第一个报告间隔（超过一个小时），我们才会收到警报！</p>
+<p>&emsp;&emsp;该接口包含用于Longtasktimer的流利的构建器：</p>
+<pre><code>LongTaskTimer longTaskTimer = LongTaskTimer
+    .builder(&quot;long.task.timer&quot;)
+    .description(&quot;a description of what this timer does&quot;) // optional
+    .tags(&quot;region&quot;, &quot;test&quot;) // optional
+    .register(registry);</code></pre><hr>
+<h1 id="13-直方图和百分位数"><a href="#13-直方图和百分位数" class="headerlink" title="13 直方图和百分位数"></a>13 直方图和百分位数</h1><p>&emsp;&emsp;Timer和分布式summary支持收集数据以观察其百分比分布。查看百分位数的主要方法有两种：</p>
+<p>&emsp;&emsp;1.百分比直方图 -MicroMeter将值累加为基础直方图，并将预定的一组buckets集合发送给监视系统。监视系统的查询语言负责计算此直方图的百分位数。目前，只有Prometheus，Atlas，和Wavefront支持直方图基于百分比近似，通过histogram_quantile，:percentile和hs()分别。如果定位到Prometheus，Atlas或Wavefront，则最好使用此方法，因为我们可以汇总各个维度上的直方图（通过简单地将一组维度中各个值的值相加）并从该直方图中得出可凝集的百分位数。</p>
+<p>&emsp;&emsp;2.客户端百分位数 -MicroMeter为每个仪表ID（名称和标签集）计算百分位数近似值，并将百分位数值发送到监视系统。这不能像百分位数直方图那样灵活，因为不可能汇总标签之间的百分位数近似值。但是，它为不支持基于直方图的服务器端百分比计算的监视系统提供了一定百分比的洞察力。</p>
+<p>&emsp;&emsp;这是一个使用直方图构建计时器的示例：</p>
+<pre><code>Timer.builder(&quot;my.timer&quot;)
+
+   .publishPercentiles(0.5, 0.95) // median and 95th percentile
+
+   .publishPercentileHistogram()
+
+   .sla(Duration.ofMillis(100))
+
+   .minimumExpectedValue(Duration.ofMillis(1))
+
+   .maximumExpectedValue(Duration.ofSeconds(10))</code></pre><p>&emsp;&emsp;1.publishPercentiles-用于发布在我们的应用中计算出的百分位值。这些值在各个维度上都是不可凝聚的。</p>
+<p>&emsp;&emsp;2.publishPercentileHistogram-用于发布直方图，该直方图适用于在Prometheus使用histogram_quantile，Atlas使用:percentile和Wavefront使用中计算可聚集的（跨维度）百分位近似hs()。对于Prometheus和Atlas，结果的直方图中的buckets值由MicroMeter根据由Netflix凭经验确定的生成器进行预设，以在大多数现实世界timer和分布式summary上产生合理的误差。默认情况下，生成器会产生276个存储桶，但Micrometer仅发送那些在设置范围内（包括minimumExpectedValue和maximumExpectedValue）的buckets值。MicroMeter默认将timer限制在1毫秒到1分钟的范围内，每个timer产生73个直方图桶。publishPercentileHistogram 对不支持可凝集百分位数逼近的系统没有影响-这些系统未提供直方图。</p>
+<p>&emsp;&emsp;3.sla-发布包含我们SLA定义的buckets的累积直方图。与publishPercentileHistogram支持可聚集百分位数的监视系统配合使用，此设置将其他buckets添加到已发布的直方图中。在不支持可聚集百分位数的系统上使用时，此设置将导致仅使用这些存储桶发布直方图。</p>
+<p>&emsp;&emsp;4.minimumExpectedValue/ maximumExpectedValue-控制publishPercentileHistogram发送的存储桶的数量，以及控制基础HdrHistogram结构的准确性和内存占用量。</p>
+<p>&emsp;&emsp;由于将百分位数发送到监视系统会生成其他时间序列，因此通常最好不要在作为依赖项包含在应用程序中的核心库中对其进行配置。取而代之的是，应用程序可以通过meter过滤器为某些计时器/分配摘要集启用此行为。</p>
+<p>&emsp;&emsp;例如，假设我们在一个公共库中有几个计时器。我们为这些计时器名称添加了前缀myservice：</p>
+<pre><code>registry.timer(&quot;myservice.http.requests&quot;).record(..);
+
+registry.timer(&quot;myservice.db.requests&quot;).record(..);</code></pre><p>&emsp;&emsp;我们可以通过仪表过滤器为两个timer打开客户端百分位数：</p>
+<pre><code>registry.config().meterFilter(
+    new MeterFilter() &#123;
+        @Override
+        public DistributionStatisticConfig configure(Meter.Id id, DistributionStatisticConfig config) &#123;
+            if(id.getName().startsWith(&quot;myservice&quot;)) &#123;
+                return DistributionStatisticConfig.builder()
+                    .percentiles(0.95)
+                    .build()
+                    .merge(config);
+            &#125;
+            return config;
+        &#125;
+    &#125;);</code></pre>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/11/%E5%B0%8F%E6%8A%80%E5%B7%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/11/%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="post-title-link" itemprop="url">小技巧</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-11 19:24:12 / 修改时间：21:43:38" itemprop="dateCreated datePublished" datetime="2019-11-11T19:24:12+08:00">2019-11-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>for(i=0;i&lt;n;i++){<br>}</p>
+<p>for(i=n;i;i–){<br>}<br>下面这一项是boolean比较，编译速度要快上一倍；</p>
+<p>不用申请额外空间完成数值交换<br>a = a^b<br>b = a^b<br>a = a^b</p>
+<p>BitMask<br>将帅问题</p>
+<p>python代码实现一遍然后再写一个文档说明。</p>
+<p>模考必考的大体类型<br>KNN算法和聚类算法</p>
+<p>信息熵的概念<br>信息熵的算法<br>解决过拟合问题–剪枝，避免决策树太深</p>
+<hr>
+<h1 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h1><h2 id="一、资源管理工具"><a href="#一、资源管理工具" class="headerlink" title="一、资源管理工具"></a>一、资源管理工具</h2><p>1.1 Kubernate<br>1.2 Docker<br>1.3 OpenStack</p>
+<h2 id="二、硬件加速"><a href="#二、硬件加速" class="headerlink" title="二、硬件加速"></a>二、硬件加速</h2><p>2.1 InfiniBand<br>2.2 NVMESSD<br>2.3 GPU<br>2.4 FPGA<br>2.5 ASIC</p>
+<p>cpu为什么会发热？<br>计算机发生了信息丢失时就会发热，</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/11/posts/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/11/posts/" class="post-title-link" itemprop="url">posts</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-11 19:23:48 / 修改时间：19:23:49" itemprop="dateCreated datePublished" datetime="2019-11-11T19:23:48+08:00">2019-11-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/10/SpringBoot-%E6%97%A5%E5%BF%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/10/SpringBoot-%E6%97%A5%E5%BF%97/" class="post-title-link" itemprop="url">SpringBoot-日志</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-10 10:06:55 / 修改时间：13:24:23" itemprop="dateCreated datePublished" datetime="2019-11-10T10:06:55+08:00">2019-11-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SpringBoot/" itemprop="url" rel="index"><span itemprop="name">SpringBoot</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在我们的日常开发中，通常需要查看日志来帮我们解决程序运行中的一些错误问题及对程序运行过程的监控，这篇文章主要是讲解在SpringBoot中日志的工作原理、日志实现类的选择、日志的展示及存储方式等内容。</p>
+<h1 id="一、常用的日志框架"><a href="#一、常用的日志框架" class="headerlink" title="一、常用的日志框架"></a>一、常用的日志框架</h1><p>JUL、JCL、Jboss-logging、logback、log4j、log4j2、slf4j….</p>
+<p>其中属于<strong>日志门面</strong>（日志的抽象层）的是：JCL（Jakarta Commons Logging）    <strong>SLF4j</strong>（Simple Logging Facade for Java）、jboss-logging    </p>
+<p>属于日志的<strong>实现类</strong>的是：Log4j2 <strong>Logback</strong>、Log4j JUL（java.util.logging） </p>
+<p>我们一般是选择SLF4j作为抽象层，Logback作为实现类</p>
+<p>springboot也是选用的<strong>SLF4j和Logback</strong></p>
+<hr>
+<h1 id="二、如何在系统中使用SLF4j"><a href="#二、如何在系统中使用SLF4j" class="headerlink" title="二、如何在系统中使用SLF4j"></a>二、如何在系统中使用SLF4j</h1><p>开发的时候，日志记录方法的调用，不应该来直接调用日志的实现类，而是调用日志抽象层里面的方法；给系统里面导入slf4j的jar和 logback的实现jar</p>
+<p>具体的实现代码如下：</p>
+<pre><code>import org.slf4j.Logger; 
+import org.slf4j.LoggerFactory;   
+
+public class HelloWorld &#123;
+   public static void main(String[] args) &#123;
+     Logger logger = LoggerFactory.getLogger(HelloWorld.class);     
+     logger.info(&quot;Hello World&quot;);
+   &#125;
+&#125;</code></pre><blockquote>
+<p>抽象类与实现类之间的关系如下所示,每一个日志的实现框架都有自己的配置文件。<br>使用slf4j以后，配置文件还是做成日志实现框架自己本身的配置文件。</p>
+</blockquote>
+<p><img src="https://wx1.sinaimg.cn/mw690/007857NYgy1g8sqnny7iaj30w00homz4.jpg" alt="抽象类与实现类的关系"></p>
+<hr>
+<h1 id="三、遗留问题"><a href="#三、遗留问题" class="headerlink" title="三、遗留问题"></a>三、遗留问题</h1><p>在springboot中我们含有很多的框架，如Spring、Hebernate、MyBatis等，这些不同的日志框架使用的日志实现类是不相同的，那么我们如何实现不同的日志实现类之间的协调统一呢？</p>
+<p>如：a（slf4j+logback）: Spring（commons-logging）、Hibernate（jboss-logging）、MyBatis、xxxx 统一日志记录，即使是别的框架和我一起统一使用slf4j进行输出？</p>
+<p><strong>如何让系统中所有的日志都统一到slf4j：</strong></p>
+<pre><code>1、将系统中其他日志框架先排除出去；
+
+2、用中间包来替换原有的日志框架；
+
+3、我们导入slf4j其他的实现；</code></pre><p><img src="https://wx4.sinaimg.cn/mw690/007857NYly1g8sr40230bj316e0u00xc.jpg" alt="日志框架的替换类"></p>
+<hr>
+<h1 id="四、SpringBoot的日志依赖关系："><a href="#四、SpringBoot的日志依赖关系：" class="headerlink" title="四、SpringBoot的日志依赖关系："></a>四、SpringBoot的日志依赖关系：</h1><p><img src="https://wx3.sinaimg.cn/mw690/007857NYgy1g8sr81yfcnj30o709f0ta.jpg" alt="日志依赖关系"></p>
+<p>总结：</p>
+<pre><code>1）、SpringBoot底层也是使用slf4j+logback的方式进行日志记录
+
+2）、SpringBoot也把其他的日志都替换成了slf4j；
+
+3）、中间替换包？
+
+4）、如果我们要引入其他框架？一定要把这个框架的默认日志依赖移除掉？Spring框架用的是commons-logging；</code></pre><p>如下为在SpringBoot中引入依赖后的<strong>转换jar包</strong></p>
+<p><img src="https://wx4.sinaimg.cn/mw690/007857NYgy1g8sreyk7njj30cp06odg2.jpg" alt="日志转换包"></p>
+<p>SpringBoot能自动适配所有的日志，而且底层使用slf4j+logback的方式记录日志，引入其他框架的时候，只需要 把这个框架依赖的日志框架排除掉即可；</p>
+<pre><code>&lt;dependency&gt;
+          &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+          &lt;artifactId&gt;spring‐core&lt;/artifactId&gt;              
+          &lt;exclusions&gt;
+              &lt;exclusion&gt;
+                    &lt;groupId&gt;commons‐logging&lt;/groupId&gt;
+                    &lt;artifactId&gt;commons‐logging&lt;/artifactId&gt;
+              &lt;/exclusion&gt;
+          &lt;/exclusions&gt;
+&lt;/dependency </code></pre><hr>
+<h1 id="五-日志的使用"><a href="#五-日志的使用" class="headerlink" title="五 日志的使用"></a>五 日志的使用</h1><p>SpringBoot默认帮我们配置好了日志；</p>
+<h2 id="默认配置"><a href="#默认配置" class="headerlink" title="默认配置"></a>默认配置</h2><pre><code>import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class DemoApplicationTests &#123;
+//日志记录器
+Logger logger = LoggerFactory.getLogger(getClass());
+
+@Test
+void contextLoads() &#123;
+    //日志的级别由低到高 trace&lt;debug&lt;info&lt;warn&lt;error
+    //可以调整输出的日志级别，日志就只会在这个级别以后的级别中生效
+    logger.trace(&quot;这是trace()日志&quot;);
+    logger.debug(&quot;这是debug日志&quot;);
+    //springboot默认提供的是info级别
+    logger.info(&quot;这是info日志&quot;);
+    logger.warn(&quot;这是warn日志&quot;);
+    logger.error(&quot;这是error日志&quot;);
+    &#125;
+&#125;</code></pre><p>当然我们可以对日志的输出格式、输出位置、默认级别等等做相应的调整</p>
+<pre><code>#指定日志的输出级别，默认条件为info级别的。
+logging.level.csu = trace
+
+#在当前目录下生成springboot.log日志
+#不指定目录则在当前目录下生成springboot.log日志
+#logging.file = springboot.log
+#也可以指定springboot.log的生成路径
+logging.file= F:/springboot.log
+
+#指定控制台输出的文件格式
+logging.pattern.console==%d&#123;yyyy‐MM‐dd&#125; [%thread] %‐5level %logger&#123;50&#125; ‐ %msg%n 
+
+#指定文件中日志的输出格式
+logging.pattern.file=%d&#123;yyyy‐MM‐dd&#125; === [%thread] === %‐5level === %logger&#123;50&#125; ==== %msg%n</code></pre><p>关于<strong>日志的输出格式简介</strong>：</p>
+<pre><code>日志输出格式： 
+
+%d表示日期时间 
+
+%thread表示线程名
+
+%‐5level：级别从左显示5个字符宽度          
+
+%logger&#123;50&#125; 表示logger名字长50个字符，否则按照句点分割。           
+
+%msg：日志消息，         
+
+%n是换行符</code></pre><h2 id="指定配置"><a href="#指定配置" class="headerlink" title="指定配置"></a>指定配置</h2><p>给类路径下放上每个日志框架自己的配置文件即可；SpringBoot就不使用他默认配置的了</p>
+<p>logback.xml：直接就被日志框架识别了； </p>
+<p>logback-spring.xml：日志框架就不直接加载日志的配置项，由SpringBoot解析日志配置，可以使用SpringBoot 的高级Proﬁle功能</p>
+<p>所以我们一般使用加上了“-spring”后缀的命名格式，如下所示在开发过程中就可以指定在开发环境和非开发环境使用的日志格式了。</p>
+<pre><code>&lt;springProfile name=&quot;dev&quot;&gt;                 
+    &lt;pattern&gt;%d&#123;yyyy‐MM‐dd HH:mm:ss.SSS&#125; ‐‐‐‐&gt; [%thread] ‐‐‐&gt; %‐5level  %logger&#123;50&#125; ‐ %msg%n&lt;/pattern&gt;             
+&lt;/springProfile&gt;             
+
+&lt;springProfile name=&quot;!dev&quot;&gt;                 
+    &lt;pattern&gt;%d&#123;yyyy‐MM‐dd HH:mm:ss.SSS&#125; ==== [%thread] ==== %‐5level  %logger&#123;50&#125; ‐ %msg%n&lt;/pattern&gt;             
+&lt;/springProfile&gt;</code></pre><p>如果直接使用没有“-spring”后缀的格式设置开发环境和非开发环境的日志格式会发生错误；</p>
+<p>当然我们也可以使用在配置中设置环境变量来进行开发环境选择：spring.profiles.active=dev<br><img src="https://wx3.sinaimg.cn/mw690/007857NYgy1g8sslk1dccj311j0ovjst.jpg" alt="环境变量设置">   </p>
+<hr>
+<h1 id="六-切换日志框架"><a href="#六-切换日志框架" class="headerlink" title="六 切换日志框架"></a>六 切换日志框架</h1><p>SpringBoot的默认方式为SLF4j+Logback形式的，现在我们将其切换成SLF4j+log4j的形式，具体操作如下：</p>
+<p><img src="https://wx1.sinaimg.cn/small/007857NYly1g8stgrfhm3j30kg0d70ti.jpg" alt="切换框架1"></p>
+<p><img src="https://wx2.sinaimg.cn/small/007857NYly1g8stgum4ucj30py0870tz.jpg" alt="切换框架2"></p>
+<p><img src="https://wx1.sinaimg.cn/mw690/007857NYly1g8stis21fpj30oa0dtta9.jpg" alt="切换框架3"></p>
+<p><img src="https://wx1.sinaimg.cn/mw690/007857NYly1g8stivul1dj30ry07zweu.jpg" alt="切换框架4"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/27/Hadoop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/27/Hadoop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Hadoop学习笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-27 15:04:26" itemprop="dateCreated datePublished" datetime="2019-10-27T15:04:26+08:00">2019-10-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-10 13:24:08" itemprop="dateModified" datetime="2019-11-10T13:24:08+08:00">2019-11-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hadoop/" itemprop="url" rel="index"><span itemprop="name">hadoop</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="HDFS概述"><a href="#HDFS概述" class="headerlink" title="HDFS概述"></a>HDFS概述</h2><p><strong>NameNode(nn)</strong>:存储文件的元数据，如文件名、文件目录结构、文件属性（生成时间、副本数、文件权限），以及每个文件的块列表和和块所在的DataNode等。</p>
+<p><strong>DataNode(dn)</strong>:在本地文件系统存储文件数据块以及数据块的校验和。</p>
+<p><strong>Secondary NameNode(2nn)</strong>:用来监控HDFS的辅助后台程序，每隔一段时间获取HDFS元数据的快照。</p>
+<p>yarn架构图</p>
+<p>常见的正则表达式</p>
+<h2 id="为什么不能一直格式化NameNode-格式化NameNode需要注意什么？"><a href="#为什么不能一直格式化NameNode-格式化NameNode需要注意什么？" class="headerlink" title="为什么不能一直格式化NameNode,格式化NameNode需要注意什么？"></a>为什么不能一直格式化NameNode,格式化NameNode需要注意什么？</h2><p>集群在工作的时候他的datanode的集群id和namenode的集群id是一样的，这样才能保证集群的正常工作，如果你格式化了namenode的集群id这个时候你的datanode的集群id是没有改变的，他们两个不一致的话集群无法正常工作。</p>
+<p>如果需要格式化NameNode的信息，那就需要datanode中的关于集群id的信息删除；</p>
+<p><img src="https://wx2.sinaimg.cn/mw690/007857NYly1g8l91bg3iuj31h20oyqjl.jpg" alt="格式化"></p>
+<p>关于YARN</p>
+<p>ResourceManager:集群资源的总管<br>NodeManager:单个节点资源的总管</p>
+<h2 id="HDFS的优缺点"><a href="#HDFS的优缺点" class="headerlink" title="HDFS的优缺点"></a>HDFS的优缺点</h2><blockquote>
+<p>优点</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>1.高容错性</p>
+<p>2.适合处理大数据</p>
+<p>3.可构建在廉价机器上</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>缺点</p>
+<blockquote>
+<p>1.不适合低延时数据访问</p>
+<p>2.无法高效的对大量小文件进行存储</p>
+<blockquote>
+<p>1.存储大量小文件的话，会占用NameNode的大量内存来存储文件目录和块信息，但NameNode的内存总是有限的</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2.小文件的存储时间会超过读取时间，违反了DFSDE的设计目标</p>
+</blockquote>
+<p>3.不支持并发写入，文件的随机修改</p>
+<blockquote>
+<p>一个文件只能有一个写，不允许多个线程同时写</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>仅支持数据的追加，不支持数据的随机修改</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/20/Linux%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/20/Linux%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Linux笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-20 12:34:24" itemprop="dateCreated datePublished" datetime="2019-10-20T12:34:24+08:00">2019-10-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-04 15:27:26" itemprop="dateModified" datetime="2019-11-04T15:27:26+08:00">2019-11-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>linux是在日常开发中常用的一个操作系统，但是linux中的指令实在太多了，这篇博客主要是记录平时常用的一些指令进行汇总。</p>
+<h2 id="如何进行secureCRT连接的不同界面之间的切换——Alt-”Num”"><a href="#如何进行secureCRT连接的不同界面之间的切换——Alt-”Num”" class="headerlink" title="如何进行secureCRT连接的不同界面之间的切换——Alt+”Num”"></a>如何进行secureCRT连接的不同界面之间的切换——Alt+”Num”</h2><p>如图所示为4个不同的连接的页面，我们在进行切换时直接按住 Alt+”连接界面所处的位置”</p>
+<hr>
+<h2 id="如何在linux中关掉一些进程"><a href="#如何在linux中关掉一些进程" class="headerlink" title="如何在linux中关掉一些进程"></a>如何在linux中关掉一些进程</h2><h2 id="scp-文件安全拷贝命令（-secure-copy）"><a href="#scp-文件安全拷贝命令（-secure-copy）" class="headerlink" title="scp 文件安全拷贝命令（    secure copy）"></a>scp 文件安全拷贝命令（    secure copy）</h2><p>scp -r 本地文件地址 username@ip:目的账户的保存地址（如果是文件的话就不需要加上 -r 了）<br><img src="https://wx1.sinaimg.cn/mw690/007857NYgy1g8lbf1v9aaj30s40diab1.jpg" alt="scp"></p>
+<hr>
+<h2 id="xsync集群分发脚本"><a href="#xsync集群分发脚本" class="headerlink" title="xsync集群分发脚本"></a>xsync集群分发脚本</h2><p>在进行集群配置的时候可能会需要在master上进行了配置，然后有需要将配置好的文件逐个传输到其他的文件夹下面，这样是非常的耗费精力的，为了实现快速的进行向各个节点的文件传输，我们这里采取配置xsync集群分发脚本。</p>
+<h2 id="集群时间的同步操作"><a href="#集群时间的同步操作" class="headerlink" title="集群时间的同步操作"></a>集群时间的同步操作</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
-1.高容错性
-2.适合处理大数据
-3.可构建在廉价机 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/10/20/Linux%E7%AC%94%E8%AE%B0/" title="Linux笔记">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/20/Linux%E7%AC%94%E8%AE%B0/" title="Linux笔记">Linux笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-20T04:34:24.000Z" title="发表于 2019-10-20 12:34:24">2019-10-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a></span></div><div class="content">linux是在日常开发中常用的一个操作系统，但是linux中的指令实在太多了，这篇博客主要是记录平时常用的一些指令进行汇总。
-如何进行secureCRT连接的不同界面之间的切换——Alt+”Num”如图所示为4个不同的连接的页面，我们在进行切换时直接按住 Alt+”连接界面所处的位置”
+          </div>
+          
 
-如何在linux中关掉一些进程scp 文件安全拷贝命令（    secure copy）scp -r 本地文件地址 username@ip:目的账户的保存地址（如果是文件的话就不需要加上 -r 了）
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 
-xsync集群分发脚本在进行集群配置的时候可能会需要在master上进行了配置，然后有需要将配置好的文件逐个传输到其他的文件夹下面，这样是非常的耗费精力的，为了实现快速的进行向各个节点的文件传输，我们这里采取配置xsync集群分发脚本。
-集群时间的同步操作</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Dongcheng</div><div class="author-info__description">Master record</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2019/11/16/Springboot%E5%AD%A6%E4%B9%A0/" title="Springboot学习"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Springboot学习"/></a><div class="content"><a class="title" href="/2019/11/16/Springboot%E5%AD%A6%E4%B9%A0/" title="Springboot学习">Springboot学习</a><time datetime="2019-11-16T14:17:43.000Z" title="发表于 2019-11-16 22:17:43">2019-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式"/></a><div class="content"><a class="title" href="/2019/11/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">正则表达式</a><time datetime="2019-11-15T12:01:15.000Z" title="发表于 2019-11-15 20:01:15">2019-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/" title="springboot2——Metrics"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="springboot2——Metrics"/></a><div class="content"><a class="title" href="/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/" title="springboot2——Metrics">springboot2——Metrics</a><time datetime="2019-11-13T12:49:11.000Z" title="发表于 2019-11-13 20:49:11">2019-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/12/java%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="java基础--基本数据类型"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java基础--基本数据类型"/></a><div class="content"><a class="title" href="/2019/11/12/java%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="java基础--基本数据类型">java基础--基本数据类型</a><time datetime="2019-11-12T14:54:49.000Z" title="发表于 2019-11-12 22:54:49">2019-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" title="MicroMeter基础概念"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MicroMeter基础概念"/></a><div class="content"><a class="title" href="/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" title="MicroMeter基础概念">MicroMeter基础概念</a><time datetime="2019-11-12T14:41:32.000Z" title="发表于 2019-11-12 22:41:32">2019-11-12</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Monitor-System/"><span class="card-category-list-name">Monitor System</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/SpringBoot/"><span class="card-category-list-name">SpringBoot</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hadoop/"><span class="card-category-list-name">hadoop</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/java/"><span class="card-category-list-name">java</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/springboot/"><span class="card-category-list-name">springboot</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/"><span class="card-category-list-name">实用操作</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">数据结构与算法</span><span class="card-category-list-count">2</span></a></li>
-            <li class="card-category-list-item more is-center"><a class="card-category-list-link-more" href="/categories/">
-                <span>查看更多</span><i class="fas fa-angle-right"></i></a></li>
-            </ul></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/11/"><span class="card-archive-list-date">十一月 2019</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/10/"><span class="card-archive-list-date">十月 2019</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/09/"><span class="card-archive-list-date">九月 2019</span><span class="card-archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">15</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2020-11-04T13:42:31.138Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By Dongcheng</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Dongcheng</p>
+  <div class="site-description" itemprop="description">Master record</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dongcheng</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

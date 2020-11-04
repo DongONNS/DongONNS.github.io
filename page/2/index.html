@@ -1,185 +1,359 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dongonns - To change the fate of the first to change their own.</title><meta name="keywords" content="Java,Python,Big Data"><meta name="author" content="Dongcheng"><meta name="copyright" content="Dongcheng"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="Master record">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Master record">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Dongonns">
 <meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Dongonns">
 <meta property="og:description" content="Master record">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/null">
 <meta property="article:author" content="Dongcheng">
 <meta property="article:tag" content="Java,Python,Big Data">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/null"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  ClickShowText: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  justifiedGallery: {
-    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isanchor: false
-};
 
-var saveToLocal = {
-  set: function setWithExpiry(key, value, ttl) {
-    const now = new Date()
-    const expiryDay = ttl * 86400000
-    const item = {
-      value: value,
-      expiry: now.getTime() + expiryDay,
-    }
-    localStorage.setItem(key, JSON.stringify(item))
-  },
+<link rel="canonical" href="http://yoursite.com/page/2/">
 
-  get: function getWithExpiry(key) {
-    const itemStr = localStorage.getItem(key)
 
-    if (!itemStr) {
-      return undefined
-    }
-    const item = JSON.parse(itemStr)
-    const now = new Date()
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
 
-    if (now.getTime() > item.expiry) {
-      localStorage.removeItem(key)
-      return undefined
-    }
-    return item.value
-  }
-}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2020-11-04 21:42:31'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
+  <title>Dongonns</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
   }
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(function () {  window.activateDarkMode = function () {
-    document.documentElement.setAttribute('data-theme', 'dark')
-    if (document.querySelector('meta[name="theme-color"]') !== null) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-    }
-  }
-  window.activateLightMode = function () {
-    document.documentElement.setAttribute('data-theme', 'light')
-   if (document.querySelector('meta[name="theme-color"]') !== null) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-    }
-  }
-  const autoChangeMode = 'false'
-  const t = saveToLocal.get('theme')
-  if (autoChangeMode === '1') {
-    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
-    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
-    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
-    if (t === undefined) {
-      if (isLightMode) activateLightMode()
-      else if (isDarkMode) activateDarkMode()
-      else if (isNotSpecified || hasNoSupport) {
-        const now = new Date()
-        const hour = now.getHours()
-        const isNight = hour <= 6 || hour >= 18
-        isNight ? activateDarkMode() : activateLightMode()
-      }
-      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-        if (saveToLocal.get('theme') === undefined) {
-          e.matches ? activateDarkMode() : activateLightMode()
-        }
-      })
-    } else if (t === 'light') activateLightMode()
-    else activateDarkMode()
-  } else if (autoChangeMode === '2') {
-    const now = new Date()
-    const hour = now.getHours()
-    const isNight = hour <= 6 || hour >= 18
-    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
-    else if (t === 'light') activateLightMode()
-    else activateDarkMode()
-  } else {
-    if (t === 'dark') activateDarkMode()
-    else if (t === 'light') activateLightMode()
-  }const asideStatus = saveToLocal.get('aside-status')
-if (asideStatus !== undefined) {
-   if (asideStatus === 'hide') {
-     document.documentElement.classList.add('hide-aside')
-   } else {
-     document.documentElement.classList.remove('hide-aside')
-   }
-}})()</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Dongonns" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Dongonns</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">Dongonns</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/10/20/%E7%89%9B%E9%A1%BF%E8%BF%AD%E8%BE%BE%E6%B3%95/" title="牛顿迭达法">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="牛顿迭达法"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/20/%E7%89%9B%E9%A1%BF%E8%BF%AD%E8%BE%BE%E6%B3%95/" title="牛顿迭达法">牛顿迭达法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-20T01:28:44.000Z" title="发表于 2019-10-20 09:28:44">2019-10-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a></span></div><div class="content">多数方程不存在求根公式，因此求精确根非常困难，甚至不可能，从而寻找方程的近似根就显得特别重要，牛顿迭达法就是一种有效的求近似根的方法。
-一、问题引入
-##实现 int sqrt(int x) 函数。
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Dongonns" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Dongonns</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">To change the fate of the first to change their own.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
 
 
-&emsp;&emsp;计算并返回 x 的平方根，其中 x 是非负整数。
 
 
-&emsp;&emsp;由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-示例 1:
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/20/%E7%89%9B%E9%A1%BF%E8%BF%AD%E8%BE%BE%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/20/%E7%89%9B%E9%A1%BF%E8%BF%AD%E8%BE%BE%E6%B3%95/" class="post-title-link" itemprop="url">牛顿迭达法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-10-20 09:28:44 / 修改时间：19:23:04" itemprop="dateCreated datePublished" datetime="2019-10-20T09:28:44+08:00">2019-10-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>多数方程不存在求根公式，因此求精确根非常困难，甚至不可能，从而寻找方程的近似根就显得特别重要，牛顿迭达法就是一种有效的求近似根的方法。</p>
+<h1 id="一、问题引入"><a href="#一、问题引入" class="headerlink" title="一、问题引入"></a>一、问题引入</h1><blockquote>
+<p>##实现 int sqrt(int x) 函数。</p>
+</blockquote>
+<blockquote>
+<p>&emsp;&emsp;计算并返回 x 的平方根，其中 x 是非负整数。</p>
+</blockquote>
+<blockquote>
+<p>&emsp;&emsp;由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。</p>
+</blockquote>
+<pre><code>示例 1:
 
 输入: 4
 
-输出: 2
+输出: 2</code></pre><br>
 
-示例 2:
+<pre><code>示例 2:
 
 输入: 8
 
-输出: 2
-&emsp;&emsp;说明: 8 的平方根是 2.82842…, 由于返回类型是整数，小数部分将被舍去
+输出: 2</code></pre><blockquote>
+<p>&emsp;&emsp;说明: 8 的平方根是 2.82842…, 由于返回类型是整数，小数部分将被舍去</p>
+</blockquote>
+<hr>
+<br>
+
+<p>###此处要求算的是一个数的平方根，所以我们可以很合理的考虑使用<strong>牛顿迭达法</strong>（也称牛顿法或牛顿-拉夫森法）</p>
+<blockquote>
+<p>###一、牛顿法的基本思想：</p>
+</blockquote>
+<p>&emsp;&emsp;通过迭代来实现，每次运算都让结果比之前好一点。</p>
+<p>&emsp;&emsp;哪怕只好一点点，在很多次迭代之后也可以得到一个很好的结果甚至最优或期望的结果。</p>
+<blockquote>
+<p>###二、牛顿法的目的：</p>
+</blockquote>
+<p><strong>&emsp;&emsp;牛顿法就是通过使原方程泰勒展开的一阶近似等于零不断获得更好的结果的求解方程零点的方法。</strong></p>
+<blockquote>
+<p>###三、牛顿迭达法的详解</p>
+</blockquote>
+<ul>
+<li><p>牛顿法是求解方程零点的方法</p>
+</li>
+<li><p>牛顿法利用泰勒展开的一阶近似的零点获得更接近真实零点的点</p>
+</li>
+<li><p>牛顿法通过迭代的方法不断的获得更好的解来求得最好的解</p>
+</li>
+</ul>
+<div align=center>![函数的泰勒展开](https://wx1.sinaimg.cn/mw690/007857NYly1g84fnxcv24j30yp0himya.jpg)
 
 
 
+<p>####<div align=left>具体的图像如下所示：</p>
+<div alogn=center>![二次函数迭达求零点](https://wx2.sinaimg.cn/mw690/007857NYly1g84fo1jounj30sc0lygmc.jpg)
 
-###此处要求算的是一个数的平方根，所以我们可以很合理的考虑使用牛顿迭达法（也称牛顿法或牛顿-拉夫森法）
+<div align=left> &emsp;&emsp;图中最右边点为原来猜想的点，然后经过迭达后得到左边的橙色点，这样子逐步逼近到零点。
 
-###一、牛顿法的基本思想：
+<p>####&emsp;&emsp;当然对于这个公式还有个问题，为什么是一阶导而不是二阶导或者三阶导呢？</p>
+<pre><code>第一是一阶导已经能够满足我们的需求了；
 
-&emsp;&emsp;通过迭代来实现，每次运算都让结果比之前好一点。
-&emsp;&emsp;哪怕只好一点点，在很多次迭代之后也可以得到一个很好的结果甚至最优或期望的结果。
+第二就是二阶导三阶导不一定存在，而且就算存在计算也会比较麻烦。</code></pre><br>
 
-###二、牛顿法的目的：
 
-&emsp;&emsp;牛顿法就是通过使原方程泰勒展开的一阶近似等于零不断获得更好的结果 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/10/20/Daily-Plan/" title="Daily Plan">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Daily Plan"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/20/Daily-Plan/" title="Daily Plan">Daily Plan</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-20T01:07:33.000Z" title="发表于 2019-10-20 09:07:33">2019-10-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%AF%8F%E6%97%A5%E8%AE%A1%E5%88%92/">每日计划</a></span></div><div class="content">每天给自己定一个计划，持续努力，遇见不一样的自己！
-2019年10月20日1.写一篇关于牛顿迭达法求最优解的博客（上午）
+<p>###&emsp;&emsp;好了，现在我们已经熟悉牛顿迭达法的原理了，那么解决上述问题就是轻而易举地事情，具体的代码如下：</p>
+<pre><code>class Solution &#123;
+      int s;  
+      public int mySqrt(int x) &#123;
+      s=x;
+      if(x==0) return 0;
+      return ((int)(sqrts(x)));
+      &#125;
+
+public double sqrts(double x)&#123;
+      double res = (x + s / x) / 2;
+      if (res == x) &#123;
+          return x;
+      &#125; else &#123;
+          return sqrts(res);
+      &#125;
+   &#125; 
+&#125;</code></pre><p>&emsp;&emsp;根据牛顿迭达法我们知道 <strong><strong><code>x−f(x)/(2x)</code></strong></strong>就是一个比x更准确的的近似值，此处将 <code>f(x)=x^2-a</code> 代入到上述的公式中就得到<code>x−(x^2−a)/(2x)</code>，也就是<code>(x+a/x)/2</code>,(上述的a就是我们要求平方根的2)，循环的结束条件就是我们通过牛顿迭达法得到的值res已经达到稳定了（或者说不再发生变化了）。</p>
+<p>参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Timingspace/article/details/50947250">牛顿法及牛顿法求解优化问题</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/20/Daily-Plan/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/20/Daily-Plan/" class="post-title-link" itemprop="url">Daily Plan</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-20 09:07:33" itemprop="dateCreated datePublished" datetime="2019-10-20T09:07:33+08:00">2019-10-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-01 23:30:01" itemprop="dateModified" datetime="2019-11-01T23:30:01+08:00">2019-11-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%AF%8F%E6%97%A5%E8%AE%A1%E5%88%92/" itemprop="url" rel="index"><span itemprop="name">每日计划</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>每天给自己定一个计划，持续努力，遇见不一样的自己！</p>
+<h1 id="2019年10月20日"><a href="#2019年10月20日" class="headerlink" title="2019年10月20日"></a>2019年10月20日</h1><pre><code>1.写一篇关于牛顿迭达法求最优解的博客（上午）
 
 2.学习python两小时--笔记总结（上午）
 
@@ -189,10 +363,10 @@ if (asideStatus !== undefined) {
 
 5.稍微看一下实习任务作内容（下午）
 
-6.总结一下http的连接方式，get和post的区别
+6.总结一下http的连接方式，get和post的区别</code></pre><br>
 ---
 
-2019年10月21日1.总结一下Object对象的那些内置方法；
+<h1 id="2019年10月21日"><a href="#2019年10月21日" class="headerlink" title="2019年10月21日"></a>2019年10月21日</h1><pre><code>1.总结一下Object对象的那些内置方法；
 
 2.学习Linux完成75-80集，好好回顾昨天的内容；
 
@@ -200,10 +374,10 @@ if (asideStatus !== undefined) {
 
 4.总结昨天做的合并两个有序数组的内容；
 
-5.学习5集左右springboot的内容；
+5.学习5集左右springboot的内容；</code></pre><br>
 ---
 
-2019年10月22日昨天的任务当然是没有完成的，今天的要求降低。
+<h1 id="2019年10月22日"><a href="#2019年10月22日" class="headerlink" title="2019年10月22日"></a>2019年10月22日</h1><pre><code>昨天的任务当然是没有完成的，今天的要求降低。
 
 1.整理好prometheus的相关内容（上班时间，能够讲明白，能够实现，80%）
 
@@ -211,44 +385,206 @@ if (asideStatus !== undefined) {
 
 3.整理好自己前几天刷的题（晚上，完成50%）
 
-4.多线程的基础内容回顾（晚上，未完成）2019年10月2 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/10/19/%E6%98%93%E5%BF%98%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%90%E7%A2%8E%E6%93%8D%E4%BD%9C/" title="易忘的一些琐碎操作">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="易忘的一些琐碎操作"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/19/%E6%98%93%E5%BF%98%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%90%E7%A2%8E%E6%93%8D%E4%BD%9C/" title="易忘的一些琐碎操作">易忘的一些琐碎操作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-19T14:30:46.000Z" title="发表于 2019-10-19 22:30:46">2019-10-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/">实用操作</a></span></div><div class="content">这篇博客记录的是一些琐碎但重要的内容
-一、如何写一篇博客并部署到github上？
-第1步：首先在博客所在的文件目录下打开git客户端，新建一个markdown文件
+4.多线程的基础内容回顾（晚上，未完成）</code></pre><h1 id="2019年10月23日"><a href="#2019年10月23日" class="headerlink" title="2019年10月23日"></a>2019年10月23日</h1><pre><code>1.今天成功实现了prometheus每秒请求数量和请求响应时间的监察；
 
-hexo new post &quot;article title&quot;
-第2步：书写博客，具体的markdown的语法格式参考如下：
 
-markdown语法
+2.在地铁上学习了关于多线程中的避免死锁的三种方法：顺序加锁、设置等待时间、忘了还有一个是什么了；
 
-第3步：清除本地缓存
+3.还学了一个新的东西Atomic,cas原理和ABA问题；
 
-hexo clean
-第4步：进行渲染
+4.Linux学了十集，下载软件 文件的压缩解压缩 硬链接软连接 大概这些印象深一些；</code></pre><h1 id="2019年10月23日-1"><a href="#2019年10月23日-1" class="headerlink" title="2019年10月23日"></a>2019年10月23日</h1><p>1.实习上完成了一些简单的查询功能；</p>
+<p>2.做了一道leetcode上的中档题，感觉自己思路比较渣，大佬思路太棒了；</p>
+<p>3.学习了多线程的线程池相关知识，但不是很深入，明天还得继续线程池；</p>
+<p>4.学习了python的一些基础语法，但感觉学的东西很简单，我学java时候也接触过了；</p>
+<p>5.明天得装好python3然后安装号pycharm</p>
+<h1 id="2019年10月26日"><a href="#2019年10月26日" class="headerlink" title="2019年10月26日"></a>2019年10月26日</h1><p>漏了好几天的总结回顾了，昨天还忘记刷leetcode了……</p>
+<p>1.看完了集合元素里面的list集合，对于具体的东西可以尝试博客记录一下。<br>2.然后也看完了Linux的基础操作，准备每天再看一下别人总结的博客内容，copy整理一下；<br>3.三天刷了两道leetcode，主要是关于二叉树的内容，得好好总结一下了，不能老是忘记；<br>4.自动化数据分析学习了一下决策树算法的概述<br>5.大数据平台核心技术学习了hadoop集群的部署，以及在hadoop集群中数据是如何进行传输保存的；</p>
+<h1 id="2019年10月31日"><a href="#2019年10月31日" class="headerlink" title="2019年10月31日"></a>2019年10月31日</h1><p>今天成功的将qps和latency指标写进了系统里面</p>
+<h1 id="2019年11月1日"><a href="#2019年11月1日" class="headerlink" title="2019年11月1日"></a>2019年11月1日</h1><p>今天开始了阿波罗配置系统的学习</p>
 
-hexo generate 简写作 hexo g 
+      
+    </div>
 
-第5步：部署到本地
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
 
-hexo server 简写作 hexo s此时会弹出本地链接地址进行浏览
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/19/%E6%98%93%E5%BF%98%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%90%E7%A2%8E%E6%93%8D%E4%BD%9C/">
 
-第6步：部署到git服务器
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
 
-hexo deploy 简写作 hexo d
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/19/%E6%98%93%E5%BF%98%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%90%E7%A2%8E%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">易忘的一些琐碎操作</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-19 22:30:46" itemprop="dateCreated datePublished" datetime="2019-10-19T22:30:46+08:00">2019-10-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-20 19:23:15" itemprop="dateModified" datetime="2019-10-20T19:23:15+08:00">2019-10-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">实用操作</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>这篇博客记录的是一些琐碎但重要的内容</p>
+<h1 id="一、如何写一篇博客并部署到github上？"><a href="#一、如何写一篇博客并部署到github上？" class="headerlink" title="一、如何写一篇博客并部署到github上？"></a>一、如何写一篇博客并部署到github上？</h1><blockquote>
+<p>第1步：首先在博客所在的文件目录下打开git客户端，新建一个markdown文件</p>
+</blockquote>
+<pre><code>hexo new post &quot;article title&quot;</code></pre><blockquote>
+<p>第2步：书写博客，具体的markdown的语法格式参考如下：</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://dongonns.github.io/2019/10/15/markdown-note/">markdown语法</a></p>
+<blockquote>
+<p>第3步：清除本地缓存</p>
+</blockquote>
+<pre><code>hexo clean</code></pre><blockquote>
+<p>第4步：进行渲染</p>
+</blockquote>
+<p><code>hexo generate 简写作 hexo g</code> </p>
+<blockquote>
+<p>第5步：部署到本地</p>
+</blockquote>
+<pre><code>hexo server 简写作 hexo s</code></pre><p>此时会弹出本地链接地址进行浏览</p>
+<blockquote>
+<p>第6步：部署到git服务器</p>
+</blockquote>
+<pre><code>hexo deploy 简写作 hexo d</code></pre><br>
 ---
 
-#二、运行web项目时发生了端口已占用如何解决？
+<p>#二、运行web项目时发生了端口已占用如何解决？</p>
+<blockquote>
+<p>第一步：打开命令窗口查看对应端口号的进程及其PID</p>
+</blockquote>
+<pre><code>Windows+R——打开命令窗口
 
-第一步：打开命令窗口查看对应端口号的进程及其PID
+netstat -ano——查看具体进程的pid</code></pre><blockquote>
+<p>第2步：打开任务管理器，在“详细”处根据pid找到进程然后强制关闭</p>
+</blockquote>
 
-Windows+R——打开命令窗口
+      
+    </div>
 
-netstat -ano——查看具体进程的pid
-第2步：打开任务管理器，在“详细”处根据pid找到进程然后强制关闭
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
 
-</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/10/15/markdown-note/" title="markdown常用语法">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="markdown常用语法"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/15/markdown-note/" title="markdown常用语法">markdown常用语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-15T13:51:46.000Z" title="发表于 2019-10-15 21:51:46">2019-10-15</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/">实用操作</a></span></div><div class="content">如何用markdown写博客？需要的语法都在这里
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/15/markdown-note/">
 
-标题
-# 一级标题
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/15/markdown-note/" class="post-title-link" itemprop="url">markdown常用语法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-15 21:51:46" itemprop="dateCreated datePublished" datetime="2019-10-15T21:51:46+08:00">2019-10-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-15 22:23:09" itemprop="dateModified" datetime="2019-11-15T22:23:09+08:00">2019-11-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">实用操作</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>如何用markdown写博客？需要的语法都在这里</p>
+<blockquote>
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a><strong>标题</strong></h1></blockquote>
+<pre><code># 一级标题
 
 ## 二级标题
 
@@ -256,90 +592,467 @@ netstat -ano——查看具体进程的pid
 
 #### 四级标题
 
-##### 五级标题
+##### 五级标题</code></pre><br>
 
-一级标题二级标题三级标题四级标题五级标题
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><hr>
+<br>
 
 
-
-
-引用
-&gt;一级引用
+<blockquote>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a><strong>引用</strong></h1></blockquote>
+<pre><code>&gt;一级引用
 &gt;
 &gt;&gt;二级引用
 &gt;
-&gt;一级引用
-一级引用
+&gt;一级引用</code></pre><blockquote>
+<p>一级引用</p>
+<blockquote>
+<p>二级引用</p>
+</blockquote>
+<p>一级引用</p>
+</blockquote>
+<hr>
+<br>
 
-二级引用
 
-一级引用
-
-
-
-
-
-
-行开头加“点”
-* red
+<blockquote>
+<h1 id="行开头加“点”"><a href="#行开头加“点”" class="headerlink" title="行开头加“点”"></a><strong>行开头加“点”</strong></h1></blockquote>
+<pre><code>* red
 
 * green
 
-* blue
-red
+* blue</code></pre><ul>
+<li><p>red</p>
+</li>
+<li><p>green</p>
+</li>
+<li><p>blue</p>
+</li>
+</ul>
+<hr>
+<br>
 
-green
-
-blue
-
-
-
-
-
-
-加上序号
-1.red
+<blockquote>
+<h1 id="加上序号"><a href="#加上序号" class="headerlink" title="加上序号"></a><strong>加上序号</strong></h1></blockquote>
+<pre><code>1.red
 
 2.green
 
-3.red1.red
-2.green
-3.red
+3.red</code></pre><p>1.red</p>
+<p>2.green</p>
+<p>3.red</p>
+<hr>
+<br>
 
-
-
-
-代码块区域：直接点上面的code“&lt;&gt;”就可以了；
-public class Hello&#123;
+<blockquote>
+<h1 id="代码块区域：直接点上面的code“-lt-gt-”就可以了；"><a href="#代码块区域：直接点上面的code“-lt-gt-”就可以了；" class="headerlink" title="代码块区域：直接点上面的code“&lt;&gt;”就可以了；"></a><strong>代码块区域：直接点上面的code“&lt;&gt;”就可以了；</strong></h1></blockquote>
+<pre><code>public class Hello&#123;
     public static void main(String[] args)&#123;
         System.out.println(&quot;Hello MarkDown);
     &#125;    
-&#125;
+&#125;</code></pre><hr>
+<br>
+
+<blockquote>
+<h1 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a><strong>斜体</strong></h1></blockquote>
+<pre><code>*这是斜体的方式*
+
+_这是斜体的方_</code></pre><p><em>这是斜体的方式</em></p>
+<p><em>这是斜体的方</em></p>
+<hr>
+<br>
+
+<blockquote>
+<h1 id="粗体"><a href="#粗体" class="headerlink" title="粗体"></a><strong>粗体</strong></h1></blockquote>
+<pre><code>**这是粗体**
+
+__这是粗体__</code></pre><p><strong>这是粗体</strong></p>
+<p><strong>这是粗体</strong></p>
+<hr>
+<br>
+># **标记行内小段代码**
+>加上 ‘’ 即可
+
+<pre><code>use the `printf()` function.</code></pre><p>use the <code>printf()</code> function.</p>
+<hr>
+<br>
+
+<blockquote>
+<h1 id="自动连接"><a href="#自动连接" class="headerlink" title="自动连接"></a><strong>自动连接</strong></h1></blockquote>
+<pre><code>语法格式：加上左右尖括号
+&lt;http://example.com/&gt;</code></pre><p><em>示例：字节跳动招聘官网</em></p>
+<p><a target="_blank" rel="noopener" href="https://job.bytedance.com/intern">https://job.bytedance.com/intern</a></p>
+<hr>
+<br>
+
+<blockquote>
+<h1 id="行内链接"><a href="#行内链接" class="headerlink" title="行内链接"></a><strong>行内链接</strong></h1></blockquote>
+<pre><code>语法格式
+
+这是 [字节跳动](https://job.bytedance.com/intern/ &quot;title&quot;) 的连接.</code></pre><p>这是<a target="_blank" rel="noopener" href="https://job.bytedance.com/intern/" title="title">字节跳动</a>的连接</p>
+<hr>
+<br>
+<br>
+
+<blockquote>
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a><strong>图片</strong></h1></blockquote>
+<pre><code>语法格式：
+
+[图片alt](图片地址 &apos;&apos;图片title&apos;&apos;)
+
+图片alt就是显示在图片下面的文字，相当于对图片内容的解释。
+
+图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加
+
+![字节跳动](https://wx1.sinaimg.cn/mw690/007857NYgy1g7z99tuyqbj30hs0hsglq.jpg)</code></pre><p><img src="https://wx1.sinaimg.cn/mw690/007857NYgy1g7z99tuyqbj30hs0hsglq.jpg" alt="字节跳动"></p>
+<hr>
+<blockquote>
+<h1 id="如何实现首行缩进"><a href="#如何实现首行缩进" class="headerlink" title="如何实现首行缩进"></a><div align=left><strong>如何实现首行缩进</strong></h1></blockquote>
+<pre><code>&amp;ensp;这是半方大的空白
+&amp;emsp;这是全方大的空白
+&amp;nbsp;这是不断行的空白</code></pre><div align=left>&ensp;这是半方大的空白
+
+<div align=left>&emsp;这是全方大的空白
+
+<div align=left>&nbsp;这是不断行的空白
+
+<br>
+---
+
+<blockquote>
+<h1 id="如何设置图片居中"><a href="#如何设置图片居中" class="headerlink" title="如何设置图片居中"></a><strong>如何设置图片居中</strong></h1></blockquote>
+<p>在图片标签之前加上<code>&lt;div align=center&gt;</code>标签</p>
+<pre><code>&lt;div align=center&gt;![字节跳动](https://wx1.sinaimg.cn/mw690/007857NYgy1g7z99tuyqbj30hs0hsglq.jpg)</code></pre><div id=1 align=center>![字节跳动](https://wx1.sinaimg.cn/mw690/007857NYgy1g7z99tuyqbj30hs0hsglq.jpg)
+
+<hr>
+<br>
+<br>
+
+<blockquote>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a><strong>表格</strong></h1></blockquote>
+<p><img src="https://wx3.sinaimg.cn/small/007857NYly1g8z372kcgrj305104r3ya.jpg" alt="表格的表达方式"></p>
+<table>
+<thead>
+<tr>
+<th align="left">表头</th>
+<th align="center">表头</th>
+<th align="center">表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">内容</td>
+<td align="center">内容</td>
+<td align="center">内容</td>
+</tr>
+<tr>
+<td align="left">内容</td>
+<td align="center">内容</td>
+<td align="center">内容</td>
+</tr>
+</tbody></table>
+<pre><code>第二行分割表头和内容。
+- 有一个就行，为了对齐，多加了几个
+文字默认居左
+-两边加：表示文字居中
+-右边加：表示文字居右
+注：原生的语法两边都要用 | 包起来。</code></pre><hr>
+<br>
+
+<blockquote>
+<h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a><strong>流程图</strong></h1></blockquote>
+<p>此处留白先，不会用。</p>
+<br>
+># **分割线**
+
+<pre><code>`---`</code></pre><hr>
+<br/>
+
+<blockquote>
+<h1 id="转义符号"><a href="#转义符号" class="headerlink" title="转义符号"></a><strong>转义符号</strong></h1><p>\   下面这些符号可以通过转义符号来实现</p>
+</blockquote>
+<pre><code>\   反斜线
+
+`   反引号
+
+*   星号
+
+_   底线
+
+&#123;&#125;  花括号
+
+[]  方括号
+
+()  括弧
+
+#   井字号
+
++   加号
+
+-   减号
+
+.   英文句点
+
+!   惊叹号</code></pre><hr>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/11/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/11/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="post-title-link" itemprop="url">二叉树</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-11 22:00:00" itemprop="dateCreated datePublished" datetime="2019-09-11T22:00:00+08:00">2019-09-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-20 19:22:53" itemprop="dateModified" datetime="2019-10-20T19:22:53+08:00">2019-10-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>关于二叉树的定义以及遍历方式</p>
+<p>#二叉树<br><strong>二叉树：</strong>任何一个节点的子节点数量不超过2，二叉树的子节点分为左节点和右节点<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568201402129&di=c0bfa0a0b158da427d343bcf7c01c3df&imgtype=0&src=http%3A%2F%2Fwww.slyar.com%2Fblog%2Fwp-content%2Fuploads%2F2009%2F05%2Fbitree.gif" alt=""></p>
+<p><strong>满二叉树：</strong>所有叶子节点都在最后一层，而且节点的总数为Math.pow(2,n)个，其中n是指树的高度<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568201503745&di=1643d1723eb011745face4de6ce2db57&imgtype=0&src=http%3A%2F%2Fimg2018.cnblogs.com%2Fblog%2F1590962%2F201902%2F1590962-20190210104140321-2036737206.png" alt=""></p>
+<p><strong>完全二叉树：</strong>所有叶子节点都在最后一层或者倒数第二层，且最后一层的叶子节点在左边连续，倒数第二层的叶子节点在右边连续<br>完全二叉树是可以从左向右一直数下去的，如果出现了数数过程中的不连续，那么就说明不是一棵完全二叉树（如果图中没有6和7,那么就不是一棵完全二叉）<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568796283&di=1e23130b9252d91586a7a6087fe60f22&imgtype=jpg&er=1&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20181120%2Fd554331cad3846e294854fb95f886ec2.jpg" alt=""></p>
+<p>##<br>##树的遍历<br>对于下图的二叉树进行遍历时，其三种遍历顺序结果为</p>
+<p>前序遍历：ABCDEFGHK</p>
+<p>中序遍历：BDCAEHGKF</p>
+<p>后序遍历：DCBHKGFEA</p>
+<p><img src="https://img-blog.csdn.net/20180507110445948?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjQzMTg5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt=""></p>
+<p><strong>前序遍历：</strong>   中左右<br>进行遍历时，先从最中间的根节点开始，然后是左子树，左子树的遍历也是按照先中间，再左边，然后右边的顺序进行的，遍历完左子树，再进行右子树的遍历。先从最中间开始，A，然后再到左子树AB,B没有左节点，故ABC,C结束后再C的先左右节点，ABCD,然后到了A的右子树，查找顺序是一样的，就不再进行赘述了得到ABCDEFGHK</p>
+<p><strong>中序遍历：</strong>   左中右<br>先从根节点开始，根节点有左节点，所以到了B位置，然后再找B的左节点的，但是为空，所以第一个为B，再到B的右节点C，此时C有左节点，优先左节点D，然后再C，C没有右节点，这个时候左子树就结束了为BDC,然乎是中间的根节点A，为BDCA，再到右子树，右子树的查找顺序是一样的，先找有没有左节点，然后再中间节点，再右节点，最后得到的结果为:BDCAEHGKF<br><img src="https://img-blog.csdn.net/20180507122356827?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjQzMTg5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt=""><br><strong>后序遍历：</strong>   左右中<br>进行遍历时，先从左子树开始，从左子树的左边的叶子节点开始，然后一直到左子树遍历结束，然后右子树，遍历方式是一样的，再是中间的根节点。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 
 
-斜体
-*这是斜体的方式*
+          </div>
+          
 
-_这是斜体的方_这是斜体的方式
-这是斜体的方
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Dongcheng</p>
+  <div class="site-description" itemprop="description">Master record</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dongcheng</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
 
 
 
 
-粗体
- ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/09/11/%E4%BA%8C%E5%8F%89%E6%A0%91/" title="二叉树">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="二叉树"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/09/11/%E4%BA%8C%E5%8F%89%E6%A0%91/" title="二叉树">二叉树</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-11T14:00:00.000Z" title="发表于 2019-09-11 22:00:00">2019-09-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a></span></div><div class="content">关于二叉树的定义以及遍历方式
-#二叉树二叉树：任何一个节点的子节点数量不超过2，二叉树的子节点分为左节点和右节点
-满二叉树：所有叶子节点都在最后一层，而且节点的总数为Math.pow(2,n)个，其中n是指树的高度
-完全二叉树：所有叶子节点都在最后一层或者倒数第二层，且最后一层的叶子节点在左边连续，倒数第二层的叶子节点在右边连续完全二叉树是可以从左向右一直数下去的，如果出现了数数过程中的不连续，那么就说明不是一棵完全二叉树（如果图中没有6和7,那么就不是一棵完全二叉）
-####树的遍历对于下图的二叉树进行遍历时，其三种遍历顺序结果为
-前序遍历：ABCDEFGHK
-中序遍历：BDCAEHGKF
-后序遍历：DCBHKGFEA
 
-前序遍历：   中左右进行遍历时，先从最中间的根节点开始，然后是左子树，左子树的遍历也是按照先中间，再左边，然后右边的顺序进行的，遍历完左子树，再进行右子树的遍历。先从最中间开始，A，然后再到左子树AB,B没有左节点，故ABC,C结束后再C的先左右节点，ABCD,然后到了A的右子树，查找顺序是一样的，就不再进行赘述了得到ABCDEFGHK
-中序遍历：   左中右先从 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Dongcheng</div><div class="author-info__description">Master record</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2019/11/16/Springboot%E5%AD%A6%E4%B9%A0/" title="Springboot学习"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Springboot学习"/></a><div class="content"><a class="title" href="/2019/11/16/Springboot%E5%AD%A6%E4%B9%A0/" title="Springboot学习">Springboot学习</a><time datetime="2019-11-16T14:17:43.000Z" title="发表于 2019-11-16 22:17:43">2019-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式"/></a><div class="content"><a class="title" href="/2019/11/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">正则表达式</a><time datetime="2019-11-15T12:01:15.000Z" title="发表于 2019-11-15 20:01:15">2019-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/" title="springboot2——Metrics"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="springboot2——Metrics"/></a><div class="content"><a class="title" href="/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/" title="springboot2——Metrics">springboot2——Metrics</a><time datetime="2019-11-13T12:49:11.000Z" title="发表于 2019-11-13 20:49:11">2019-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/12/java%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="java基础--基本数据类型"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java基础--基本数据类型"/></a><div class="content"><a class="title" href="/2019/11/12/java%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="java基础--基本数据类型">java基础--基本数据类型</a><time datetime="2019-11-12T14:54:49.000Z" title="发表于 2019-11-12 22:54:49">2019-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" title="MicroMeter基础概念"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MicroMeter基础概念"/></a><div class="content"><a class="title" href="/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" title="MicroMeter基础概念">MicroMeter基础概念</a><time datetime="2019-11-12T14:41:32.000Z" title="发表于 2019-11-12 22:41:32">2019-11-12</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Monitor-System/"><span class="card-category-list-name">Monitor System</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/SpringBoot/"><span class="card-category-list-name">SpringBoot</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hadoop/"><span class="card-category-list-name">hadoop</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/java/"><span class="card-category-list-name">java</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/springboot/"><span class="card-category-list-name">springboot</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/"><span class="card-category-list-name">实用操作</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">数据结构与算法</span><span class="card-category-list-count">2</span></a></li>
-            <li class="card-category-list-item more is-center"><a class="card-category-list-link-more" href="/categories/">
-                <span>查看更多</span><i class="fas fa-angle-right"></i></a></li>
-            </ul></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/11/"><span class="card-archive-list-date">十一月 2019</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/10/"><span class="card-archive-list-date">十月 2019</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/09/"><span class="card-archive-list-date">九月 2019</span><span class="card-archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">15</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2020-11-04T13:42:31.138Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By Dongcheng</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
