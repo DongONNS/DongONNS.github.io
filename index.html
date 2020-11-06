@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="Master record">
@@ -123,11 +123,6 @@
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
@@ -148,10 +143,6 @@
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
 
 
     <main class="main">
@@ -196,7 +187,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-05 20:19:52" itemprop="dateModified" datetime="2020-11-05T20:19:52+08:00">2020-11-05</time>
+                <time title="修改时间：2020-11-06 14:28:39" itemprop="dateModified" datetime="2020-11-06T14:28:39+08:00">2020-11-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -219,15 +210,68 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="PoatConstruct有什么作用"><a href="#PoatConstruct有什么作用" class="headerlink" title="@PoatConstruct有什么作用"></a>@PoatConstruct有什么作用</h2><p>PostConstruct注释用于在完成依赖项注入以执行任何初始化之后需要执行的方法。必须在类投入使用之前调用此方法。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/16/Springboot%E5%AD%A6%E4%B9%A0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <a id="more"></a>
+
+<h2 id="PoatConstruct有什么作用"><a href="#PoatConstruct有什么作用" class="headerlink" title="@PoatConstruct有什么作用"></a>@PoatConstruct有什么作用</h2><p>PostConstruct注释用于在完成依赖项注入以执行任何初始化之后需要执行的方法。必须在类投入使用之前调用此方法。</p>
+<!--more-->
+
+<p>所有支持依赖注入的类都必须支持此注释。即使类没有请求注入任何资源，也必须调用使用PostConstruct注释的方法。</p>
+<p>只有一个方法可以使用此批注进行批注。</p>
+<p>应用PostConstruct注释的方法必须满足以下所有条件：除了拦截器之外，方法绝不能有任何参数，在这种情况下它采用Interceptor规范定义的InvocationContext对象。</p>
+<p>在拦截器类上定义的方法必须具有以下签名之一：</p>
+<p>void <METHOD>（InvocationContext）Object <METHOD>（InvocationContext）抛出异常注意：<br>PostConstruct拦截器方法不能抛出应用程序异常，但可以声明它抛出检查异常，包括java.lang.Exception，</p>
+<p>如果相同的拦截器方法除了生命周期事件之外插入业务或超时方法。</p>
+<p>如果PostConstruct拦截器方法返回一个值，容器将忽略它。</p>
+<p>在非拦截器类上定义的方法必须具有以下签名：void <METHOD>（）应用PostConstruct的方法可以是public，protected，package private或private。</p>
+<p>除应用程序客户端外，该方法绝不能是静态的。</p>
+<p>该方法可能是最终的。如果该方法抛出一个未经检查的异常，那么该类绝不能投入使用，除非EJB可以处理异常甚至从它们恢复的EJB。</p>
+<h3 id="构造方法-gt-Autowired-gt-PostConstruct"><a href="#构造方法-gt-Autowired-gt-PostConstruct" class="headerlink" title="构造方法 &gt; @Autowired &gt; @PostConstruct"></a>构造方法 &gt; @Autowired &gt; @PostConstruct</h3><p>1、从Java EE5规范开始，Servlet中增加了两个影响Servlet生命周期的注解，@PostConstruct和@PreDestroy，这两个注解被用来修饰一个非静态的void（）方法。写法有如下两种方式：</p>
+<p>@PostConstruct</p>
+<p>public void someMethod(){}</p>
+<p>或者</p>
+<p>public @PostConstruct void someMethod(){}</p>
+<p>被@PostConstruct修饰的方法会在服务器加载Servlet的时候运行，并且只会被服务器执行一次。PostConstruct在构造函数之后执行，init（）方法之前执行。PreDestroy（）方法在destroy（）方法知性之后执行</p>
+<p>执行顺序</p>
+<h4 id="另外，spring中Constructor、-Autowired、-PostConstruct的顺序"><a href="#另外，spring中Constructor、-Autowired、-PostConstruct的顺序" class="headerlink" title="另外，spring中Constructor、@Autowired、@PostConstruct的顺序"></a>另外，spring中Constructor、@Autowired、@PostConstruct的顺序</h4><h4 id="其实从依赖注入的字面意思就可以知道，要将对象p注入到对象a，那么首先就必须得生成对象a和对象p，才能执行注入。所以，如果一个类A中有个成员变量p被-Autowried注解，那么-Autowired注入是发生在A的构造方法执行完之后的。"><a href="#其实从依赖注入的字面意思就可以知道，要将对象p注入到对象a，那么首先就必须得生成对象a和对象p，才能执行注入。所以，如果一个类A中有个成员变量p被-Autowried注解，那么-Autowired注入是发生在A的构造方法执行完之后的。" class="headerlink" title="其实从依赖注入的字面意思就可以知道，要将对象p注入到对象a，那么首先就必须得生成对象a和对象p，才能执行注入。所以，如果一个类A中有个成员变量p被@Autowried注解，那么@Autowired注入是发生在A的构造方法执行完之后的。"></a>其实从依赖注入的字面意思就可以知道，要将对象p注入到对象a，那么首先就必须得生成对象a和对象p，才能执行注入。所以，如果一个类A中有个成员变量p被@Autowried注解，那么@Autowired注入是发生在A的构造方法执行完之后的。</h4><h4 id="如果想在生成对象时完成某些初始化操作，而偏偏这些初始化操作又依赖于依赖注入，那么久无法在构造函数中实现。为此，可以使用-PostConstruct注解一个方法来完成初始化，-PostConstruct注解的方法将会在依赖注入完成后被自动调用。"><a href="#如果想在生成对象时完成某些初始化操作，而偏偏这些初始化操作又依赖于依赖注入，那么久无法在构造函数中实现。为此，可以使用-PostConstruct注解一个方法来完成初始化，-PostConstruct注解的方法将会在依赖注入完成后被自动调用。" class="headerlink" title="如果想在生成对象时完成某些初始化操作，而偏偏这些初始化操作又依赖于依赖注入，那么久无法在构造函数中实现。为此，可以使用@PostConstruct注解一个方法来完成初始化，@PostConstruct注解的方法将会在依赖注入完成后被自动调用。"></a>如果想在生成对象时完成某些初始化操作，而偏偏这些初始化操作又依赖于依赖注入，那么久无法在构造函数中实现。为此，可以使用@PostConstruct注解一个方法来完成初始化，@PostConstruct注解的方法将会在依赖注入完成后被自动调用。</h4><h4 id="Constructor-gt-gt-Autowired-gt-gt-PostConstruct"><a href="#Constructor-gt-gt-Autowired-gt-gt-PostConstruct" class="headerlink" title="Constructor &gt;&gt; @Autowired &gt;&gt; @PostConstruct"></a>Constructor &gt;&gt; @Autowired &gt;&gt; @PostConstruct</h4><hr>
+<h2 id="Aspect的作用是什么？"><a href="#Aspect的作用是什么？" class="headerlink" title="@Aspect的作用是什么？"></a>@Aspect的作用是什么？</h2><p>AOP为Aspect Oriented Programming的缩写，意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术.AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。</p>
+<p>在spring AOP中业务逻辑仅仅只关注业务本身，将日志记录，性能统计，安全控制，事务处理，异常处理等代码从业务逻辑代码中划分出来，通过对这些行为的分离，我们希望可以将它们独立到非指导业务逻辑的方法中，进而改变这些行为的时候不影响业务逻辑的代码。</p>
+<pre><code>@Aspect:作用是把当前类标识为一个切面供容器读取
+
+@Pointcut：Pointcut是植入Advice的触发条件。每个Pointcut的定义包括2部分，一是表达式，二是方法签名。方法签名必须是 public及void型。可以将Pointcut中的方法看作是一个被Advice引用的助记符，因为表达式不直观，因此我们可以通过方法签名的方式为 此表达式命名。因此Pointcut中的方法只需要方法签名，而不需要在方法体内编写实际代码。
+
+@Around：环绕增强，相当于MethodInterceptor
+
+@AfterReturning：后置增强，相当于AfterReturningAdvice，方法正常退出时执行
+
+@Before：标识一个前置增强方法，相当于BeforeAdvice的功能，相似功能的还有
+
+@AfterThrowing：异常抛出增强，相当于ThrowsAdvice
+
+@After: final增强，不管是抛出异常或者正常退出都会执行</code></pre><p>Spring AOP面向切面编程，可以用来配置事务、做日志、权限验证、在用户请求时做一些处理等等。用@Aspect做一个切面，就可以直接实现。</p>
+<p>1.首先定义一个切面类，加上@Component  @Aspect这两个注解   </p>
+<pre><code>@Component
+@Aspect
+public class LogAspect &#123;
+
+private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);
+private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+
+
+&#125;</code></pre><p>2.定义切点     </p>
+<pre><code>private final String POINT_CUT = &quot;execution(public * com.xhx.springboot.controller.*.*(..))&quot;;
+
+@Pointcut(POINT_CUT)
+public void pointCut()&#123;&#125;</code></pre><p>切点表达式中，..两个点表明多个，<em>代表一个，  上面表达式代表切入com.xhx.springboot.controller包下的所有类的所有方法，方法参数不限，返回类型不限。  其中访问修饰符可以不写，不能用</em>，，第一个<em>代表返回类型不限，第二个</em>表示所有类，第三个*表示所有方法，..两个点表示方法里的参数不限。  然后用@Pointcut切点注解，想在一个空方法上面，一会儿在Advice通知中，直接调用这个空方法就行了，也可以把切点表达式卸载Advice通知中的，单独定义出来主要是为了好管理。</p>
+<p>3.Advice，通知增强，主要包括五个注解Before,After,AfterReturning,AfterThrowing,Around，下面代码中关键地方都有注释，我都列出来了。</p>
+<pre><code>@Before  在切点方法之前执行
+
+@After  在切点方法之后执行
+
+@AfterReturning 切点方法返回后执行
+
+@AfterThrowing 切点方法抛异常执行
+
+@Around 属于环绕增强，能控制切点执行前，执行后，，用这个注解后，程序抛异常，会影响@AfterThrowing这个注解</code></pre>
       
     </div>
 
@@ -269,10 +313,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-15 20:01:15 / 修改时间：23:17:59" itemprop="dateCreated datePublished" datetime="2019-11-15T20:01:15+08:00">2019-11-15</time>
+              <time title="创建时间：2019-11-15 20:01:15" itemprop="dateCreated datePublished" datetime="2019-11-15T20:01:15+08:00">2019-11-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-06 14:30:12" itemprop="dateModified" datetime="2020-11-06T14:30:12+08:00">2020-11-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -295,90 +345,14 @@
 
       
           <p>&emsp;正则是一个非常重要的知识点，我在数据库、前端设计、爬虫等中都看到过很多，但是自己没有去刻意学习，每次都是自己去网上搜，今天就建立自己的正则库，方便自己以后翻阅，同时也用于把自己平时见到的一些巧妙的正则表达式往里面塞一塞。</p>
-<h3 id="一、什么是正则表达式？"><a href="#一、什么是正则表达式？" class="headerlink" title="一、什么是正则表达式？"></a>一、什么是正则表达式？</h3><p>&emsp;&emsp;正则表达式，又称规则表达式，通常被用来检索、替换那些符合某个模式(规则)的文本。正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。</p>
-<h3 id="二、正则能干嘛？"><a href="#二、正则能干嘛？" class="headerlink" title="二、正则能干嘛？"></a>二、正则能干嘛？</h3><ul>
-<li><p>一是给定的字符串是否符合正则表达式的过滤逻辑（这个过程可称为“匹配”）；</p>
-</li>
-<li><p>二是通过正则表达式，从文本字符串中获取我们想要的特定部分（这个过程可称为“过滤”）。</p>
-</li>
-</ul>
-<h3 id="三正表达式的语法"><a href="#三正表达式的语法" class="headerlink" title="三正表达式的语法"></a>三正表达式的语法</h3><pre><code>^  表示匹配字符串的开始位置  (例外  用在中括号中[ ] 时,可以理解为取反,表示不匹配括号中字符串)
-
-$  表示匹配字符串的结束位置
-
-*  表示匹配 零次到多次
-
-+  表示匹配 一次到多次 (至少有一次)
-
-?  表示匹配零次或一次
-
-.  表示匹配单个字符 
-
-|  表示为或者,两项中取一项
-
-(  ) 小括号表示匹配括号中全部字符
-
-[  ] 中括号表示匹配括号中一个字符 范围描述 如[0-9 a-z A-Z]
-
-&#123;  &#125; 大括号用于限定匹配次数  如 &#123;n&#125;表示匹配n个字符  &#123;n,&#125;表示至少匹配n个字符  &#123;n,m&#125;表示至少n,最多m
-
-\  转义字符 如上基本符号匹配都需要转义字符   如 \*  表示匹配*号
-
-\w 表示英文字母和数字
-
-\W  非字母和数字
-
-\d  表示数字
-
-\D  非数字</code></pre><h3 id="四、常用的正则表达式"><a href="#四、常用的正则表达式" class="headerlink" title="四、常用的正则表达式"></a>四、常用的正则表达式</h3><p>常用的正则表达式(转)<br>匹配中文字符的正则表达式： <code>[\u4e00-\u9fa5]</code></p>
-<p>匹配双字节字符(包括汉字在内)：<code>[^\x00-\xff]</code></p>
-<p>匹配空行的正则表达式：<code>\n[\s| ]*\r</code></p>
-<p>匹配HTML标记的正则表达式：<code>/&lt;(.*)&gt;.*&lt;\/\1&gt;|&lt;(.*) \/&gt;/</code> </p>
-<p>匹配首尾空格的正则表达式：<code>(^\s*)|(\s*$)</code></p>
-<p>匹配IP地址的正则表达式：<code>/(\d+)\.(\d+)\.(\d+)\.(\d+)/g //</code></p>
-<p>匹配Email地址的正则表达式：<code>\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</code></p>
-<p>匹配网址URL的正则表达式：<code>http://(/[\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?</code></p>
-<p>sql语句：<code>^(select|drop|delete|create|update|insert).*$</code></p>
-<p>1、非负整数：<code>^\d+$</code></p>
-<p>2、正整数：<code>^[0-9]*[1-9][0-9]*$</code></p>
-<p>3、非正整数：<code>^((-\d+)|(0+))$</code></p>
-<p>4、负整数：<code>^-[0-9]*[1-9][0-9]*$</code> </p>
-<p>5、整数：<code>^-?\d+$</code> </p>
-<p>6、非负浮点数：<code>^\d+(\.\d+)?$</code></p>
-<p>7、正浮点数：<code>^((0-9)+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$</code></p>
-<p>8、非正浮点数：<code>^((-\d+\.\d+)?)|(0+(\.0+)?))$</code></p>
-<p>9、负浮点数：<code>^(-((正浮点数正则式)))$</code></p>
-<p>10、英文字符串：<code>^[A-Za-z]+$</code> </p>
-<p>11、英文大写串：<code>^[A-Z]+$</code> </p>
-<p>12、英文小写串：<code>^[a-z]+$</code> </p>
-<p>13、英文字符数字串：<code>^[A-Za-z0-9]+$</code></p>
-<p>14、英数字加下划线串：<code>^\w+$</code></p>
-<p>15、E-mail地址：<code>^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$</code></p>
-<p>16、URL：<code>^[a-zA-Z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\s*)?$</code><br>或：<code>^http:\/\/[A-Za-z0-9]+\.[A-Za-z0-9]+[\/=\?%\-&amp;_~</code>@[]&#39;:+!]<em>([^&lt;&gt;&quot;&quot;])</em>$`</p>
-<p>17、邮政编码：<code>^[1-9]\d&#123;5&#125;$</code></p>
-<p>18、中文：<code>^[\u0391-\uFFE5]+$</code></p>
-<p>19、电话号码：<code>^((\d2,3)|(\d&#123;3&#125;\-))?(0\d2,3|0\d&#123;2,3&#125;-)?[1-9]\d&#123;6,7&#125;(\-\d&#123;1,4&#125;)?$</code></p>
-<p>20、手机号码：<code>^((\d2,3)|(\d&#123;3&#125;\-))?13\d&#123;9&#125;$</code></p>
-<p>21、双字节字符(包括汉字在内)：<code>^\x00-\xff</code></p>
-<p>22、匹配首尾空格：<code>(^\s*)|(\s*$)</code>（像vbscript那样的trim函数）</p>
-<p>23、匹配HTML标记：<code>&lt;(.*)&gt;.*&lt;\/\1&gt;|&lt;(.*) \/&gt;</code></p>
-<p>24、匹配空行：<code>\n[\s| ]*\r</code></p>
-<p>25、提取信息中的网络链接：<code>(h|H)(r|R)(e|E)(f|F) *= *(&#39;|&quot;)?(\w|\\|\/|\.)+(&#39;|&quot;| *|&gt;)?</code></p>
-<p>26、提取信息中的邮件地址：<code>\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</code></p>
-<p>27、提取信息中的图片链接：<code>(s|S)(r|R)(c|C) *= *(&#39;|&quot;)?(\w|\\|\/|\.)+(&#39;|&quot;| *|&gt;)?</code></p>
-<p>28、提取信息中的IP地址：<code>(\d+)\.(\d+)\.(\d+)\.(\d+)</code></p>
-<p>29、提取信息中的中国手机号码：<code>(86)*0*13\d&#123;9&#125;</code></p>
-<p>30、提取信息中的中国固定电话号码：<code>(\d3,4|\d&#123;3,4&#125;-|\s)?\d&#123;8&#125;</code></p>
-<p>31、提取信息中的中国电话号码（包括移动和固定电话）：<code>(\d3,4|\d&#123;3,4&#125;-|\s)?\d&#123;7,14&#125;</code></p>
-<p>32、提取信息中的中国邮政编码：<code>[1-9]&#123;1&#125;(\d+)&#123;5&#125;</code></p>
-<p>33、提取信息中的浮点数（即小数）：<code>(-?\d*)\.?\d+</code></p>
-<p>34、提取信息中的任何数字 ：<code>(-?\d*)(\.\d+)?</code> </p>
-<p>35、IP：<code>(\d+)\.(\d+)\.(\d+)\.(\d+)</code></p>
-<p>36、电话区号：<code>/^0\d&#123;2,3&#125;$/</code></p>
-<p>37、腾讯QQ号：<code>^[1-9]*[1-9][0-9]*$</code></p>
-<p>38、帐号(字母开头，允许5-16字节，允许字母数字下划线)：<code>^[a-zA-Z][a-zA-Z0-9_]&#123;4,15&#125;$</code></p>
-<p>39、中文、英文、数字及下划线：<code>^[\u4e00-\u9fa5_a-zA-Z0-9]+$</code></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -420,10 +394,16 @@ $  表示匹配字符串的结束位置
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-13 20:49:11 / 修改时间：20:58:57" itemprop="dateCreated datePublished" datetime="2019-11-13T20:49:11+08:00">2019-11-13</time>
+              <time title="创建时间：2019-11-13 20:49:11" itemprop="dateCreated datePublished" datetime="2019-11-13T20:49:11+08:00">2019-11-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-06 14:20:22" itemprop="dateModified" datetime="2020-11-06T14:20:22+08:00">2020-11-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -445,7 +425,9 @@ $  表示匹配字符串的结束位置
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Metrics"><a href="#Metrics" class="headerlink" title="Metrics"></a>Metrics</h1><p>&emsp;&emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prometheus、SignalFx、Simple (in-memory)、StatsD、Wavefront。</p>
+          <a id="more"></a>
+
+<h1 id="Metrics"><a href="#Metrics" class="headerlink" title="Metrics"></a>Metrics</h1><p>&emsp;&emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prometheus、SignalFx、Simple (in-memory)、StatsD、Wavefront。</p>
 <p>&emsp;&emsp;要了解有关Micrometer功能的更多信息，请参阅其参考文档，特别是<a target="_blank" rel="noopener" href="https://dongonns.github.io/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/">概念</a>部分。</p>
 <hr>
 <h2 id="1-入门"><a href="#1-入门" class="headerlink" title="1 入门"></a>1 入门</h2><p>&emsp;&emsp;Spring Boot自动配置组合MeterRegistry，并为其在类路径上找到的每个支持的实现向组合添加注册表。在micrometer-registry-{system}运行时类路径中具有依赖项足以让Spring Boot配置注册表。</p>
@@ -723,7 +705,7 @@ management.metrics.tags.stack=prod</code></pre><p>&emsp;&emsp;上面的示例将
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-13 00:13:47" itemprop="dateModified" datetime="2019-11-13T00:13:47+08:00">2019-11-13</time>
+                <time title="修改时间：2020-11-06 14:18:22" itemprop="dateModified" datetime="2020-11-06T14:18:22+08:00">2020-11-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -746,7 +728,9 @@ management.metrics.tags.stack=prod</code></pre><p>&emsp;&emsp;上面的示例将
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="一、注释的写法"><a href="#一、注释的写法" class="headerlink" title="一、注释的写法"></a>一、注释的写法</h1><p>1.1 单行注释   //这是单行注释</p>
+          <a id="more"></a>
+
+<h1 id="一、注释的写法"><a href="#一、注释的写法" class="headerlink" title="一、注释的写法"></a>一、注释的写法</h1><p>1.1 单行注释   //这是单行注释</p>
 <p>1.2 多行注释</p>
 <pre><code>/*这是
       多行注释*/</code></pre><p>1.3 文档注释</p>
@@ -795,10 +779,16 @@ management.metrics.tags.stack=prod</code></pre><p>&emsp;&emsp;上面的示例将
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-12 22:41:32 / 修改时间：22:47:46" itemprop="dateCreated datePublished" datetime="2019-11-12T22:41:32+08:00">2019-11-12</time>
+              <time title="创建时间：2019-11-12 22:41:32" itemprop="dateCreated datePublished" datetime="2019-11-12T22:41:32+08:00">2019-11-12</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-06 14:19:07" itemprop="dateModified" datetime="2020-11-06T14:19:07+08:00">2020-11-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -820,7 +810,9 @@ management.metrics.tags.stack=prod</code></pre><p>&emsp;&emsp;上面的示例将
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="一、目的"><a href="#一、目的" class="headerlink" title="一、目的"></a>一、目的</h1><p>&emsp;&emsp;MicroMeter是针对基于JVM的应用程序的Metrics标准检测库。它为最流行的监视系统提供了一个基于可视化客户端的简单外观，使我们无需供应商锁定即可对基于JVM的应用程序代码进行可视化。它旨在在最大限度地提高指标工作可移植性的同时，几乎不增加指标收集活动的开销。</p>
+          <a id="more"></a>
+
+<h1 id="一、目的"><a href="#一、目的" class="headerlink" title="一、目的"></a>一、目的</h1><p>&emsp;&emsp;MicroMeter是针对基于JVM的应用程序的Metrics标准检测库。它为最流行的监视系统提供了一个基于可视化客户端的简单外观，使我们无需供应商锁定即可对基于JVM的应用程序代码进行可视化。它旨在在最大限度地提高指标工作可移植性的同时，几乎不增加指标收集活动的开销。</p>
 <hr>
 <h1 id="二、支持的监控系统"><a href="#二、支持的监控系统" class="headerlink" title="二、支持的监控系统"></a>二、支持的监控系统</h1><p>&emsp;&emsp;MicroMeter不是分布式跟踪系统或事件日志记录器。阿德里安·科尔（Adrian Cole）关于“ 可观测性3种方式”的演讲在强调这些不同类型的系统之间的差异方面做得很好。</p>
 <p>&emsp;&emsp;MicroMeter包含一个带有可视化一起SPI的核心模块，一组包含各种监视系统的实现（每个系统称为注册表）的模块，以及一个测试套件。学习监视系统理解下面三个重要特征：</p>
@@ -1438,10 +1430,16 @@ registry.timer(&quot;myservice.db.requests&quot;).record(..);</code></pre><p>&em
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-11 19:24:12 / 修改时间：21:43:38" itemprop="dateCreated datePublished" datetime="2019-11-11T19:24:12+08:00">2019-11-11</time>
+              <time title="创建时间：2019-11-11 19:24:12" itemprop="dateCreated datePublished" datetime="2019-11-11T19:24:12+08:00">2019-11-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-06 14:21:42" itemprop="dateModified" datetime="2020-11-06T14:21:42+08:00">2020-11-06</time>
+              </span>
 
           
 
@@ -1454,7 +1452,9 @@ registry.timer(&quot;myservice.db.requests&quot;).record(..);</code></pre><p>&em
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>for(i=0;i&lt;n;i++){<br>}</p>
+          <a id="more"></a>
+
+<p>for(i=0;i&lt;n;i++){<br>}</p>
 <p>for(i=n;i;i–){<br>}<br>下面这一项是boolean比较，编译速度要快上一倍；</p>
 <p>不用申请额外空间完成数值交换<br>a = a^b<br>b = a^b<br>a = a^b</p>
 <p>BitMask<br>将帅问题</p>
@@ -1466,64 +1466,6 @@ registry.timer(&quot;myservice.db.requests&quot;).record(..);</code></pre><p>&em
 <h2 id="二、硬件加速"><a href="#二、硬件加速" class="headerlink" title="二、硬件加速"></a>二、硬件加速</h2><p>2.1 InfiniBand<br>2.2 NVMESSD<br>2.3 GPU<br>2.4 FPGA<br>2.5 ASIC</p>
 <p>cpu为什么会发热？<br>计算机发生了信息丢失时就会发热，</p>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/11/posts/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/naruto.jpg">
-      <meta itemprop="name" content="Dongcheng">
-      <meta itemprop="description" content="Master record">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dongonns">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/11/posts/" class="post-title-link" itemprop="url">posts</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2019-11-11 19:23:48 / 修改时间：19:23:49" itemprop="dateCreated datePublished" datetime="2019-11-11T19:23:48+08:00">2019-11-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
       
     </div>
 
@@ -1565,10 +1507,16 @@ registry.timer(&quot;myservice.db.requests&quot;).record(..);</code></pre><p>&em
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-10 10:06:55 / 修改时间：13:24:23" itemprop="dateCreated datePublished" datetime="2019-11-10T10:06:55+08:00">2019-11-10</time>
+              <time title="创建时间：2019-11-10 10:06:55" itemprop="dateCreated datePublished" datetime="2019-11-10T10:06:55+08:00">2019-11-10</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-06 14:20:34" itemprop="dateModified" datetime="2020-11-06T14:20:34+08:00">2020-11-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -1591,125 +1539,14 @@ registry.timer(&quot;myservice.db.requests&quot;).record(..);</code></pre><p>&em
 
       
           <p>在我们的日常开发中，通常需要查看日志来帮我们解决程序运行中的一些错误问题及对程序运行过程的监控，这篇文章主要是讲解在SpringBoot中日志的工作原理、日志实现类的选择、日志的展示及存储方式等内容。</p>
-<h1 id="一、常用的日志框架"><a href="#一、常用的日志框架" class="headerlink" title="一、常用的日志框架"></a>一、常用的日志框架</h1><p>JUL、JCL、Jboss-logging、logback、log4j、log4j2、slf4j….</p>
-<p>其中属于<strong>日志门面</strong>（日志的抽象层）的是：JCL（Jakarta Commons Logging）    <strong>SLF4j</strong>（Simple Logging Facade for Java）、jboss-logging    </p>
-<p>属于日志的<strong>实现类</strong>的是：Log4j2 <strong>Logback</strong>、Log4j JUL（java.util.logging） </p>
-<p>我们一般是选择SLF4j作为抽象层，Logback作为实现类</p>
-<p>springboot也是选用的<strong>SLF4j和Logback</strong></p>
-<hr>
-<h1 id="二、如何在系统中使用SLF4j"><a href="#二、如何在系统中使用SLF4j" class="headerlink" title="二、如何在系统中使用SLF4j"></a>二、如何在系统中使用SLF4j</h1><p>开发的时候，日志记录方法的调用，不应该来直接调用日志的实现类，而是调用日志抽象层里面的方法；给系统里面导入slf4j的jar和 logback的实现jar</p>
-<p>具体的实现代码如下：</p>
-<pre><code>import org.slf4j.Logger; 
-import org.slf4j.LoggerFactory;   
-
-public class HelloWorld &#123;
-   public static void main(String[] args) &#123;
-     Logger logger = LoggerFactory.getLogger(HelloWorld.class);     
-     logger.info(&quot;Hello World&quot;);
-   &#125;
-&#125;</code></pre><blockquote>
-<p>抽象类与实现类之间的关系如下所示,每一个日志的实现框架都有自己的配置文件。<br>使用slf4j以后，配置文件还是做成日志实现框架自己本身的配置文件。</p>
-</blockquote>
-<p><img src="https://wx1.sinaimg.cn/mw690/007857NYgy1g8sqnny7iaj30w00homz4.jpg" alt="抽象类与实现类的关系"></p>
-<hr>
-<h1 id="三、遗留问题"><a href="#三、遗留问题" class="headerlink" title="三、遗留问题"></a>三、遗留问题</h1><p>在springboot中我们含有很多的框架，如Spring、Hebernate、MyBatis等，这些不同的日志框架使用的日志实现类是不相同的，那么我们如何实现不同的日志实现类之间的协调统一呢？</p>
-<p>如：a（slf4j+logback）: Spring（commons-logging）、Hibernate（jboss-logging）、MyBatis、xxxx 统一日志记录，即使是别的框架和我一起统一使用slf4j进行输出？</p>
-<p><strong>如何让系统中所有的日志都统一到slf4j：</strong></p>
-<pre><code>1、将系统中其他日志框架先排除出去；
-
-2、用中间包来替换原有的日志框架；
-
-3、我们导入slf4j其他的实现；</code></pre><p><img src="https://wx4.sinaimg.cn/mw690/007857NYly1g8sr40230bj316e0u00xc.jpg" alt="日志框架的替换类"></p>
-<hr>
-<h1 id="四、SpringBoot的日志依赖关系："><a href="#四、SpringBoot的日志依赖关系：" class="headerlink" title="四、SpringBoot的日志依赖关系："></a>四、SpringBoot的日志依赖关系：</h1><p><img src="https://wx3.sinaimg.cn/mw690/007857NYgy1g8sr81yfcnj30o709f0ta.jpg" alt="日志依赖关系"></p>
-<p>总结：</p>
-<pre><code>1）、SpringBoot底层也是使用slf4j+logback的方式进行日志记录
-
-2）、SpringBoot也把其他的日志都替换成了slf4j；
-
-3）、中间替换包？
-
-4）、如果我们要引入其他框架？一定要把这个框架的默认日志依赖移除掉？Spring框架用的是commons-logging；</code></pre><p>如下为在SpringBoot中引入依赖后的<strong>转换jar包</strong></p>
-<p><img src="https://wx4.sinaimg.cn/mw690/007857NYgy1g8sreyk7njj30cp06odg2.jpg" alt="日志转换包"></p>
-<p>SpringBoot能自动适配所有的日志，而且底层使用slf4j+logback的方式记录日志，引入其他框架的时候，只需要 把这个框架依赖的日志框架排除掉即可；</p>
-<pre><code>&lt;dependency&gt;
-          &lt;groupId&gt;org.springframework&lt;/groupId&gt;
-          &lt;artifactId&gt;spring‐core&lt;/artifactId&gt;              
-          &lt;exclusions&gt;
-              &lt;exclusion&gt;
-                    &lt;groupId&gt;commons‐logging&lt;/groupId&gt;
-                    &lt;artifactId&gt;commons‐logging&lt;/artifactId&gt;
-              &lt;/exclusion&gt;
-          &lt;/exclusions&gt;
-&lt;/dependency </code></pre><hr>
-<h1 id="五-日志的使用"><a href="#五-日志的使用" class="headerlink" title="五 日志的使用"></a>五 日志的使用</h1><p>SpringBoot默认帮我们配置好了日志；</p>
-<h2 id="默认配置"><a href="#默认配置" class="headerlink" title="默认配置"></a>默认配置</h2><pre><code>import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class DemoApplicationTests &#123;
-//日志记录器
-Logger logger = LoggerFactory.getLogger(getClass());
-
-@Test
-void contextLoads() &#123;
-    //日志的级别由低到高 trace&lt;debug&lt;info&lt;warn&lt;error
-    //可以调整输出的日志级别，日志就只会在这个级别以后的级别中生效
-    logger.trace(&quot;这是trace()日志&quot;);
-    logger.debug(&quot;这是debug日志&quot;);
-    //springboot默认提供的是info级别
-    logger.info(&quot;这是info日志&quot;);
-    logger.warn(&quot;这是warn日志&quot;);
-    logger.error(&quot;这是error日志&quot;);
-    &#125;
-&#125;</code></pre><p>当然我们可以对日志的输出格式、输出位置、默认级别等等做相应的调整</p>
-<pre><code>#指定日志的输出级别，默认条件为info级别的。
-logging.level.csu = trace
-
-#在当前目录下生成springboot.log日志
-#不指定目录则在当前目录下生成springboot.log日志
-#logging.file = springboot.log
-#也可以指定springboot.log的生成路径
-logging.file= F:/springboot.log
-
-#指定控制台输出的文件格式
-logging.pattern.console==%d&#123;yyyy‐MM‐dd&#125; [%thread] %‐5level %logger&#123;50&#125; ‐ %msg%n 
-
-#指定文件中日志的输出格式
-logging.pattern.file=%d&#123;yyyy‐MM‐dd&#125; === [%thread] === %‐5level === %logger&#123;50&#125; ==== %msg%n</code></pre><p>关于<strong>日志的输出格式简介</strong>：</p>
-<pre><code>日志输出格式： 
-
-%d表示日期时间 
-
-%thread表示线程名
-
-%‐5level：级别从左显示5个字符宽度          
-
-%logger&#123;50&#125; 表示logger名字长50个字符，否则按照句点分割。           
-
-%msg：日志消息，         
-
-%n是换行符</code></pre><h2 id="指定配置"><a href="#指定配置" class="headerlink" title="指定配置"></a>指定配置</h2><p>给类路径下放上每个日志框架自己的配置文件即可；SpringBoot就不使用他默认配置的了</p>
-<p>logback.xml：直接就被日志框架识别了； </p>
-<p>logback-spring.xml：日志框架就不直接加载日志的配置项，由SpringBoot解析日志配置，可以使用SpringBoot 的高级Proﬁle功能</p>
-<p>所以我们一般使用加上了“-spring”后缀的命名格式，如下所示在开发过程中就可以指定在开发环境和非开发环境使用的日志格式了。</p>
-<pre><code>&lt;springProfile name=&quot;dev&quot;&gt;                 
-    &lt;pattern&gt;%d&#123;yyyy‐MM‐dd HH:mm:ss.SSS&#125; ‐‐‐‐&gt; [%thread] ‐‐‐&gt; %‐5level  %logger&#123;50&#125; ‐ %msg%n&lt;/pattern&gt;             
-&lt;/springProfile&gt;             
-
-&lt;springProfile name=&quot;!dev&quot;&gt;                 
-    &lt;pattern&gt;%d&#123;yyyy‐MM‐dd HH:mm:ss.SSS&#125; ==== [%thread] ==== %‐5level  %logger&#123;50&#125; ‐ %msg%n&lt;/pattern&gt;             
-&lt;/springProfile&gt;</code></pre><p>如果直接使用没有“-spring”后缀的格式设置开发环境和非开发环境的日志格式会发生错误；</p>
-<p>当然我们也可以使用在配置中设置环境变量来进行开发环境选择：spring.profiles.active=dev<br><img src="https://wx3.sinaimg.cn/mw690/007857NYgy1g8sslk1dccj311j0ovjst.jpg" alt="环境变量设置">   </p>
-<hr>
-<h1 id="六-切换日志框架"><a href="#六-切换日志框架" class="headerlink" title="六 切换日志框架"></a>六 切换日志框架</h1><p>SpringBoot的默认方式为SLF4j+Logback形式的，现在我们将其切换成SLF4j+log4j的形式，具体操作如下：</p>
-<p><img src="https://wx1.sinaimg.cn/small/007857NYly1g8stgrfhm3j30kg0d70ti.jpg" alt="切换框架1"></p>
-<p><img src="https://wx2.sinaimg.cn/small/007857NYly1g8stgum4ucj30py0870tz.jpg" alt="切换框架2"></p>
-<p><img src="https://wx1.sinaimg.cn/mw690/007857NYly1g8stis21fpj30oa0dtta9.jpg" alt="切换框架3"></p>
-<p><img src="https://wx1.sinaimg.cn/mw690/007857NYly1g8stivul1dj30ry07zweu.jpg" alt="切换框架4"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/10/SpringBoot-%E6%97%A5%E5%BF%97/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1759,7 +1596,7 @@ logging.pattern.file=%d&#123;yyyy‐MM‐dd&#125; === [%thread] === %‐5level =
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-10 13:24:08" itemprop="dateModified" datetime="2019-11-10T13:24:08+08:00">2019-11-10</time>
+                <time title="修改时间：2020-11-06 14:17:28" itemprop="dateModified" datetime="2020-11-06T14:17:28+08:00">2020-11-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1782,7 +1619,8 @@ logging.pattern.file=%d&#123;yyyy‐MM‐dd&#125; === [%thread] === %‐5level =
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="HDFS概述"><a href="#HDFS概述" class="headerlink" title="HDFS概述"></a>HDFS概述</h2><p><strong>NameNode(nn)</strong>:存储文件的元数据，如文件名、文件目录结构、文件属性（生成时间、副本数、文件权限），以及每个文件的块列表和和块所在的DataNode等。</p>
+          <a id="more"></a>
+<h2 id="HDFS概述"><a href="#HDFS概述" class="headerlink" title="HDFS概述"></a>HDFS概述</h2><p><strong>NameNode(nn)</strong>:存储文件的元数据，如文件名、文件目录结构、文件属性（生成时间、副本数、文件权限），以及每个文件的块列表和和块所在的DataNode等。</p>
 <p><strong>DataNode(dn)</strong>:在本地文件系统存储文件数据块以及数据块的校验和。</p>
 <p><strong>Secondary NameNode(2nn)</strong>:用来监控HDFS的辅助后台程序，每隔一段时间获取HDFS元数据的快照。</p>
 <p>yarn架构图</p>
@@ -1876,7 +1714,7 @@ logging.pattern.file=%d&#123;yyyy‐MM‐dd&#125; === [%thread] === %‐5level =
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-04 15:27:26" itemprop="dateModified" datetime="2019-11-04T15:27:26+08:00">2019-11-04</time>
+                <time title="修改时间：2020-11-06 14:18:36" itemprop="dateModified" datetime="2020-11-06T14:18:36+08:00">2020-11-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1900,12 +1738,95 @@ logging.pattern.file=%d&#123;yyyy‐MM‐dd&#125; === [%thread] === %‐5level =
 
       
           <p>linux是在日常开发中常用的一个操作系统，但是linux中的指令实在太多了，这篇博客主要是记录平时常用的一些指令进行汇总。</p>
-<h2 id="如何进行secureCRT连接的不同界面之间的切换——Alt-”Num”"><a href="#如何进行secureCRT连接的不同界面之间的切换——Alt-”Num”" class="headerlink" title="如何进行secureCRT连接的不同界面之间的切换——Alt+”Num”"></a>如何进行secureCRT连接的不同界面之间的切换——Alt+”Num”</h2><p>如图所示为4个不同的连接的页面，我们在进行切换时直接按住 Alt+”连接界面所处的位置”</p>
-<hr>
-<h2 id="如何在linux中关掉一些进程"><a href="#如何在linux中关掉一些进程" class="headerlink" title="如何在linux中关掉一些进程"></a>如何在linux中关掉一些进程</h2><h2 id="scp-文件安全拷贝命令（-secure-copy）"><a href="#scp-文件安全拷贝命令（-secure-copy）" class="headerlink" title="scp 文件安全拷贝命令（    secure copy）"></a>scp 文件安全拷贝命令（    secure copy）</h2><p>scp -r 本地文件地址 username@ip:目的账户的保存地址（如果是文件的话就不需要加上 -r 了）<br><img src="https://wx1.sinaimg.cn/mw690/007857NYgy1g8lbf1v9aaj30s40diab1.jpg" alt="scp"></p>
-<hr>
-<h2 id="xsync集群分发脚本"><a href="#xsync集群分发脚本" class="headerlink" title="xsync集群分发脚本"></a>xsync集群分发脚本</h2><p>在进行集群配置的时候可能会需要在master上进行了配置，然后有需要将配置好的文件逐个传输到其他的文件夹下面，这样是非常的耗费精力的，为了实现快速的进行向各个节点的文件传输，我们这里采取配置xsync集群分发脚本。</p>
-<h2 id="集群时间的同步操作"><a href="#集群时间的同步操作" class="headerlink" title="集群时间的同步操作"></a>集群时间的同步操作</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/10/20/Linux%E7%AC%94%E8%AE%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/20/%E7%89%9B%E9%A1%BF%E8%BF%AD%E8%BE%BE%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/naruto.jpg">
+      <meta itemprop="name" content="Dongcheng">
+      <meta itemprop="description" content="Master record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dongonns">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/20/%E7%89%9B%E9%A1%BF%E8%BF%AD%E8%BE%BE%E6%B3%95/" class="post-title-link" itemprop="url">牛顿迭达法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-20 09:28:44" itemprop="dateCreated datePublished" datetime="2019-10-20T09:28:44+08:00">2019-10-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-06 14:21:10" itemprop="dateModified" datetime="2020-11-06T14:21:10+08:00">2020-11-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>多数方程不存在求根公式，因此求精确根非常困难，甚至不可能，从而寻找方程的近似根就显得特别重要，牛顿迭达法就是一种有效的求近似根的方法。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/10/20/%E7%89%9B%E9%A1%BF%E8%BF%AD%E8%BE%BE%E6%B3%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1991,14 +1912,14 @@ logging.pattern.file=%d&#123;yyyy‐MM‐dd&#125; === [%thread] === %‐5level =
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -2007,6 +1928,10 @@ logging.pattern.file=%d&#123;yyyy‐MM‐dd&#125; === [%thread] === %‐5level =
 
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
 
     </div>
   </aside>

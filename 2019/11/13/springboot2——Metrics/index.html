@@ -17,18 +17,18 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Metrics&amp;emsp;&amp;emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prometh">
+  <meta name="description" content="Metrics&amp;emsp;&amp;emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prome">
 <meta property="og:type" content="article">
 <meta property="og:title" content="springboot2——Metrics">
 <meta property="og:url" content="http://yoursite.com/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/index.html">
 <meta property="og:site_name" content="Dongonns">
-<meta property="og:description" content="Metrics&amp;emsp;&amp;emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prometh">
+<meta property="og:description" content="Metrics&amp;emsp;&amp;emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prome">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-11-13T12:49:11.000Z">
-<meta property="article:modified_time" content="2019-11-13T12:58:57.430Z">
+<meta property="article:modified_time" content="2020-11-06T06:20:22.374Z">
 <meta property="article:author" content="Dongcheng">
 <meta property="article:tag" content="Java,Python,Big Data">
 <meta name="twitter:card" content="summary">
@@ -125,11 +125,6 @@
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
@@ -150,10 +145,6 @@
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
 
 
     <main class="main">
@@ -190,10 +181,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-13 20:49:11 / 修改时间：20:58:57" itemprop="dateCreated datePublished" datetime="2019-11-13T20:49:11+08:00">2019-11-13</time>
+              <time title="创建时间：2019-11-13 20:49:11" itemprop="dateCreated datePublished" datetime="2019-11-13T20:49:11+08:00">2019-11-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-06 14:20:22" itemprop="dateModified" datetime="2020-11-06T14:20:22+08:00">2020-11-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -215,7 +212,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Metrics"><a href="#Metrics" class="headerlink" title="Metrics"></a>Metrics</h1><p>&emsp;&emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prometheus、SignalFx、Simple (in-memory)、StatsD、Wavefront。</p>
+        <a id="more"></a>
+
+<h1 id="Metrics"><a href="#Metrics" class="headerlink" title="Metrics"></a>Metrics</h1><p>&emsp;&emsp;Spring Boot Actuator为Micrometer提供了依赖项管理和自动配置，Micrometer是一种支持大量监视系统的应用程序指标展示，包括：AppOptics、Atlas、Datadog、Dynatrace、Elastic、Ganglia、Graphite、Humio、Influx、JMX、KairosDB、New Relic、Prometheus、SignalFx、Simple (in-memory)、StatsD、Wavefront。</p>
 <p>&emsp;&emsp;要了解有关Micrometer功能的更多信息，请参阅其参考文档，特别是<a target="_blank" rel="noopener" href="https://dongonns.github.io/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/">概念</a>部分。</p>
 <hr>
 <h2 id="1-入门"><a href="#1-入门" class="headerlink" title="1 入门"></a>1 入门</h2><p>&emsp;&emsp;Spring Boot自动配置组合MeterRegistry，并为其在类路径上找到的每个支持的实现向组合添加注册表。在micrometer-registry-{system}运行时类路径中具有依赖项足以让Spring Boot配置注册表。</p>
@@ -449,6 +448,23 @@ management.metrics.tags.stack=prod</code></pre><p>&emsp;&emsp;上面的示例将
     
     
     
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Dongcheng
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/11/13/springboot2%E2%80%94%E2%80%94Metrics/" title="springboot2——Metrics">http://yoursite.com/2019/11/13/springboot2——Metrics/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
 
       <footer class="post-footer">
 
@@ -539,14 +555,14 @@ management.metrics.tags.stack=prod</code></pre><p>&emsp;&emsp;上面的示例将
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -555,6 +571,10 @@ management.metrics.tags.stack=prod</code></pre><p>&emsp;&emsp;上面的示例将
 
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
 
     </div>
   </aside>
