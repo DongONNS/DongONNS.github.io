@@ -1,571 +1,408 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="Master record">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Dongonns - To change the fate of the first to change their own.</title><meta name="keywords" content="Java,Python,Big Data"><meta name="author" content="dongcheng"><meta name="copyright" content="dongcheng"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="日拱一卒无有尽 功不唐捐终入海">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Dongonns">
 <meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Dongonns">
-<meta property="og:description" content="Master record">
+<meta property="og:description" content="日拱一卒无有尽 功不唐捐终入海">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="Dongcheng">
+<meta property="og:image" content="http://yoursite.com/img/naruto.jpg">
+<meta property="article:author" content="dongcheng">
 <meta property="article:tag" content="Java,Python,Big Data">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://yoursite.com/page/2/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>Dongonns</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta name="twitter:image" content="http://yoursite.com/img/naruto.jpg"><link rel="shortcut icon" href="/img/icon.png"><link rel="canonical" href="http://yoursite.com/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Dongonns',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-04-10 23:30:22'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<link rel="alternate" href="/atom.xml" title="Dongonns" type="application/atom+xml">
-</head>
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-	<a target="_blank" rel="noopener" href="https://github.com/DongONNS" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Dongonns</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">To change the fate of the first to change their own.</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/19/%E6%98%93%E5%BF%98%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%90%E7%A2%8E%E6%93%8D%E4%BD%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/naruto.jpg">
-      <meta itemprop="name" content="Dongcheng">
-      <meta itemprop="description" content="Master record">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dongonns">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/10/19/%E6%98%93%E5%BF%98%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%90%E7%A2%8E%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">易忘的一些琐碎操作</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-10-19 22:30:46" itemprop="dateCreated datePublished" datetime="2019-10-19T22:30:46+08:00">2019-10-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-06 14:22:00" itemprop="dateModified" datetime="2020-11-06T14:22:00+08:00">2020-11-06</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">实用操作</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这篇博客记录的是一些琐碎但重要的内容</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/10/19/%E6%98%93%E5%BF%98%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%90%E7%A2%8E%E6%93%8D%E4%BD%9C/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/15/markdown-note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/naruto.jpg">
-      <meta itemprop="name" content="Dongcheng">
-      <meta itemprop="description" content="Master record">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dongonns">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/10/15/markdown-note/" class="post-title-link" itemprop="url">markdown常用语法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-10-15 21:51:46" itemprop="dateCreated datePublished" datetime="2019-10-15T21:51:46+08:00">2019-10-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-06 14:18:55" itemprop="dateModified" datetime="2020-11-06T14:18:55+08:00">2020-11-06</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">实用操作</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>如何用markdown写博客？需要的语法都在这里</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/10/15/markdown-note/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/11/%E4%BA%8C%E5%8F%89%E6%A0%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/naruto.jpg">
-      <meta itemprop="name" content="Dongcheng">
-      <meta itemprop="description" content="Master record">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dongonns">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/09/11/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="post-title-link" itemprop="url">二叉树</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-09-11 22:00:00" itemprop="dateCreated datePublished" datetime="2019-09-11T22:00:00+08:00">2019-09-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-06 14:20:58" itemprop="dateModified" datetime="2020-11-06T14:20:58+08:00">2020-11-06</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>关于二叉树的定义以及遍历方式</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/09/11/%E4%BA%8C%E5%8F%89%E6%A0%91/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
       }
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Dongcheng"
-      src="/images/naruto.jpg">
-  <p class="site-author-name" itemprop="name">Dongcheng</p>
-  <div class="site-description" itemprop="description">Master record</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <span class="site-state-item-count">13</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">9</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-  </nav>
-</div>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Dongonns" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/naruto.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/index.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Dongonns</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Dongonns</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2019/11/12/java%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="java基础--基本数据类型"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java基础--基本数据类型"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/12/java%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="java基础--基本数据类型">java基础--基本数据类型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-12T14:54:49.000Z" title="发表于 2019-11-12 22:54:49">2019-11-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/java/">java</a></span></div><div class="content">
+
+一、注释的写法1.1 单行注释   &#x2F;&#x2F;这是单行注释
+1.2 多行注释
+/*这是
+      多行注释*/
+
+1.3 文档注释
+/**
+*
+*
+*/    
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" title="MicroMeter基础概念"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MicroMeter基础概念"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/12/MicroMeter%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" title="MicroMeter基础概念">MicroMeter基础概念</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-12T14:41:32.000Z" title="发表于 2019-11-12 22:41:32">2019-11-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Monitor-System/">Monitor System</a></span></div><div class="content">
+
+一、目的&amp;emsp;&amp;emsp;MicroMeter是针对基于JVM的应用程序的Metrics标准检测库。它为最流行的监视系统提供了一个基于可视化客户端的简单外观，使我们无需供应商锁定即可对基于JVM的应用程序代码进行可视化。它旨在在最大限度地提高指标工作可移植性的同时，几乎不增加指标收集活动的开销。
+
+二、支持的监控系统&amp;emsp;&amp;emsp;MicroMeter不是分布式跟踪系统或事件日志记录器。阿德里安·科尔（Adrian Cole）关于“ 可观测性3种方式”的演讲在强调这些不同类型的系统之间的差异方面做得很好。
+&amp;emsp;&amp;emsp;MicroMeter包含一个带有可视化一起SPI的核心模块，一组包含各种监视系统的实现（每个系统称为注册表）的模块，以及一个测试套件。学习监视系统理解下面三个重要特征：
+2.1 维度&amp;emsp;&amp;emsp;系统是否支持通过标记键&#x2F;值对丰富metrics名称（tags）。如果系统不是为维度性的，则它是分层的，这意味着它仅支持平面度量标准名称。将metrics指标发布到分层 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2019/11/11/%E5%B0%8F%E6%8A%80%E5%B7%A7/" title="小技巧"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小技巧"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/11/%E5%B0%8F%E6%8A%80%E5%B7%A7/" title="小技巧">小技巧</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-11T11:24:12.000Z" title="发表于 2019-11-11 19:24:12">2019-11-11</time></span></div><div class="content">
+
+for(i&#x3D;0;i&lt;n;i++){}
+for(i&#x3D;n;i;i–){}下面这一项是boolean比较，编译速度要快上一倍；
+不用申请额外空间完成数值交换a &#x3D; a^bb &#x3D; a^ba &#x3D; a^b
+BitMask将帅问题
+python代码实现一遍然后再写一个文档说明。
+模考必考的大体类型KNN算法和聚类算法
+信息熵的概念信息熵的算法解决过拟合问题–剪枝，避免决策树太深
+
+AI一、资源管理工具1.1 Kubernate1.2 Docker1.3 OpenStack
+二、硬件加速2.1 InfiniBand2.2 NVMESSD2.3 GPU2.4 FPGA2.5 ASIC
+cpu为什么会发热？计算机发生了信息丢失时就会发热，
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2019/11/10/SpringBoot-%E6%97%A5%E5%BF%97/" title="SpringBoot-日志"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SpringBoot-日志"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/10/SpringBoot-%E6%97%A5%E5%BF%97/" title="SpringBoot-日志">SpringBoot-日志</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-10T02:06:55.000Z" title="发表于 2019-11-10 10:06:55">2019-11-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/SpringBoot/">SpringBoot</a></span></div><div class="content">在我们的日常开发中，通常需要查看日志来帮我们解决程序运行中的一些错误问题及对程序运行过程的监控，这篇文章主要是讲解在SpringBoot中日志的工作原理、日志实现类的选择、日志的展示及存储方式等内容。
+
+
+一、常用的日志框架JUL、JCL、Jboss-logging、logback、log4j、log4j2、slf4j….
+其中属于日志门面（日志的抽象层）的是：JCL（Jakarta Commons Logging）    SLF4j（Simple Logging Facade for Java）、jboss-logging    
+属于日志的实现类的是：Log4j2 Logback、Log4j JUL（java.util.logging） 
+我们一般是选择SLF4j作为抽象层，Logback作为实现类
+springboot也是选用的SLF4j和Logback
+
+二、如何在系统中使用SLF4j开发的时候，日志记录方法的调用，不应该来直接调用日志的实现类，而是调用日志抽象层里面的方法；给系统里面导入slf4j的jar和 logback的实现jar
+具体的实现代码如下：
+import or ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2019/10/27/Hadoop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Hadoop学习笔记"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hadoop学习笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/27/Hadoop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Hadoop学习笔记">Hadoop学习笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-27T07:04:26.000Z" title="发表于 2019-10-27 15:04:26">2019-10-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/hadoop/">hadoop</a></span></div><div class="content">
+HDFS概述NameNode(nn):存储文件的元数据，如文件名、文件目录结构、文件属性（生成时间、副本数、文件权限），以及每个文件的块列表和和块所在的DataNode等。
+DataNode(dn):在本地文件系统存储文件数据块以及数据块的校验和。
+Secondary NameNode(2nn):用来监控HDFS的辅助后台程序，每隔一段时间获取HDFS元数据的快照。
+yarn架构图
+常见的正则表达式
+为什么不能一直格式化NameNode,格式化NameNode需要注意什么？集群在工作的时候他的datanode的集群id和namenode的集群id是一样的，这样才能保证集群的正常工作，如果你格式化了namenode的集群id这个时候你的datanode的集群id是没有改变的，他们两个不一致的话集群无法正常工作。
+如果需要格式化NameNode的信息，那就需要datanode中的关于集群id的信息删除；
+
+关于YARN
+ResourceManager:集群资源的总管NodeManager:单个节点资源的总管
+HDFS的优缺点
+优点
 
 
 
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+1.高容错性
+2.适合处理大数据
+3.可构建在廉价 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2019/10/20/Linux%E7%AC%94%E8%AE%B0/" title="Linux笔记"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/20/Linux%E7%AC%94%E8%AE%B0/" title="Linux笔记">Linux笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-20T04:34:24.000Z" title="发表于 2019-10-20 12:34:24">2019-10-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a></span></div><div class="content">linux是在日常开发中常用的一个操作系统，但是linux中的指令实在太多了，这篇博客主要是记录平时常用的一些指令进行汇总。
 
 
-      </div>
-    </main>
+如何进行secureCRT连接的不同界面之间的切换——Alt+”Num”如图所示为4个不同的连接的页面，我们在进行切换时直接按住 Alt+”连接界面所处的位置”
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
+如何在linux中关掉一些进程scp 文件安全拷贝命令（    secure copy）scp -r 本地文件地址 username@ip:目的账户的保存地址（如果是文件的话就不需要加上 -r 了）
 
-        
+xsync集群分发脚本在进行集群配置的时候可能会需要在master上进行了配置，然后有需要将配置好的文件逐个传输到其他的文件夹下面，这样是非常的耗费精力的，为了实现快速的进行向各个节点的文件传输，我们这里采取配置xsync集群分发脚本。
+集群时间的同步操作</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2019/10/20/%E7%89%9B%E9%A1%BF%E8%BF%AD%E8%BE%BE%E6%B3%95/" title="牛顿迭达法"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="牛顿迭达法"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/20/%E7%89%9B%E9%A1%BF%E8%BF%AD%E8%BE%BE%E6%B3%95/" title="牛顿迭达法">牛顿迭达法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-20T01:28:44.000Z" title="发表于 2019-10-20 09:28:44">2019-10-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a></span></div><div class="content">多数方程不存在求根公式，因此求精确根非常困难，甚至不可能，从而寻找方程的近似根就显得特别重要，牛顿迭达法就是一种有效的求近似根的方法。
 
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Dongcheng</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
+
+一、问题引入
+##实现 int sqrt(int x) 函数。
+
+
+&amp;emsp;&amp;emsp;计算并返回 x 的平方根，其中 x 是非负整数。
+
+
+&amp;emsp;&amp;emsp;由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。
+
+示例 1:
+
+输入: 4
+
+输出: 2
 
 
 
-        
+示例 2:
+
+输入: 8
+
+输出: 2
 
 
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-  <script defer src="/lib/three/three.min.js"></script>
-
-
-  
+&amp;emsp;&amp;emsp;说明: 8 的平方根是 2.82842…, 由于返回类型是整数，小数部分将被舍去
 
 
 
 
+###此处要求算的是一个数的平方根，所以我们可以很合理的考虑使用牛顿迭达法（也称牛顿法或牛顿-拉夫森法）
+
+###一、牛顿法的基本思想：
+
+&amp;emsp;&amp;emsp;通过迭代来实现，每次运算都让结果比之前好一点。
+&amp;emsp;&amp;emsp;哪怕只好一点点，在很多次迭代之后也可以得到一个很好的结果甚至最优或期望的结果。
+
+###二、牛顿法的目的： ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2019/10/19/%E6%98%93%E5%BF%98%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%90%E7%A2%8E%E6%93%8D%E4%BD%9C/" title="易忘的一些琐碎操作"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="易忘的一些琐碎操作"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/19/%E6%98%93%E5%BF%98%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%90%E7%A2%8E%E6%93%8D%E4%BD%9C/" title="易忘的一些琐碎操作">易忘的一些琐碎操作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-19T14:30:46.000Z" title="发表于 2019-10-19 22:30:46">2019-10-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/">实用操作</a></span></div><div class="content">这篇博客记录的是一些琐碎但重要的内容
+
+
+一、如何写一篇博客并部署到github上？
+第1步：首先在博客所在的文件目录下打开git客户端，新建一个markdown文件
+
+hexo new post &quot;article title&quot;
+
+
+第2步：书写博客，具体的markdown的语法格式参考如下：
+
+markdown语法
+
+第3步：清除本地缓存
+
+hexo clean
+
+
+第4步：进行渲染
+
+hexo generate 简写作 hexo g 
+
+第5步：部署到本地
+
+hexo server 简写作 hexo s
+
+此时会弹出本地链接地址进行浏览
+
+第6步：部署到git服务器
+
+hexo deploy 简写作 hexo d
+
+
+---
+
+#二、运行web项目时发生了端口已占用如何解决？
+
+第一步：打开命令窗口查看对应端口号的进程及其PID
+
+Windows+R——打开命令窗口
+
+netstat -ano——查看具体进程的pid
+
+
+第2步：打开任务管理器，在“详细”处根据pid找到进程然后强制关闭
+
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2019/10/15/markdown-note/" title="markdown常用语法"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="markdown常用语法"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/15/markdown-note/" title="markdown常用语法">markdown常用语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-15T13:51:46.000Z" title="发表于 2019-10-15 21:51:46">2019-10-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/">实用操作</a></span></div><div class="content">如何用markdown写博客？需要的语法都在这里
+
+
+
+标题
+# 一级标题
+
+## 二级标题
+
+### 三级标题
+
+#### 四级标题
+
+##### 五级标题
+
+
+
+一级标题二级标题三级标题四级标题五级标题
+
+
+
+
+引用
+&gt;一级引用
+&gt;
+&gt;&gt;二级引用
+&gt;
+&gt;一级引用
+
+
+一级引用
+
+二级引用
+
+一级引用
 
 
 
 
 
 
+行开头加“点”
+* red
+
+* green
+
+* blue
+
+
+red
+
+green
+
+blue
 
 
 
 
 
-  
 
-  
+加上序号
+1.red
 
-</body>
-</html>
+2.green
+
+3.red
+
+1.red
+2.green
+3.red
+
+
+
+
+代码块区域：直接点上面的code“&lt;&gt;”就可以了；
+public class Hello&#123;
+    public static void main(String[] args)&#123;
+        System.out.println(&quot;Hello MarkDown);
+    &#125;    
+&#125;
+
+
+
+
+
+斜体
+*这是斜体的方式*
+
+_这是斜体的方_
+
+这是斜体的方式
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2019/09/11/%E4%BA%8C%E5%8F%89%E6%A0%91/" title="二叉树"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="二叉树"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/09/11/%E4%BA%8C%E5%8F%89%E6%A0%91/" title="二叉树">二叉树</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-11T14:00:00.000Z" title="发表于 2019-09-11 22:00:00">2019-09-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a></span></div><div class="content">关于二叉树的定义以及遍历方式
+
+
+#二叉树二叉树：任何一个节点的子节点数量不超过2，二叉树的子节点分为左节点和右节点
+满二叉树：所有叶子节点都在最后一层，而且节点的总数为Math.pow(2,n)个，其中n是指树的高度
+完全二叉树：所有叶子节点都在最后一层或者倒数第二层，且最后一层的叶子节点在左边连续，倒数第二层的叶子节点在右边连续完全二叉树是可以从左向右一直数下去的，如果出现了数数过程中的不连续，那么就说明不是一棵完全二叉树（如果图中没有6和7,那么就不是一棵完全二叉）
+##树的遍历对于下图的二叉树进行遍历时，其三种遍历顺序结果为
+前序遍历：ABCDEFGHK
+中序遍历：BDCAEHGKF
+后序遍历：DCBHKGFEA
+
+前序遍历：   中左右进行遍历时，先从最中间的根节点开始，然后是左子树，左子树的遍历也是按照先中间，再左边，然后右边的顺序进行的，遍历完左子树，再进行右子树的遍历。先从最中间开始，A，然后再到左子树AB,B没有左节点，故ABC,C结束后再C的先左右节点，ABCD,然后到了A的右子树，查找顺序是一样的，就不再进行赘述了得到ABCDEFGHK
+中序遍历：   左中右先从 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/naruto.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">dongcheng</div><div class="author-info__description">日拱一卒无有尽 功不唐捐终入海</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/DongONNS"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">记录所学所思</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/03/26/%E8%8D%89%E7%A8%BF/%E4%BD%BF%E7%94%A8supervisorctl%E7%AE%A1%E7%90%86%E8%BF%9B%E7%A8%8B/" title="无题"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2021/03/26/%E8%8D%89%E7%A8%BF/%E4%BD%BF%E7%94%A8supervisorctl%E7%AE%A1%E7%90%86%E8%BF%9B%E7%A8%8B/" title="无题">无题</a><time datetime="2021-03-26T15:23:29.974Z" title="发表于 2021-03-26 23:23:29">2021-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/26/%E8%8D%89%E7%A8%BF/mysql%E4%B8%AD%E4%BD%BF%E7%94%A8uuid%E7%9A%84%E5%A5%BD%E5%A4%84/" title="无题"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2021/03/26/%E8%8D%89%E7%A8%BF/mysql%E4%B8%AD%E4%BD%BF%E7%94%A8uuid%E7%9A%84%E5%A5%BD%E5%A4%84/" title="无题">无题</a><time datetime="2021-03-26T15:10:28.889Z" title="发表于 2021-03-26 23:10:28">2021-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/26/%E8%8D%89%E7%A8%BF/SerialVersionUid%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8/" title="无题"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2021/03/26/%E8%8D%89%E7%A8%BF/SerialVersionUid%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8/" title="无题">无题</a><time datetime="2021-03-26T15:03:29.173Z" title="发表于 2021-03-26 23:03:29">2021-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/26/%E8%8D%89%E7%A8%BF/java%E5%BA%8F%E5%88%97%E5%8C%96%E6%9C%BA%E5%88%B6/" title="无题"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2021/03/26/%E8%8D%89%E7%A8%BF/java%E5%BA%8F%E5%88%97%E5%8C%96%E6%9C%BA%E5%88%B6/" title="无题">无题</a><time datetime="2021-03-26T15:01:26.460Z" title="发表于 2021-03-26 23:01:26">2021-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/09/%E6%88%91%E7%9A%842020/" title="我的2020"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的2020"/></a><div class="content"><a class="title" href="/2021/01/09/%E6%88%91%E7%9A%842020/" title="我的2020">我的2020</a><time datetime="2021-01-09T11:51:36.000Z" title="发表于 2021-01-09 19:51:36">2021-01-09</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Monitor-System/"><span class="card-category-list-name">Monitor System</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/SpringBoot/"><span class="card-category-list-name">SpringBoot</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hadoop/"><span class="card-category-list-name">hadoop</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/java/"><span class="card-category-list-name">java</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/jvm/"><span class="card-category-list-name">jvm</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/springboot/"><span class="card-category-list-name">springboot</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/"><span class="card-category-list-name">实用操作</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">数据结构与算法</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%88%AC%E8%99%AB/"><span class="card-category-list-name">爬虫</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/11/"><span class="card-archive-list-date">十一月 2019</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/10/"><span class="card-archive-list-date">十月 2019</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/09/"><span class="card-archive-list-date">九月 2019</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">20</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-04-10T15:30:22.491Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By dongcheng</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
