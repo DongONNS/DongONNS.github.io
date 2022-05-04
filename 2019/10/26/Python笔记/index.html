@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Python笔记 | Dongonns</title><meta name="keywords" content="Java,Python,Big Data"><meta name="author" content="dongcheng"><meta name="copyright" content="dongcheng"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="在print(r’Hello,Python’)中的r是什么意思？r代表的是原始字符串标识符,也就是说 用r’ ‘表示’ ‘内部的字符串默认不转义 输出：print()eg.print(&#39;The quick brome fox&#39;,&#39;jumps over&#39;,&#39;the lazy dog&#39;) The quick brome fox jumps over">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python笔记">
+<meta property="og:url" content="http://yoursite.com/2019/10/26/Python%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Dongonns">
+<meta property="og:description" content="在print(r’Hello,Python’)中的r是什么意思？r代表的是原始字符串标识符,也就是说 用r’ ‘表示’ ‘内部的字符串默认不转义 输出：print()eg.print(&#39;The quick brome fox&#39;,&#39;jumps over&#39;,&#39;the lazy dog&#39;) The quick brome fox jumps over">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2019-10-26T08:40:25.000Z">
+<meta property="article:modified_time" content="2022-05-04T08:09:22.666Z">
+<meta property="article:author" content="dongcheng">
+<meta property="article:tag" content="Java,Python,Big Data">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/icon.png"><link rel="canonical" href="http://yoursite.com/2019/10/26/Python%E7%AC%94%E8%AE%B0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Python笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-05-04 16:09:22'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Dongonns" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/naruto.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Dongonns</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Python笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-10-26T08:40:25.000Z" title="发表于 2019-10-26 16:40:25">2019-10-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-05-04T08:09:22.666Z" title="更新于 2022-05-04 16:09:22">2022-05-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python%E7%AC%94%E8%AE%B0/">Python笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Python笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><a id="more"></a>
+
+<h3 id="在print-r’Hello-Python’-中的r是什么意思？"><a href="#在print-r’Hello-Python’-中的r是什么意思？" class="headerlink" title="在print(r’Hello,Python’)中的r是什么意思？"></a>在print(r’Hello,Python’)中的r是什么意思？</h3><p>r代表的是原始字符串标识符,也就是说 用r’ ‘表示’ ‘内部的字符串默认不转义</p>
+<h2 id="输出：print"><a href="#输出：print" class="headerlink" title="输出：print()"></a>输出：print()</h2><pre><code>eg.print(&#39;The quick brome fox&#39;,&#39;jumps over&#39;,&#39;the lazy dog&#39;)
+The quick brome fox jumps over the lazy dog
+</code></pre>
+<h2 id="输入：input"><a href="#输入：input" class="headerlink" title="输入：input()"></a>输入：input()</h2><p>上述命令即可进行人机交互了<br>    eg.name&#x3D;input()<br>       Daniel</p>
+<p>可以在input里面放入一些提示信息如下所示</p>
+<pre><code>name=input(&#39;please input your name:&#39;)
+print(&#39;hello,&#39;,name)
+</code></pre>
+<p>运行上面的代码结果如下所示</p>
+<pre><code>please input your name:Daniel
+hello Daniel
+</code></pre>
+<h2 id="字符编码"><a href="#字符编码" class="headerlink" title="字符编码"></a>字符编码</h2><p>对于单个字符，Python提供了ord（）函数获取字符的整数表示和chr()函数把编码转换成对应的字符：</p>
+<pre><code>&gt;&gt;&gt;ord(&#39;A&#39;)
+65
+&gt;&gt;&gt;ord(&#39;中&#39;)
+20013
+&gt;&gt;&gt;chr(66)
+&#39;B&#39;
+&gt;&gt;&gt;chr(25991)
+&#39;文&#39;
+</code></pre>
+<p>如果知道字符的整数编码，还可以用十六进制这么写</p>
+<pre><code>&gt;&gt;&gt; &#39;\u4e2d\u6587&#39;
+&#39;中文&#39;
+</code></pre>
+<p>要注意区分’ABC’和b’ABC’,两者内容上是一样的，但是str类型的数据像’ABC’，它在内存中是以Unicode表示，一个字符对应若干字节，而b’ABC’每个字符只占一个字节，以Unicode表示的str通过encode()方法可以编码为指定的bytes,例如：</p>
+<pre><code>&gt;&gt;&gt; &#39;ABC&#39;.encodes(&#39;ascii&#39;)
+b&#39;ABC&#39;
+</code></pre>
+<p>英文的str可以用ASCII编码为bytes，内容是一样的，含有中文的str可以用UTF-8编码为bytes。含有中文的str无法用ASCII编码，因为中文编码的范围超过了ASCII编码的范围，Python会报错。</p>
+<p>反过来，如果我们从网络或磁盘上读取了字节流，那么读到的数据就是bytes。要把bytes变为str，就需要用**decode()**方法：</p>
+<pre><code>&gt;&gt;&gt; b&#39;\xe4\xb8\xad\xe6\x96\x87&#39;.decode(&#39;utf-8&#39;)
+&#39;中文&#39;
+</code></pre>
+<p>如果bytes中包含无法解码的字节，decode()方法会报错：</p>
+<pre><code>&gt;&gt;&gt; b&#39;\xe4\xb8\xad\xff&#39;.decode(&#39;utf-8&#39;)
+Traceback (most recent call last):
+  ...
+UnicodeDecodeError: &#39;utf-8&#39; codec can&#39;t decode byte 0xff in 
+
+position 3: invalid start byte
+</code></pre>
+<p>如果bytes中只有一小部分无效的字节，可以传入errors&#x3D;’ignore’忽略错误的字节：</p>
+<pre><code>&gt;&gt;&gt; b&#39;\xe4\xb8\xad\xff&#39;.decode(&#39;utf-8&#39;, errors=&#39;ignore&#39;)
+&#39;中&#39;
+</code></pre>
+<p>要计算str包含多少个字符，可以用len()函数：</p>
+<pre><code>&gt;&gt;&gt; len(&#39;ABC&#39;)
+3
+&gt;&gt;&gt; len(&#39;中文&#39;)
+2
+</code></pre>
+<p>len()函数计算的是str的字符数，如果换成bytes，len()函数就计算字节数：</p>
+<pre><code>&gt;&gt;&gt; len(b&#39;ABC&#39;)
+3
+&gt;&gt;&gt; len(b&#39;\xe4\xb8\xad\xe6\x96\x87&#39;)
+6
+&gt;&gt;&gt; len(&#39;中文&#39;.encode(&#39;utf-8&#39;))
+6
+</code></pre>
+<p>可见，1个中文字符经过UTF-8编码后通常会占用3个字节，而1个英文字符只占用1个字节。</p>
+<p>在操作字符串时，我们经常遇到str和bytes的互相转换。为了避免乱码问题，应当<strong>始终坚持使用UTF-8编码</strong>对str和bytes进行转换。</p>
+<p>当Python解释器读取源代码时，为了让它按UTF-8编码读取，我们通常在文件开头写上这两行：</p>
+<pre><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+</code></pre>
+<p>第一行注释是为了告诉Linux&#x2F;OS X系统，这是一个Python可执行程序，Windows系统会忽略这个注释；</p>
+<p>第二行注释是为了告诉Python解释器，按照UTF-8编码读取源代码，否则，你在源代码中写的中文输出可能会有乱码。</p>
+<p>申明了UTF-8编码并不意味着你的.py文件就是UTF-8编码的，必须并且要确保文本编辑器正在使用UTF-8 without BOM编码</p>
+<p>在Python中，采用的格式化方式和C语言是一致的，用%实现，举例如下：</p>
+<pre><code>&gt;&gt;&gt; &#39;Hello, %s&#39; % &#39;world&#39;
+&#39;Hello, world&#39;
+&gt;&gt;&gt; &#39;Hi, %s, you have $%d.&#39; % (&#39;Michael&#39;, 1000000)
+&#39;Hi, Michael, you have $1000000.&#39;
+</code></pre>
+<p>  占位符        替换内容<br>   %d           整数<br>   %f        浮点数<br>   %s        字符串<br>   %x      十六进制整数</p>
+<p>如果你不太确定应该用什么，%s永远起作用，它会把任何数据类型转换为字符串：</p>
+<pre><code>&gt;&gt;&gt; &#39;Age: %s. Gender: %s&#39; % (25, True)
+&#39;Age: 25. Gender: True&#39;
+</code></pre>
+<p>有些时候，字符串里面的%是一个普通字符怎么办？这个时候就需要转义，用%%来表示一个%：</p>
+<pre><code>&gt;&gt;&gt; &#39;growth rate: %d %%&#39; % 7
+&#39;growth rate: 7 %
+</code></pre>
+<h2 id="format"><a href="#format" class="headerlink" title="format()"></a>format()</h2><p>另一种格式化字符串的方法是使用字符串的format()方法，它会用传入的参数依次替换字符串内的占位符{0}、{1}……，不过这种方式写起来比%要麻烦得多：</p>
+<pre><code>&gt;&gt;&gt; &#39;Hello, &#123;0&#125;, 成绩提升了 &#123;1:.1f&#125;%&#39;.format(&#39;小明&#39;, 17.125)
+&#39;Hello, 小明, 成绩提升了 17.1%&#39;
+</code></pre>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://yoursite.com">dongcheng</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2019/10/26/Python%E7%AC%94%E8%AE%B0/">http://yoursite.com/2019/10/26/Python%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com" target="_blank">Dongonns</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/10/27/Hadoop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><img class="prev-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hadoop学习笔记</div></div></a></div><div class="next-post pull-right"><a href="/2019/10/20/Linux%E7%AC%94%E8%AE%B0/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Linux笔记</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/naruto.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">dongcheng</div><div class="author-info__description">日拱一卒无有尽 功不唐捐终入海</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/DongONNS"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">记录所学所思</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8print-r%E2%80%99Hello-Python%E2%80%99-%E4%B8%AD%E7%9A%84r%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">在print(r’Hello,Python’)中的r是什么意思？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%EF%BC%9Aprint"><span class="toc-number"></span> <span class="toc-text">输出：print()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%EF%BC%9Ainput"><span class="toc-number"></span> <span class="toc-text">输入：input()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81"><span class="toc-number"></span> <span class="toc-text">字符编码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#format"><span class="toc-number"></span> <span class="toc-text">format()</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/05/04/go%E4%B8%ADrune%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="go中rune数据类型"><img src="/img/go.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="go中rune数据类型"/></a><div class="content"><a class="title" href="/2022/05/04/go%E4%B8%ADrune%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="go中rune数据类型">go中rune数据类型</a><time datetime="2022-05-04T07:35:00.000Z" title="发表于 2022-05-04 15:35:00">2022-05-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/02/MapReduce%E8%AE%BA%E6%96%87%E5%AD%A6%E4%B9%A0/" title="MapReduce论文学习"><img src="/img/mapreduce.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MapReduce论文学习"/></a><div class="content"><a class="title" href="/2022/05/02/MapReduce%E8%AE%BA%E6%96%87%E5%AD%A6%E4%B9%A0/" title="MapReduce论文学习">MapReduce论文学习</a><time datetime="2022-05-02T11:44:00.000Z" title="发表于 2022-05-02 19:44:00">2022-05-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/12/hexo%20d%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E6%8A%A5%E9%94%99/" title="无题"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/04/12/hexo%20d%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E6%8A%A5%E9%94%99/" title="无题">无题</a><time datetime="2022-04-11T16:41:15.151Z" title="发表于 2022-04-12 00:41:15">2022-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/26/SerialVersionUid%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8/" title="SerialVersionUid的作用"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SerialVersionUid的作用"/></a><div class="content"><a class="title" href="/2021/01/26/SerialVersionUid%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8/" title="SerialVersionUid的作用">SerialVersionUid的作用</a><time datetime="2021-01-26T14:00:00.000Z" title="发表于 2021-01-26 22:00:00">2021-01-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/26/mysql%E4%B8%AD%E4%BD%BF%E7%94%A8uuid%E7%9A%84%E5%A5%BD%E5%A4%84/" title="MySQL中自增主键的好处"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL中自增主键的好处"/></a><div class="content"><a class="title" href="/2021/01/26/mysql%E4%B8%AD%E4%BD%BF%E7%94%A8uuid%E7%9A%84%E5%A5%BD%E5%A4%84/" title="MySQL中自增主键的好处">MySQL中自增主键的好处</a><time datetime="2021-01-26T14:00:00.000Z" title="发表于 2021-01-26 22:00:00">2021-01-26</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By dongcheng</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
